@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 	public int movementPattern;
 	
 	WaveController waveController;
+	public int wpnsCount;
 	public float mobility;
 	public float hostileness;
 	private float mobilityR = 0.0f;
@@ -22,6 +23,7 @@ public class Enemy : MonoBehaviour
 	{
 		
 		waveController = GameObject.Find("WaveController").GetComponent<WaveController>();
+		wpnsCount = gameObject.GetComponent<Weapons>().Wpns.Length;
 		mobilityR=Random.Range(0,1/mobility);
 		hostilenessR=Random.Range(0,1/hostileness);
 		if(movementPattern==2) //SPY
@@ -42,9 +44,10 @@ public class Enemy : MonoBehaviour
 		if(hostilenessR>1/hostileness)
 		{
 			hostilenessR=Random.Range(0,1/hostileness);
-			gameObject.SendMessage("Shoot",0,SendMessageOptions.RequireReceiver);
-			gameObject.SendMessage("Shoot",1,SendMessageOptions.RequireReceiver);
-			gameObject.SendMessage("Shoot",2,SendMessageOptions.RequireReceiver);
+			for(int i=0;i<wpnsCount;i++)
+			{
+				gameObject.SendMessage("Shoot",i,SendMessageOptions.RequireReceiver);
+			}
 		}
 			
 			//1 up
