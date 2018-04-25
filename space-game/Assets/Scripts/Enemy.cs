@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour
 	private float mobilityR = 0.0f;
 	private float hostilenessR = 0.0f;
 	
+	public bool patternChanger;
+	float changerTime;
+	
 	private int currentScheme=0;
 	Transform target;
 	int mod(int x, int m) 
@@ -26,7 +29,7 @@ public class Enemy : MonoBehaviour
 		wpnsCount = gameObject.GetComponent<Weapons>().Wpns.Length;
 		mobilityR=Random.Range(0,1/mobility);
 		hostilenessR=Random.Range(0,1/hostileness);
-		if(movementPattern==2) //SPY
+		if(movementPattern==2||patternChanger) //SPY
 		{
 			if(GameObject.FindGameObjectWithTag("Player"))
 				target=GameObject.FindGameObjectWithTag("Player").transform;
@@ -96,6 +99,20 @@ public class Enemy : MonoBehaviour
 				gameObject.SendMessage("GetInput", 3);
 		}
 		
+		
+		if(patternChanger)
+		{
+			if(changerTime>3)
+			{
+				changerTime=0;
+				movementPattern++;
+				if(movementPattern>2)
+				{
+					movementPattern=0;
+				}	
+			}
+		}
+		
     }
 	
 	void OnCollisionEnter2D(Collision2D coll) 
@@ -107,6 +124,8 @@ public class Enemy : MonoBehaviour
 	{
 		mobilityR+=Time.deltaTime;
 		hostilenessR+=Time.deltaTime;
+		if(patternChanger)
+			changerTime+=Time.deltaTime;
 	}
 	
 	public void OnDestroy() 
