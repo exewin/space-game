@@ -115,7 +115,7 @@ MonoBehaviour:
   penetrableRate: 1
   ownerTag: 
   sound: {fileID: 8300000, guid: 4e4edf3d2672cea49a1bd25e549f9d28, type: 3}
-  boomEffect: {fileID: 1516502056755872, guid: b32acdabb4f7b7342ad2dff9986cb44f, type: 2}
+  boomEffect: {fileID: 1896030988815074, guid: 52b4e5b632e19b449ba5c6d245e7e8d8, type: 2}
   destroySound: {fileID: 0}
 --- !u!114 &114381845054694424
 MonoBehaviour:
@@ -189,7 +189,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1780673455
+  randomSeed: -1426606142
   InitialModule:
     serializedVersion: 3
     enabled: 1

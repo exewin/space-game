@@ -8,6 +8,10 @@ public class MouseActions : MonoBehaviour
 	public Transform rocketLauncher;
 	float prop;
 	
+	public float speed = 1.0F;
+    private float startTime;
+    private float journeyLength;
+	
 	void Start()
 	{
 		prop=OnResolutionChange.OnResolution();
@@ -43,8 +47,20 @@ public class MouseActions : MonoBehaviour
 		mouseOnScreen.x *= prop;
 		positionOnScreen.x *= prop;
 		float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
-		rocketLauncher.rotation =  Quaternion.Euler (new Vector3(0f,0f,angle+90));
-		
+		if(Mathf.Abs(rocketLauncher.rotation.z)<0.7)
+		{
+			rocketLauncher.rotation = Quaternion.Lerp(rocketLauncher.rotation, Quaternion.Euler (new Vector3(0f,0f,angle+90)), 0.05f);
+		}
+		else if(rocketLauncher.rotation.z>0.7)
+		{
+			Debug.Log("Er1");
+			rocketLauncher.rotation = Quaternion.Euler (new Vector3(0f,0f,88.8f));
+		}
+		else if(rocketLauncher.rotation.z<-0.7)
+		{
+			Debug.Log("Er2");
+			rocketLauncher.rotation = Quaternion.Euler (new Vector3(0f,0f,-88.8f));
+		}
 	}
 	
 	float AngleBetweenTwoPoints(Vector2 a, Vector2 b) 

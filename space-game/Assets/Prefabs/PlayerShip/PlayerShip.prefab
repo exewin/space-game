@@ -774,7 +774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a63cd4ce190c834b83474f9708690a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 75
+  maxHp: 4444
   hp: 0
   isPlayer: 1
   destroyEffect: {fileID: 1493211344075380, guid: c7ab8e17ae2967242b45da5fe6fa609a,

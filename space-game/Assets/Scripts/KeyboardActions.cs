@@ -20,6 +20,10 @@ public class KeyboardActions : MonoBehaviour
 			}	
 		}
 		
+	}
+	
+	void Update()
+	{
 		if(Input.GetKey(KeyCode.Space))
 		{
 			gameObject.SendMessage("ShieldMe",1);
