@@ -12,6 +12,8 @@ public class Weapons : MonoBehaviour
 	[HideInInspector]
 	public bool weaponaryBonus=false;
 	
+	public bool autoFire;
+	
 	[System.Serializable]
 	public class Weapon
 	{
@@ -60,7 +62,8 @@ public class Weapons : MonoBehaviour
 	
 	void Start()
 	{
-		
+		if(gameObject.tag=="Player")
+			isPlayer=true;
 		for(int i = 0;i<Wpns.Length;i++)
 		{
 			if(isPlayer)
@@ -102,6 +105,12 @@ public class Weapons : MonoBehaviour
 	void PickupW(bool mode)
 	{
 		weaponaryBonus=mode;
+	}
+	
+	void Update()
+	{
+		if(autoFire)
+			Wpns[0].Shoot();
 	}
 	
 }

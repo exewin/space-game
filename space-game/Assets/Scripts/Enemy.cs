@@ -27,8 +27,8 @@ public class Enemy : MonoBehaviour
 		
 		waveController = GameObject.Find("WaveController").GetComponent<WaveController>();
 		wpnsCount = gameObject.GetComponent<Weapons>().Wpns.Length;
-		mobilityR=Random.Range(0,1/mobility);
-		hostilenessR=Random.Range(0,1/hostileness);
+		mobilityR=0;
+		hostilenessR=Random.Range(-0.5f,0);
 		if(movementPattern==2||patternChanger) //SPY
 		{
 			if(GameObject.FindGameObjectWithTag("Player"))

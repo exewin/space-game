@@ -6,21 +6,24 @@ public class WaveController : MonoBehaviour
 	public int curWave = -1;
 	public int numOfObjs;
 	public GameObject [] wave;
+	public GameObject dangerZone;
 	
 	void Start()
 	{
+		dangerZone.SetActive(false);
 		wave=GetAllChildren.getChildren(gameObject);
 		NextWave();
 	}
 	
 	void KillWave()
 	{
-		//wave[curWave].SetActive(false);
+		dangerZone.SetActive(true);
 		StartCoroutine(Waiter());
 	}
 	
 	void NextWave()
 	{
+		dangerZone.GetComponent<DangerZone>().enabling=false;
 		curWave++;
 		if(curWave>=wave.Length)
 			EndGame();
@@ -42,7 +45,7 @@ public class WaveController : MonoBehaviour
 	
 	IEnumerator Waiter ()
 	{
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(5);
 		NextWave();
 	}
 	

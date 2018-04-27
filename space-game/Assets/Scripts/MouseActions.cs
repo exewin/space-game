@@ -53,12 +53,10 @@ public class MouseActions : MonoBehaviour
 		}
 		else if(rocketLauncher.rotation.z>0.7)
 		{
-			Debug.Log("Er1");
 			rocketLauncher.rotation = Quaternion.Euler (new Vector3(0f,0f,88.8f));
 		}
 		else if(rocketLauncher.rotation.z<-0.7)
 		{
-			Debug.Log("Er2");
 			rocketLauncher.rotation = Quaternion.Euler (new Vector3(0f,0f,-88.8f));
 		}
 	}

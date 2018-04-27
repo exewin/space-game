@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4278294417942152}
   - component: {fileID: 212844465619595188}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: colorC2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4383577565339058}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RocketLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4590253249313492}
   - component: {fileID: 114499288563040366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mini Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4397464572334318}
   - component: {fileID: 198034688478899866}
   - component: {fileID: 199600983160412870}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EngineFireParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4575344154046446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LongRangePlasmaThrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4078143266345986}
   - component: {fileID: 114559481252777672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mini Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4006391276557286}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Big Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4653849936872948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PenetrableGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 4581390543013550}
   - component: {fileID: 198413302901834506}
   - component: {fileID: 199883030698207354}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EngineFireParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4281529233432498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Big Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4971973744331450}
   - component: {fileID: 212243261594358874}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4184899909686120}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RocketLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4914648411251928}
   - component: {fileID: 114924568084746782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mini Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,9 +274,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4519791337840688}
-  m_Layer: 0
+  - component: {fileID: 114563758173695116}
+  m_Layer: 9
   m_Name: GPX
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,7 +291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4523865838499394}
   - component: {fileID: 212362732100615688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: colorC1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +322,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4885586921248772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PressureGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,8 +339,23 @@ GameObject:
   - component: {fileID: 4788734494935800}
   - component: {fileID: 198453762920104040}
   - component: {fileID: 199284104503065498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EngineFireParticle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1784752170438740
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4723129575147118}
+  m_Layer: 9
+  m_Name: FireOutput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,7 +369,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4221318087316650}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Big Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4798657280300102}
   - component: {fileID: 114038187617952814}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mini Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4385861616770474}
   - component: {fileID: 212500070364972914}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: colorC2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4846967563697428}
   - component: {fileID: 114494555245028116}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mini Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +434,7 @@ GameObject:
   - component: {fileID: 4012711339259766}
   - component: {fileID: 198185897318354644}
   - component: {fileID: 199177457563017666}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EngineFireParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4590246451502728}
   - component: {fileID: 114335188754508126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mini Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4113267095846928}
   - component: {fileID: 114877443942972106}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mini Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +499,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4608785573058218}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Big Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4711331483608664}
   - component: {fileID: 114887416654006840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mini Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +640,7 @@ Transform:
   - {fileID: 4653849936872948}
   - {fileID: 4885586921248772}
   m_Father: {fileID: 4519791337840688}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4221318087316650
 Transform:
@@ -685,7 +701,7 @@ Transform:
   - {fileID: 4006391276557286}
   - {fileID: 4221318087316650}
   m_Father: {fileID: 4519791337840688}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4383577565339058
 Transform:
@@ -724,7 +740,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4519791337840688}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 90}
 --- !u!4 &4519791337840688
 Transform:
@@ -737,6 +753,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4971973744331450}
+  - {fileID: 4723129575147118}
   - {fileID: 4397464572334318}
   - {fileID: 4898830843774226}
   - {fileID: 4323608752617836}
@@ -848,6 +865,19 @@ Transform:
   m_Father: {fileID: 4898830843774226}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4723129575147118
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1784752170438740}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: -7.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4519791337840688}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &4788734494935800
 Transform:
   m_ObjectHideFlags: 1
@@ -920,7 +950,7 @@ Transform:
   - {fileID: 4590246451502728}
   - {fileID: 4113267095846928}
   m_Father: {fileID: 4519791337840688}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4914648411251928
 Transform:
@@ -942,7 +972,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1964280767718780}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 7.6, y: 18.7, z: 0}
+  m_LocalPosition: {x: -98.5, y: -61.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4008252346460040}
@@ -1009,7 +1039,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.25503922, y: -0.1956749}
+  m_Offset: {x: 0.06655884, y: -0.1956768}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.7423292, y: 0.606927}
@@ -1020,7 +1050,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.365776, y: 4.7334595}
+  m_Size: {x: 6.0977936, y: 2.334568}
   m_EdgeRadius: 0
 --- !u!61 &61647528318277802
 BoxCollider2D:
@@ -1034,7 +1064,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07543564, y: 1.4332619}
+  m_Offset: {x: -0.09257126, y: 1.3647213}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1045,7 +1075,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.6301346, y: 5.975876}
+  m_Size: {x: 5.4992294, y: 5.8387947}
   m_EdgeRadius: 0
 --- !u!61 &61726681746387102
 BoxCollider2D:
@@ -1059,7 +1089,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12514114, y: -0.2858734}
+  m_Offset: {x: 0.2004242, y: -0.2687416}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.24546722, y: 0.606927}
@@ -1070,7 +1100,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.7766953, y: 4.8950043}
+  m_Size: {x: 6.1255646, y: 2.3933105}
   m_EdgeRadius: 0
 --- !u!61 &61997668194870830
 BoxCollider2D:
@@ -1084,7 +1114,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15087128, y: -2.7156677}
+  m_Offset: {x: -0.15087128, y: -3.315384}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1095,7 +1125,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.43631, y: 9.144142}
+  m_Size: {x: 5.323929, y: 6.642456}
   m_EdgeRadius: 0
 --- !u!82 &82917481489953830
 AudioSource:
@@ -1205,6 +1235,7 @@ MonoBehaviour:
   speedBonus: 1
   damageBonus: 1
   weaponaryBonus: 0
+  autoFire: 0
   Wpns:
   - isPlayer: 0
     nameTag: 
@@ -1229,7 +1260,7 @@ MonoBehaviour:
     nameTag: 
     nextFire: 0
     playerScript: {fileID: 0}
-    projectile: {fileID: 1062580776735640, guid: 176202c48fda0104a99759cab3342fae,
+    projectile: {fileID: 1716115806708774, guid: ba3dcc985982302459ea58988cb4129c,
       type: 2}
     fireRate: 2.5
     spawnPoint:
@@ -1432,6 +1463,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   angle: 45
+--- !u!114 &114563758173695116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1715654580553332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e244d23d10acfb44c92368c19ded339e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  speedBonus: 1
+  damageBonus: 1
+  weaponaryBonus: 0
+  autoFire: 1
+  Wpns:
+  - isPlayer: 0
+    nameTag: 
+    nextFire: 0
+    playerScript: {fileID: 0}
+    projectile: {fileID: 1320894943552610, guid: 53ec2bb7f24b92f41b220e960004f5c0,
+      type: 2}
+    fireRate: 0.2
+    spawnPoint:
+    - {fileID: 4723129575147118}
 --- !u!114 &114635661612361040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1600,14 +1657,14 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -606798627
+  randomSeed: 780952587
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2

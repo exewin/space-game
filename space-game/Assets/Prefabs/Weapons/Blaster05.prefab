@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf525e31ffcd194c8cb65499b2e4ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 34
   damage: 27
   penetrableRate: 1
   ownerTag: 

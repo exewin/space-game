@@ -122,12 +122,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 13
-  damage: 35
+  damage: 55
   penetrableRate: 1
   ownerTag: 
   sound: {fileID: 8300000, guid: f6564dc8221d4a94fb6cb392d6e47288, type: 3}
-  boomEffect: {fileID: 1610025635877318, guid: efd7233f184954f4e8c824d4df0cebb5, type: 2}
-  destroySound: {fileID: 0}
+  boomEffect: {fileID: 1896030988815074, guid: 52b4e5b632e19b449ba5c6d245e7e8d8, type: 2}
+  destroySound: {fileID: 8300000, guid: cef28ad044b48624fbfeba734e9d6447, type: 3}
 --- !u!198 &198233388827356632
 ParticleSystem:
   m_ObjectHideFlags: 1
