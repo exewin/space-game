@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212401286245700900}
   - component: {fileID: 114946249723021726}
   - component: {fileID: 58250455725271686}
+  - component: {fileID: 114809033313298930}
   m_Layer: 0
   m_Name: HealthPackSmall
   m_TagString: Pickup
@@ -57,6 +58,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.28
+--- !u!114 &114809033313298930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1965146696457360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f781200a9d55f04bbe27828daed3e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 10
 --- !u!114 &114946249723021726
 MonoBehaviour:
   m_ObjectHideFlags: 1

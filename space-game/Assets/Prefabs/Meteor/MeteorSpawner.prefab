@@ -9,89 +9,73 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1617110476650696}
+  m_RootGameObject: {fileID: 1069187840786478}
   m_IsPrefabParent: 1
---- !u!1 &1617110476650696
+--- !u!1 &1069187840786478
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4426727023963886}
-  - component: {fileID: 212033761359652122}
-  - component: {fileID: 114299576717506250}
-  - component: {fileID: 58447198098520262}
-  - component: {fileID: 114984925749707618}
+  - component: {fileID: 4533883404581006}
+  - component: {fileID: 114888549187531112}
+  - component: {fileID: 212513779208544588}
+  - component: {fileID: 114062803169861554}
   m_Layer: 0
-  m_Name: Weaponary
-  m_TagString: Pickup
+  m_Name: MeteorSpawner
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4426727023963886
+--- !u!4 &4533883404581006
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1617110476650696}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -95.03, y: -53.019356, z: 0}
+  m_GameObject: {fileID: 1069187840786478}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -106.2, y: -42.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!58 &58447198098520262
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1617110476650696}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.28
---- !u!114 &114299576717506250
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114062803169861554
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1617110476650696}
+  m_GameObject: {fileID: 1069187840786478}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f28f074068ce1d4386fa8c0aa294176, type: 3}
+  m_Script: {fileID: 11500000, guid: 18ded4bfac76966409865135cf108e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  type: 3
-  bonusTime: 15
-  multiplier: 0
-  sound: {fileID: 8300000, guid: 8e8fc8ca9d7cf1245af77a62c8a26acb, type: 3}
---- !u!114 &114984925749707618
+  speed: 460
+  angle: 0
+--- !u!114 &114888549187531112
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1617110476650696}
+  m_GameObject: {fileID: 1069187840786478}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f781200a9d55f04bbe27828daed3e16, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f02011a8e98edc4bbc0f1fbf6bd195a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
---- !u!212 &212033761359652122
+  hostileness: 2
+  meteor: {fileID: 1140784741114742, guid: 53e7f9a846a10b54091abf5c8bfdabd3, type: 2}
+  biggity: 45
+  direction: 3
+--- !u!212 &212513779208544588
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1617110476650696}
+  m_GameObject: {fileID: 1069187840786478}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -120,10 +104,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 038a4908145c59041a1914934c1a5860, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4ef719ea27c08f4a82ee9e40c77f867, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
-  m_FlipY: 1
+  m_FlipX: 0
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5

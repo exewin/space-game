@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212918627032335612}
   - component: {fileID: 50483019212018754}
   - component: {fileID: 114177171323786676}
-  - component: {fileID: 114125339653012342}
   - component: {fileID: 114360077618857230}
   - component: {fileID: 60584255370080874}
+  - component: {fileID: 114176604582012076}
   m_Layer: 10
   m_Name: Meteor
   m_TagString: Meteor
@@ -216,7 +216,7 @@ PolygonCollider2D:
       - {x: -0.96999997, y: -2.71}
       - {x: -0.75, y: -2.61}
       - {x: -0.59999996, y: -2.54}
---- !u!114 &114125339653012342
+--- !u!114 &114176604582012076
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -227,8 +227,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5746856e55d9f0b4a978ba96ad08831d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 45000
+  speed: 0
   timer: 0.1
+  dir: 0
 --- !u!114 &114177171323786676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,12 +254,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 150
-  armor: 0
+  hp: 0
   isPlayer: 0
   destroyEffect: {fileID: 1681009956557646, guid: 67ea47cce046a9c478b9b8f1f6e773ee,
     type: 2}
   hitEffect: {fileID: 1862122879074142, guid: cdef2b99313bcad4daadee2d6fe3c0ef, type: 2}
   destroyOrigin: {fileID: 0}
+  hitSound: {fileID: 0}
+  shieldSound: {fileID: 0}
+  UI: {fileID: 0}
+  killAfter: 1
 --- !u!212 &212918627032335612
 SpriteRenderer:
   m_ObjectHideFlags: 1

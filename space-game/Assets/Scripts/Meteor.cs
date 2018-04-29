@@ -6,6 +6,7 @@ public class Meteor : MonoBehaviour
 {
 	public float speed;
 	public float timer=0.1f;
+	bool done;
 	
 	void Start()
 	{
@@ -14,18 +15,25 @@ public class Meteor : MonoBehaviour
 	
 	void FixedUpdate()
 	{
-		timer-=Time.deltaTime*1;
-		if(timer<0)
+			timer-=Time.deltaTime*1;
+		
+		if(timer<0&&done==false)
 		{
 			Push();
-			GetComponent<Rigidbody2D>().angularVelocity = Random.Range(500,500);
-			Destroy(this);
+			GetComponent<Rigidbody2D>().angularVelocity = Random.Range(-500,500);
+			done=true;
+		}
+		
+		if(timer<-10)
+		{
+			GetComponent<Toughness>().killAfter=true;
+			GetComponent<Toughness>().Annihilation();
 		}
 	}
 	
 	void Push()
 	{
-		gameObject.SendMessage("GetInput", 2);
+		gameObject.SendMessage("GetInput", 1);
 	}
 	
 	

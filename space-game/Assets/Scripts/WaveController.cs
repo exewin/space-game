@@ -3,34 +3,40 @@ using UnityEngine;
 
 public class WaveController : MonoBehaviour 
 {
-	public int curWave = -1;
-	public int numOfObjs;
-	public GameObject [] wave;
+	public int curEvent = -1;
+	public int curWave = 0;
+	int numOfObjs;
+	GameObject [] wave;
 	public GameObject dangerZone;
+	public EventSystem venue;
+	
+	public int[] miniEvents;
 	
 	void Start()
 	{
 		dangerZone.SetActive(false);
 		wave=GetAllChildren.getChildren(gameObject);
-		NextWave();
+		StartCoroutine(Waiter(3));
 	}
 	
-	void KillWave()
-	{
-		dangerZone.SetActive(true);
-		StartCoroutine(Waiter());
-	}
 	
-	void NextWave()
+	void NextEvent()
 	{
-		dangerZone.GetComponent<DangerZone>().enabling=false;
-		curWave++;
-		if(curWave>=wave.Length)
-			EndGame();
-		else
+		curEvent++;
+		//wave
+		if(miniEvents[curEvent]==0)
 		{
+			dangerZone.GetComponent<DangerZone>().enabling=false;
+			curWave++;
 			wave[curWave].SetActive(true);
 			numOfObjs=GetAllChildren.getChildren(wave[curWave],false,"Enemy").Length;
+			venue.CastEvent(curEvent);
+		}
+		//text
+		else
+		{
+			venue.CastEvent(curEvent);
+			StartCoroutine(Waiter(5));
 		}
 	}
 	
@@ -39,14 +45,16 @@ public class WaveController : MonoBehaviour
 		numOfObjs--;
 		if(numOfObjs<=0)
 		{
-			KillWave();
+			dangerZone.SetActive(true);
+			Destroy(wave[curWave]);
+			StartCoroutine(Waiter(5));
 		}
 	}	
 	
-	IEnumerator Waiter ()
+	IEnumerator Waiter (int secs)
 	{
-		yield return new WaitForSeconds(5);
-		NextWave();
+		yield return new WaitForSeconds(secs);
+		NextEvent();
 	}
 	
 	void EndGame()

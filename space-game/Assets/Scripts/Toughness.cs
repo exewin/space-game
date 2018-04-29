@@ -15,6 +15,9 @@ public class Toughness : MonoBehaviour
 	[Header("Optional")]
 	public GameObject hitEffect;
 	public Transform destroyOrigin;
+	[HideInInspector]
+	public bool killAfter;
+	
 	[Header("PlayerOnly")]
 	public AudioClip hitSound; //only for player
 	public AudioClip shieldSound; //only for player
@@ -92,21 +95,27 @@ public class Toughness : MonoBehaviour
 	
 	void PickupR(int heal)
 	{
-		hp+=heal;
-		
-		if(hp>maxHp)
+		if(heal<=maxHp-hp)
+			hp+=heal;
+		else
+		{
+			SendMessage("AddXP",heal-(maxHp-hp));
 			hp=maxHp;
+		}
 		
 		AdjustUI();
 	}
 	
 	
-	void Annihilation()
+	public void Annihilation()
 	{
 		//effect
 		if(destroyOrigin==null)
 			destroyOrigin=gameObject.transform;
-		Instantiate(destroyEffect,destroyOrigin.position,Quaternion.Euler(transform.rotation.x,transform.rotation.y,Random.Range(0,360)));
+		
+		GameObject eff = Instantiate(destroyEffect,destroyOrigin.position,Quaternion.Euler(transform.rotation.x,transform.rotation.y,Random.Range(0,360)));
+		if(killAfter)
+			Destroy(eff.GetComponent<PlayAtPoint>());
 		
 		Destroy(gameObject);
 	}
