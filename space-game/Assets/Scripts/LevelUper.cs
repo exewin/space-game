@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LevelUper : MonoBehaviour 
 {
 	int exp=0;
-	int reqExp=20;
+	int reqExp=25;
 	int level=0;
 	public GameObject UI;
 	
@@ -15,6 +15,7 @@ public class LevelUper : MonoBehaviour
 	void Start()
 	{
 		LevelUp(0);
+		AdjustUI();
 	}
 	
 	void LevelUp (int level)
@@ -32,7 +33,7 @@ public class LevelUper : MonoBehaviour
 			level++;
 			LevelUp(level);
 			exp-=reqExp;
-			reqExp*=2;
+			reqExp=reqExp*2/3;
 		}
 		AdjustUI();
 	}

@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f781200a9d55f04bbe27828daed3e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 40
 --- !u!114 &114747755054099132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f28f074068ce1d4386fa8c0aa294176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6
   type: 4
   bonusTime: 15
   multiplier: 0

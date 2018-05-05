@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
 	
 	private int currentScheme=0;
 	Transform target;
+	
 	int mod(int x, int m) 
 	{
 		return (x%m + m)%m;
@@ -34,6 +35,7 @@ public class Enemy : MonoBehaviour
 			if(GameObject.FindGameObjectWithTag("Player"))
 				target=GameObject.FindGameObjectWithTag("Player").transform;
 		}
+
 	}
 
     void FixedUpdate()

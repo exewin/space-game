@@ -6,18 +6,26 @@ public class PickupSpawner : MonoBehaviour
 {
 	
 	[Range(1,100)]
-	public byte[] percentage;
 	public GameObject[] prefabs;
+	EventSystem EvSys;
+	
+	void Start()
+	{
+		EvSys = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+	}
 	
 	void OnDestroy() 
 	{
-		for(int i = 0; i < Mathf.Min(percentage.Length,prefabs.Length); i++)
+		if(EvSys.spawnExp)
 		{
-			if(Random.Range(1,100) < percentage[i])
-			{
-				Instantiate (prefabs[i],transform.position,transform.rotation);
-				break;
-			}
+			Instantiate (prefabs[0],transform.position,transform.rotation);
+			EvSys.spawnExp=false;
+		}
+		else
+		{
+			EvSys.spawnExp=true;
+			if(Random.Range(1,100)<25)
+				Instantiate (prefabs[Random.Range(1,6)],transform.position,transform.rotation);
 		}
 	}
 	

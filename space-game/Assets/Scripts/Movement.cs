@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour
 			if (coll.gameObject.tag != gameObject.tag || coll.gameObject.tag=="Meteor" && gameObject.tag=="Meteor")
 			{
 				bulletInfo = new int[4];
-				bulletInfo[0] = (int)rb.velocity.magnitude+(int)coll.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude;
+				bulletInfo[0] = ((int)rb.velocity.magnitude+(int)coll.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude)*4/5;
 				bulletInfo[1] = 0;
 				
 				foreach (ContactPoint2D missileHit in coll.contacts)

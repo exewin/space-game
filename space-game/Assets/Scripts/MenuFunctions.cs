@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class MenuFunctions : MonoBehaviour 
@@ -9,6 +9,11 @@ public class MenuFunctions : MonoBehaviour
 	{
 		Debug.Log("Exit game");
 		Application.Quit();
-	}	
+	}
+	
+	public void StartGame()
+	{
+		SceneManager.LoadScene("Game");
+	}
 
 }
