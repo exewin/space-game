@@ -8,7 +8,9 @@ public class Weapons : MonoBehaviour
 	[HideInInspector]
 	public float speedBonus=1f;
 	[HideInInspector]
-	public float damageBonus=1f;
+	public float damageBonus=1f;	
+	[HideInInspector]
+	public float fireRateBonus=1;
 	[HideInInspector]
 	public bool weaponaryBonus=false;
 	
@@ -47,11 +49,18 @@ public class Weapons : MonoBehaviour
 						}
 						spawn.SendMessage("GiveOwner",nameTag);
 						
-						
-						if(!isPlayer || playerScript.weaponaryBonus)
-							nextFire = Time.time + this.fireRate;
+						if(!isPlayer)
+						{
+							nextFire = (Time.time + this.fireRate) ;
+						}
 						else
-							playerScript.FillNextFires();
+						{
+							if(playerScript.weaponaryBonus)
+								nextFire = (Time.time + this.fireRate/playerScript.fireRateBonus) ;
+							else
+								playerScript.FillNextFires();
+						}
+						
 					}
 				}
 			}
@@ -61,6 +70,10 @@ public class Weapons : MonoBehaviour
 	public Weapon[] Wpns;
 	
 	void Start()
+	{
+		Configure();
+	}
+	public void Configure()
 	{
 		if(gameObject.tag=="Player")
 			isPlayer=true;
@@ -84,22 +97,19 @@ public class Weapons : MonoBehaviour
 	{
 		for(int i = 0;i<Wpns.Length;i++)
 		{
-			Wpns[i].nextFire = Time.time + Wpns[i].fireRate;
+			Wpns[i].nextFire = Time.time + Wpns[i].fireRate/fireRateBonus;
 		}
 	}
 	
 	void PickupSP(float multiplier)
 	{
-		speedBonus*=multiplier;
-		damageBonus*=multiplier;
+		speedBonus=multiplier;
+		damageBonus=multiplier;
 	}
 	
 	void PickupRF(float multiplier)
 	{
-		for(int i = 0;i<Wpns.Length;i++)
-		{
-			Wpns[i].fireRate/=multiplier;
-		}
+		fireRateBonus=multiplier;
 	}
 	
 	void PickupW(bool mode)

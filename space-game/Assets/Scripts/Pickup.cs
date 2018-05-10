@@ -34,9 +34,9 @@ public class Pickup : MonoBehaviour
 		if(type==0)
 			ship.SendMessage("PickupR",(int)multiplier);
 		else if(type==1)
-			ship.SendMessage("PickupSP",multiplier);
+			ship.SendMessage("PickupSP",1.5f);
 		else if(type==2)
-			ship.SendMessage("PickupRF",multiplier);
+			ship.SendMessage("PickupRF",2);
 		else if(type==3)
 			ship.SendMessage("PickupW",true);
 		else if(type==4)
@@ -51,9 +51,9 @@ public class Pickup : MonoBehaviour
 			yield return new WaitForSeconds(bonusTime);
 			
 			if(type==1)
-				ship.SendMessage("PickupSP",1/multiplier);
+				ship.SendMessage("PickupSP",1);
 			else if(type==2)
-				ship.SendMessage("PickupRF",1/multiplier);
+				ship.SendMessage("PickupRF",1);
 			else if(type==3)
 				ship.SendMessage("PickupW",false);
 			else if(type==4)

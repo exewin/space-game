@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LevelUper : MonoBehaviour 
 {
 	int exp=0;
-	int reqExp=25;
+	int reqExp=30;
 	int level=0;
 	public GameObject UI;
 	
@@ -23,17 +23,22 @@ public class LevelUper : MonoBehaviour
 		Destroy(GetComponent<Weapons>());
 		Weapons wpns = gameObject.AddComponent<Weapons>() as Weapons;
 		wpns.Wpns = WeaponsPresets[level].Wpns;
+		wpns.Configure();
 	}
 	
 	void AddXP(int xp)
 	{
 		exp+=xp;
-		if(exp>=reqExp)
+		if(exp>=reqExp&&level<5)
 		{
 			level++;
 			LevelUp(level);
 			exp-=reqExp;
-			reqExp=reqExp*2/3;
+			reqExp=reqExp+30;
+			if(level==5)
+			{
+				reqExp=0;
+			}
 		}
 		AdjustUI();
 	}
@@ -41,5 +46,7 @@ public class LevelUper : MonoBehaviour
 	void AdjustUI()
 	{
 		UI.GetComponent<Text>().text=""+(reqExp-exp);
+		if(level==5)
+			UI.GetComponent<Text>().text="-----";
 	}
 }

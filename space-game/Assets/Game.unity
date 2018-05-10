@@ -14340,6 +14340,7 @@ MonoBehaviour:
   isPlayer: 1
   speedBonus: 1
   damageBonus: 1
+  fireRateBonus: 1
   weaponaryBonus: 0
   autoFire: 0
   Wpns:
@@ -14702,6 +14703,7 @@ MonoBehaviour:
   isPlayer: 1
   speedBonus: 1
   damageBonus: 1
+  fireRateBonus: 1
   weaponaryBonus: 0
   autoFire: 0
   Wpns:
@@ -14872,6 +14874,7 @@ MonoBehaviour:
   isPlayer: 1
   speedBonus: 1
   damageBonus: 1
+  fireRateBonus: 1
   weaponaryBonus: 0
   autoFire: 0
   Wpns:
@@ -15310,6 +15313,7 @@ MonoBehaviour:
   isPlayer: 1
   speedBonus: 1
   damageBonus: 1
+  fireRateBonus: 1
   weaponaryBonus: 0
   autoFire: 0
   Wpns:
@@ -18246,6 +18250,7 @@ MonoBehaviour:
   isPlayer: 1
   speedBonus: 1
   damageBonus: 1
+  fireRateBonus: 1
   weaponaryBonus: 0
   autoFire: 0
   Wpns:
@@ -22019,6 +22024,7 @@ MonoBehaviour:
   isPlayer: 1
   speedBonus: 1
   damageBonus: 1
+  fireRateBonus: 1
   weaponaryBonus: 0
   autoFire: 0
   Wpns:
@@ -22333,6 +22339,7 @@ MonoBehaviour:
   isPlayer: 1
   speedBonus: 1
   damageBonus: 1
+  fireRateBonus: 1
   weaponaryBonus: 0
   autoFire: 0
   Wpns:
@@ -23076,7 +23083,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25
+  m_Text: '-----'
 --- !u!222 &1373438196
 CanvasRenderer:
   m_ObjectHideFlags: 0

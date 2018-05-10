@@ -21,8 +21,7 @@ GameObject:
   - component: {fileID: 4426727023963886}
   - component: {fileID: 212033761359652122}
   - component: {fileID: 114299576717506250}
-  - component: {fileID: 58447198098520262}
-  - component: {fileID: 114984925749707618}
+  - component: {fileID: 61375469340128030}
   m_Layer: 0
   m_Name: Weaponary
   m_TagString: Pickup
@@ -43,8 +42,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!58 &58447198098520262
-CircleCollider2D:
+--- !u!61 &61375469340128030
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -56,8 +55,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1.28
+  m_Size: {x: 2.4, y: 2.4}
+  m_EdgeRadius: 0
 --- !u!114 &114299576717506250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,18 +83,6 @@ MonoBehaviour:
   bonusTime: 15
   multiplier: 0
   sound: {fileID: 8300000, guid: 8e8fc8ca9d7cf1245af77a62c8a26acb, type: 3}
---- !u!114 &114984925749707618
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1617110476650696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f781200a9d55f04bbe27828daed3e16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 40
 --- !u!212 &212033761359652122
 SpriteRenderer:
   m_ObjectHideFlags: 1
