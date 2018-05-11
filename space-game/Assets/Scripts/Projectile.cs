@@ -19,7 +19,8 @@ public class Projectile : MonoBehaviour
 	
 	void Start()
 	{
-		AudioSource.PlayClipAtPoint(sound, new Vector3(5,0,0));
+		if(sound)
+			AudioSource.PlayClipAtPoint(sound, new Vector3(5,0,0));
 		bulletInfo = new int[4];
 		bulletInfo[0] = (int)damage;
 	}

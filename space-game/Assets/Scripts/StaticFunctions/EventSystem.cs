@@ -17,8 +17,13 @@ public class EventSystem : MonoBehaviour
 	public GameObject dangerZone;
 	
 	public GameObject UIText;
+	public GameObject ShieldUI;
 	
 	public bool spawnExp;
+	
+	public MouseActions msa;
+	public KeyboardActions kba;
+	public Toughness tn;
 	
 	void Start()
 	{
@@ -41,6 +46,27 @@ public class EventSystem : MonoBehaviour
 		//active dangerZone
 		if(id==1)
 			dangerZone.SetActive(true);
+		if(id==2)
+			msa.allowRocketLauncher=true;
+		if(id==3)
+		{
+			kba.allowShield=true;
+			ShieldUI.SetActive(true);
+		}
+		if(id==4)
+		{
+			tn.maxHp+=25;
+			tn.hp=tn.maxHp;
+		}
+		if(id==5)
+		{
+			EndGame();
+			
+		}
 	}
-
+	
+	public void EndGame()
+	{
+		Debug.Log("End Game.");
+	}
 }

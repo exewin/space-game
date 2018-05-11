@@ -5,6 +5,7 @@ using UnityEngine;
 public class KeyboardActions : MonoBehaviour 
 {
 
+	public bool allowShield;
 	public string[] inputs;
 	void Start ()
 	{
@@ -26,11 +27,13 @@ public class KeyboardActions : MonoBehaviour
 	{
 		if(Input.GetKey(KeyCode.Space))
 		{
-			gameObject.SendMessage("ShieldMe",1);
+			if(allowShield)
+				gameObject.SendMessage("ShieldMe",1);
 		}
 		else if(Input.GetKeyUp(KeyCode.Space))
 		{
-			gameObject.SendMessage("ShieldMe",2);
+			if(allowShield)
+				gameObject.SendMessage("ShieldMe",2);
 		}
 	}
 }

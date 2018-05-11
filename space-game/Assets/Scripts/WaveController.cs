@@ -30,12 +30,12 @@ public class WaveController : MonoBehaviour
 			curWave++;
 			wave[curWave].SetActive(true);
 			numOfObjs=GetAllChildren.getChildren(wave[curWave],false,"Enemy").Length;
-			venue.CastEvent(curEvent);
+			venue.CastEvent(miniEvents[curEvent]);
 		}
 		//text
 		else
 		{
-			venue.CastEvent(curEvent);
+			venue.CastEvent(miniEvents[curEvent]);
 			StartCoroutine(Waiter(5));
 		}
 	}

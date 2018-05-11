@@ -9,6 +9,7 @@ public class LevelUper : MonoBehaviour
 	int reqExp=30;
 	int level=0;
 	public GameObject UI;
+	public GameObject UI2;
 	
 	public Weapons[] WeaponsPresets;
 	
@@ -34,7 +35,7 @@ public class LevelUper : MonoBehaviour
 			level++;
 			LevelUp(level);
 			exp-=reqExp;
-			reqExp=reqExp+30;
+			reqExp=reqExp+20;
 			if(level==5)
 			{
 				reqExp=0;
@@ -45,8 +46,10 @@ public class LevelUper : MonoBehaviour
 	
 	void AdjustUI()
 	{
-		UI.GetComponent<Text>().text=""+(reqExp-exp);
+		UI.GetComponent<Text>().text=""+reqExp;
 		if(level==5)
-			UI.GetComponent<Text>().text="-----";
+			UI.GetComponent<Text>().text="99999";
+		
+		UI2.GetComponent<Text>().text=""+exp;
 	}
 }

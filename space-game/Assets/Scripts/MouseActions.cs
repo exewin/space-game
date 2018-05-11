@@ -5,6 +5,7 @@ using UnityEngine;
 public class MouseActions : MonoBehaviour
 {
 	public bool allowLaser;
+	public bool allowRocketLauncher;
 	public Transform rocketLauncher;
 	float prop;
 	
@@ -37,27 +38,30 @@ public class MouseActions : MonoBehaviour
 			
 			if(Input.GetMouseButton(2))
 			{
-				gameObject.SendMessage("Shoot",2);
+				if(allowRocketLauncher)
+					gameObject.SendMessage("Shoot",2);
 			}
 		}
 		
-
-		Vector2 positionOnScreen = Camera.main.WorldToViewportPoint (rocketLauncher.position);
-		Vector2 mouseOnScreen = (Vector2)Camera.main.ScreenToViewportPoint(Input.mousePosition);
-		mouseOnScreen.x *= prop;
-		positionOnScreen.x *= prop;
-		float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
-		if(Mathf.Abs(rocketLauncher.rotation.z)<0.7)
+		if(allowRocketLauncher)
 		{
-			rocketLauncher.rotation = Quaternion.Lerp(rocketLauncher.rotation, Quaternion.Euler (new Vector3(0f,0f,angle+90)), 0.05f);
-		}
-		else if(rocketLauncher.rotation.z>0.7)
-		{
-			rocketLauncher.rotation = Quaternion.Euler (new Vector3(0f,0f,88.8f));
-		}
-		else if(rocketLauncher.rotation.z<-0.7)
-		{
-			rocketLauncher.rotation = Quaternion.Euler (new Vector3(0f,0f,-88.8f));
+			Vector2 positionOnScreen = Camera.main.WorldToViewportPoint (rocketLauncher.position);
+			Vector2 mouseOnScreen = (Vector2)Camera.main.ScreenToViewportPoint(Input.mousePosition);
+			mouseOnScreen.x *= prop;
+			positionOnScreen.x *= prop;
+			float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
+			if(Mathf.Abs(rocketLauncher.rotation.z)<0.7)
+			{
+				rocketLauncher.rotation = Quaternion.Lerp(rocketLauncher.rotation, Quaternion.Euler (new Vector3(0f,0f,angle+90)), 0.05f);
+			}
+			else if(rocketLauncher.rotation.z>0.7)
+			{
+				rocketLauncher.rotation = Quaternion.Euler (new Vector3(0f,0f,88.8f));
+			}
+			else if(rocketLauncher.rotation.z<-0.7)
+			{
+				rocketLauncher.rotation = Quaternion.Euler (new Vector3(0f,0f,-88.8f));
+			}
 		}
 	}
 	
