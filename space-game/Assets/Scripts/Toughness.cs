@@ -120,7 +120,7 @@ public class Toughness : MonoBehaviour
 		Destroy(gameObject);
 	}
 	
-	void AdjustUI()
+	public void AdjustUI()
 	{
 		UI.GetComponent<Text>().text=""+hp;
 	}

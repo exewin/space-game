@@ -57,6 +57,7 @@ public class EventSystem : MonoBehaviour
 		{
 			tn.maxHp+=25;
 			tn.hp=tn.maxHp;
+			tn.AdjustUI();
 		}
 		if(id==5)
 		{

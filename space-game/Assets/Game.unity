@@ -18467,7 +18467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowLaser: 0
-  allowRocketLauncher: 1
+  allowRocketLauncher: 0
   rocketLauncher: {fileID: 1736450940}
   speed: 1
 --- !u!114 &1176034337
