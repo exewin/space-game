@@ -5,7 +5,6 @@ using UnityEngine;
 public class PickupSpawner : MonoBehaviour 
 {
 	
-	[Range(1,100)]
 	public GameObject[] prefabs;
 	EventSystem EvSys;
 	
@@ -14,7 +13,7 @@ public class PickupSpawner : MonoBehaviour
 		EvSys = GameObject.Find("EventSystem").GetComponent<EventSystem>();
 	}
 	
-	void OnDestroy() 
+	void SpawnPickup() 
 	{
 		if(EvSys.spawnExp)
 		{

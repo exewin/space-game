@@ -146,7 +146,7 @@ VideoPlayer:
   m_RenderMode: 0
   m_AspectRatio: 2
   m_DataSource: 0
-  m_PlaybackSpeed: 0.9
+  m_PlaybackSpeed: 2
   m_AudioOutputMode: 0
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc6edf209135474a8aaa1ca4cf0dec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 2.2
+  delay: 2
 --- !u!1 &2008588657
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class EventSystem : MonoBehaviour
 	public GameObject dangerZone;
 	
 	public GameObject UIText;
+	public GameObject UIPortrait;
 	public GameObject ShieldUI;
 	
 	public bool spawnExp;
@@ -25,6 +26,10 @@ public class EventSystem : MonoBehaviour
 	public KeyboardActions kba;
 	public Toughness tn;
 	
+	public GameObject MusicSwitcher;
+	public GameObject Canvas;
+	public GameObject VictoryScreen;
+	
 	void Start()
 	{
 		audioSource = GetComponent<AudioSource>();
@@ -32,13 +37,18 @@ public class EventSystem : MonoBehaviour
 	
 	public void CastEvent(int id)
 	{
+		UIPortrait.SetActive(true);
 		UIText.GetComponent<Text>().text=msgs[id];
 		if(specialEvents[id]!=0)
 		{
 			CustomEvent(specialEvents[id]); //bring the silence
 		}
 		if(msgs[id]!="")
+		{
 			audioSource.PlayOneShot(msgSound);	
+		}
+		else
+			UIPortrait.SetActive(false);
 	}
 	
 	public void CustomEvent(int id)
@@ -64,10 +74,17 @@ public class EventSystem : MonoBehaviour
 			EndGame();
 			
 		}
+		if(id==6)//switch music
+		{
+			MusicSwitcher.GetComponent<MusicScript>().curMusic++;
+			MusicSwitcher.GetComponent<AudioSource>().clip = MusicSwitcher.GetComponent<MusicScript>().music[MusicSwitcher.GetComponent<MusicScript>().curMusic];
+			MusicSwitcher.GetComponent<AudioSource>().Play();
+		}
 	}
 	
 	public void EndGame()
 	{
-		Debug.Log("End Game.");
+		Canvas.GetComponent<Pause>().endGame=true;
+		VictoryScreen.SetActive(true);
 	}
 }

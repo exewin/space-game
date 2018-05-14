@@ -14,6 +14,11 @@ public class Pickup : MonoBehaviour
 	
 	public AudioClip sound;
 	
+	void OnDisable()
+	{
+		Destroy(gameObject);
+	}
+	
 	void Update()
     {
 		transform.Translate(0,speed*Time.deltaTime,0);

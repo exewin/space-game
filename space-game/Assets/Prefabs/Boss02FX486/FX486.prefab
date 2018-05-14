@@ -1234,6 +1234,7 @@ MonoBehaviour:
   isPlayer: 0
   speedBonus: 1
   damageBonus: 1
+  fireRateBonus: 1
   weaponaryBonus: 0
   autoFire: 0
   Wpns:
@@ -1350,10 +1351,12 @@ MonoBehaviour:
   maxHp: 300
   hp: 0
   isPlayer: 0
+  part: 1
   destroyEffect: {fileID: 1779608162010944, guid: 34d0817d04381f646ad4436caba5a2f3,
     type: 2}
   hitEffect: {fileID: 1340627897301150, guid: 9631871e4a858604eacef6d3eb6fa2c0, type: 2}
   destroyOrigin: {fileID: 0}
+  killAfter: 0
   hitSound: {fileID: 0}
   shieldSound: {fileID: 0}
   UI: {fileID: 0}
@@ -1371,10 +1374,12 @@ MonoBehaviour:
   maxHp: 400
   hp: 0
   isPlayer: 0
+  part: 1
   destroyEffect: {fileID: 1354133155007792, guid: 6471a18bbb9065b479e0c8263c88b68f,
     type: 2}
   hitEffect: {fileID: 1987764455833446, guid: bd5386df0312ea24ab6aafb47a83e8e0, type: 2}
   destroyOrigin: {fileID: 0}
+  killAfter: 0
   hitSound: {fileID: 0}
   shieldSound: {fileID: 0}
   UI: {fileID: 0}
@@ -1443,10 +1448,12 @@ MonoBehaviour:
   maxHp: 600
   hp: 0
   isPlayer: 0
+  part: 0
   destroyEffect: {fileID: 1201937724140810, guid: d93ea6aedfc640543abecac53609429f,
     type: 2}
   hitEffect: {fileID: 1340627897301150, guid: 9631871e4a858604eacef6d3eb6fa2c0, type: 2}
   destroyOrigin: {fileID: 0}
+  killAfter: 0
   hitSound: {fileID: 0}
   shieldSound: {fileID: 0}
   UI: {fileID: 0}
@@ -1477,6 +1484,7 @@ MonoBehaviour:
   isPlayer: 0
   speedBonus: 1
   damageBonus: 1
+  fireRateBonus: 1
   weaponaryBonus: 0
   autoFire: 1
   Wpns:
@@ -1532,10 +1540,12 @@ MonoBehaviour:
   maxHp: 300
   hp: 0
   isPlayer: 0
+  part: 1
   destroyEffect: {fileID: 1779608162010944, guid: 34d0817d04381f646ad4436caba5a2f3,
     type: 2}
   hitEffect: {fileID: 1340627897301150, guid: 9631871e4a858604eacef6d3eb6fa2c0, type: 2}
   destroyOrigin: {fileID: 0}
+  killAfter: 0
   hitSound: {fileID: 0}
   shieldSound: {fileID: 0}
   UI: {fileID: 0}
@@ -1550,7 +1560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb42e8035c894c2459266fcb13dc1d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  percentage: 190505050501
   prefabs:
   - {fileID: 1965146696457360, guid: 59a180a295092e44e93e48cde0b2e09d, type: 2}
   - {fileID: 1660509175289882, guid: e31fbff3f4af9004bb9c5933b8314938, type: 2}

@@ -5,7 +5,7 @@ public class WaveController : MonoBehaviour
 {
 	public int curEvent = -1;
 	public int curWave = 0;
-	int numOfObjs;
+	public int numOfObjs;
 	GameObject [] wave;
 	public GameObject dangerZone;
 	public EventSystem venue;
@@ -22,30 +22,41 @@ public class WaveController : MonoBehaviour
 	
 	void NextEvent()
 	{
-		curEvent++;
-		//wave
-		if(miniEvents[curEvent]==0)
+		if(miniEvents.Length==curEvent)
 		{
-			dangerZone.GetComponent<DangerZone>().enabling=false;
-			curWave++;
-			wave[curWave].SetActive(true);
-			numOfObjs=GetAllChildren.getChildren(wave[curWave],false,"Enemy").Length;
-			venue.CastEvent(miniEvents[curEvent]);
+			Debug.Log("endGame");
 		}
-		//text
 		else
 		{
-			venue.CastEvent(miniEvents[curEvent]);
-			StartCoroutine(Waiter(5));
+			curEvent++;
+			//wave
+			if(miniEvents[curEvent]==0)
+			{
+				dangerZone.GetComponent<DangerZone>().enabling=false;
+				curWave++;
+				wave[curWave].SetActive(true);
+				numOfObjs=GetAllChildren.getChildren(wave[curWave],false,"Enemy").Length;
+				venue.CastEvent(miniEvents[curEvent]);
+			}
+			//text
+			else
+			{
+				venue.CastEvent(miniEvents[curEvent]);
+				StartCoroutine(Waiter(5));
+			}
 		}
 	}
 	
 	public void Reduce()
 	{
-		numOfObjs--;
+		numOfObjs=GetAllChildren.getChildren(wave[curWave],false,"Enemy").Length-1;
 		if(numOfObjs<=0)
 		{
-			dangerZone.SetActive(true);
+			DestroyMeteors();
+			if(curWave!=19)
+			{
+				dangerZone.SetActive(true);
+			}
 			Destroy(wave[curWave]);
 			StartCoroutine(Waiter(5));
 		}
@@ -60,5 +71,14 @@ public class WaveController : MonoBehaviour
 	void EndGame()
 	{
 		Debug.Log("victory");
+	}
+	
+	void DestroyMeteors()
+	{
+		GameObject[] meteors = GameObject.FindGameObjectsWithTag("Meteor");
+		foreach (GameObject meteor in meteors)
+        {
+			meteor.GetComponent<Toughness>().Annihilation();
+		}
 	}
 }

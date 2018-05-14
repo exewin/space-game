@@ -5,7 +5,6 @@ public class Enemy : MonoBehaviour
 
 	public int movementPattern;
 	
-	WaveController waveController;
 	public int wpnsCount;
 	public float mobility;
 	public float hostileness;
@@ -26,7 +25,6 @@ public class Enemy : MonoBehaviour
 	void Start()
 	{
 		
-		waveController = GameObject.Find("WaveController").GetComponent<WaveController>();
 		wpnsCount = gameObject.GetComponent<Weapons>().Wpns.Length;
 		mobilityR=0;
 		hostilenessR=Random.Range(-0.5f,0);
@@ -128,11 +126,6 @@ public class Enemy : MonoBehaviour
 		hostilenessR+=Time.deltaTime;
 		if(patternChanger)
 			changerTime+=Time.deltaTime;
-	}
-	
-	public void OnDestroy() 
-	{
-		waveController.Reduce();
 	}
 	
 }

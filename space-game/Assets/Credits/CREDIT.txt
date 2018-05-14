@@ -3,4 +3,7 @@ Delapouite | game-icons.net
 
 Bonsaiheldin | https://opengameart.org/content/shield-effect
 
-Open Font License
+https://opensource.org/licenses/OFL-1.1
+
+Frozen Jam by tgfcoder <https://twitter.com/tgfcoder> licensed under CC-BY-3 <http://creativecommons.org/licenses/by/3.0/>
+DST | http://www.nosoapradio.us

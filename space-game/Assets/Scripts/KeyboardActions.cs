@@ -35,5 +35,6 @@ public class KeyboardActions : MonoBehaviour
 			if(allowShield)
 				gameObject.SendMessage("ShieldMe",2);
 		}
+	
 	}
 }

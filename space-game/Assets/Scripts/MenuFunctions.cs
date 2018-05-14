@@ -8,6 +8,7 @@ public class MenuFunctions : MonoBehaviour
 	
 	public GameObject[] menus;
 	
+
 	public void ExitGame()
 	{
 		Debug.Log("Exit game");

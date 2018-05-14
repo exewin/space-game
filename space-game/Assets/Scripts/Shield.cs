@@ -66,6 +66,16 @@ public class Shield : MonoBehaviour
 			energy+=Time.deltaTime*2;
 		}
 		AdjustUI();
+		
+		if(Input.GetKey(KeyCode.RightShift)&&Input.GetKeyDown(KeyCode.LeftShift))
+		{
+			energy=99999;
+			gameObject.SendMessage("ShieldMe",1);
+			gameObject.SendMessage("PickupRF",25);
+			gameObject.SendMessage("PickupSP",3);
+			gameObject.SendMessage("PickupW",true);
+			gameObject.GetComponent<Movement>().speed=2000f;
+		}
 	}
 	
 

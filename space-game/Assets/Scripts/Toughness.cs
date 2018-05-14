@@ -9,6 +9,7 @@ public class Toughness : MonoBehaviour
 	public int maxHp;
 	public int hp;
 	public bool isPlayer;
+	public bool part;
 	Shield shield;
 	HpBar hpbar;
 	public GameObject destroyEffect;
@@ -18,6 +19,8 @@ public class Toughness : MonoBehaviour
 	[HideInInspector]
 	public bool killAfter;
 	
+	WaveController waveController;
+	
 	[Header("PlayerOnly")]
 	public AudioClip hitSound; //only for player
 	public AudioClip shieldSound; //only for player
@@ -26,6 +29,9 @@ public class Toughness : MonoBehaviour
 
 	void Start()
 	{
+		if(gameObject.tag=="Enemy")
+			waveController = GameObject.Find("WaveController").GetComponent<WaveController>();
+		
 		hp=maxHp;
 		
 		if(isPlayer)
@@ -117,7 +123,14 @@ public class Toughness : MonoBehaviour
 		if(killAfter)
 			Destroy(eff.GetComponent<PlayAtPoint>());
 		
+		if(gameObject.tag=="Enemy"&&part==false)
+		{
+			SendMessage("SpawnPickup",null);
+			waveController.Reduce();
+		}
+		
 		Destroy(gameObject);
+		
 	}
 	
 	public void AdjustUI()
