@@ -67,6 +67,8 @@ public class Shield : MonoBehaviour
 		}
 		AdjustUI();
 		
+		
+		//pst, you want some cheats?
 		if(Input.GetKey(KeyCode.RightShift)&&Input.GetKeyDown(KeyCode.LeftShift))
 		{
 			energy=99999;

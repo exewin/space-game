@@ -29,16 +29,24 @@ public class LevelUper : MonoBehaviour
 	
 	void AddXP(int xp)
 	{
-		exp+=xp;
-		if(exp>=reqExp&&level<5)
+		if(level==5)
 		{
-			level++;
-			LevelUp(level);
-			exp-=reqExp;
-			reqExp=reqExp+20;
-			if(level==5)
+			exp=0;
+			SendMessage("SuperHeal",xp);
+		}
+		else
+		{
+			exp+=xp;
+			if(exp>=reqExp&&level<5)
 			{
-				reqExp=0;
+				level++;
+				LevelUp(level);
+				exp-=reqExp;
+				reqExp=reqExp+20;
+				if(level==5)
+				{
+					reqExp=0;
+				}
 			}
 		}
 		AdjustUI();

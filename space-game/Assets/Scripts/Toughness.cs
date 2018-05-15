@@ -112,6 +112,12 @@ public class Toughness : MonoBehaviour
 		AdjustUI();
 	}
 	
+	void SuperHeal(int xp)
+	{
+		maxHp+=xp;
+		hp+=xp;
+	}
+	
 	
 	public void Annihilation()
 	{

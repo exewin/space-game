@@ -7,6 +7,7 @@ public class MenuFunctions : MonoBehaviour
 {
 	
 	public GameObject[] menus;
+	public GameObject UILoading;
 	
 
 	public void ExitGame()
@@ -17,6 +18,7 @@ public class MenuFunctions : MonoBehaviour
 	
 	public void StartGame()
 	{
+		UILoading.SetActive(true);
 		SceneManager.LoadScene("Game");
 	}
 	

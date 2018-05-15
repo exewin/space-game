@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class WindowedModeCheck : MonoBehaviour 
 {
 
-	void Start () 
+	void Awake() 
 	{
 		if(Screen.fullScreen)
 			GetComponent<Text>().text="X";

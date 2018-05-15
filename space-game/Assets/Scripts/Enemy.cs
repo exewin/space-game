@@ -93,10 +93,15 @@ public class Enemy : MonoBehaviour
 		// SPY
 		else if(movementPattern==2)
 		{
-			if(transform.position.x>target.position.x)
-				gameObject.SendMessage("GetInput", 4);
+			if(target)
+			{
+				if(transform.position.x>target.position.x)
+					gameObject.SendMessage("GetInput", 4);
+				else
+					gameObject.SendMessage("GetInput", 3);
+			}
 			else
-				gameObject.SendMessage("GetInput", 3);
+				movementPattern=1;
 		}
 		
 		
