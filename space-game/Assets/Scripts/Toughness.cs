@@ -25,6 +25,7 @@ public class Toughness : MonoBehaviour
 	public AudioClip hitSound; //only for player
 	public AudioClip shieldSound; //only for player
 	public GameObject UI; //only for player
+	public GameObject UIGameOver; //only for player
 	
 
 	void Start()
@@ -133,6 +134,12 @@ public class Toughness : MonoBehaviour
 		{
 			SendMessage("SpawnPickup",null);
 			waveController.Reduce();
+		}
+		
+		if(isPlayer)
+		{
+			Time.timeScale=0f;
+			UIGameOver.SetActive(true);
 		}
 		
 		Destroy(gameObject);

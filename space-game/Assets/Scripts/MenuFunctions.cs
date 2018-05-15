@@ -8,7 +8,18 @@ public class MenuFunctions : MonoBehaviour
 	
 	public GameObject[] menus;
 	public GameObject UILoading;
+	public AudioClip sound;
+	AudioSource audioSource;
 	
+	void Start()
+	{
+		audioSource = GetComponent<AudioSource>();
+	}
+	
+	public void Click()
+	{
+		audioSource.PlayOneShot(sound);	
+	}
 
 	public void ExitGame()
 	{

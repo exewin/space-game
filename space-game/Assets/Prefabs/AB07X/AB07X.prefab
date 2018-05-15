@@ -616,13 +616,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a63cd4ce190c834b83474f9708690a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 55
+  maxHp: 45
   hp: 0
   isPlayer: 0
+  part: 0
   destroyEffect: {fileID: 1737573863684448, guid: 23ab368d3cf0b8845b967a74e24091e7,
     type: 2}
   hitEffect: {fileID: 1102128536135602, guid: 3c8f9b4e4b951fc4aa0b01a4f384b9af, type: 2}
   destroyOrigin: {fileID: 0}
+  killAfter: 0
   hitSound: {fileID: 0}
   shieldSound: {fileID: 0}
   UI: {fileID: 0}
@@ -678,7 +680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb42e8035c894c2459266fcb13dc1d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  percentage: 190505050501
   prefabs:
   - {fileID: 1965146696457360, guid: 59a180a295092e44e93e48cde0b2e09d, type: 2}
   - {fileID: 1660509175289882, guid: e31fbff3f4af9004bb9c5933b8314938, type: 2}
@@ -700,7 +701,9 @@ MonoBehaviour:
   isPlayer: 0
   speedBonus: 1
   damageBonus: 1
+  fireRateBonus: 1
   weaponaryBonus: 0
+  autoFire: 0
   Wpns:
   - isPlayer: 0
     nameTag: 

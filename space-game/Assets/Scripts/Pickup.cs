@@ -36,35 +36,38 @@ public class Pickup : MonoBehaviour
 	{
 		AudioSource.PlayClipAtPoint(sound, new Vector3(0,0,0));
 		GameObject ship = player.gameObject;
-		if(type==0)
-			ship.SendMessage("PickupR",(int)multiplier);
-		else if(type==1)
-			ship.SendMessage("PickupSP",1.5f);
-		else if(type==2)
-			ship.SendMessage("PickupRF",2);
-		else if(type==3)
-			ship.SendMessage("PickupW",true);
-		else if(type==4)
-			ship.SendMessage("PickupL",true);
-		else if(type==5)
-			ship.SendMessage("PickupEB",multiplier);
-		
-		if(bonusTime!=0)
+		if(ship)
 		{
-			GetComponent<SpriteRenderer>().enabled = false;
-			GetComponent<Collider2D>().enabled = false;
-			yield return new WaitForSeconds(bonusTime);
-			
-			if(type==1)
-				ship.SendMessage("PickupSP",1);
+			if(type==0)
+				ship.SendMessage("PickupR",(int)multiplier);
+			else if(type==1)
+				ship.SendMessage("PickupSP",1.5f);
 			else if(type==2)
-				ship.SendMessage("PickupRF",1);
+				ship.SendMessage("PickupRF",2);
 			else if(type==3)
-				ship.SendMessage("PickupW",false);
+				ship.SendMessage("PickupW",true);
 			else if(type==4)
-				ship.SendMessage("PickupL",false);
+				ship.SendMessage("PickupL",true);
 			else if(type==5)
-				ship.SendMessage("PickupEB",1/multiplier);
+				ship.SendMessage("PickupEB",multiplier);
+			
+			if(bonusTime!=0)
+			{
+				GetComponent<SpriteRenderer>().enabled = false;
+				GetComponent<Collider2D>().enabled = false;
+				yield return new WaitForSeconds(bonusTime);
+				
+				if(type==1)
+					ship.SendMessage("PickupSP",1);
+				else if(type==2)
+					ship.SendMessage("PickupRF",1);
+				else if(type==3)
+					ship.SendMessage("PickupW",false);
+				else if(type==4)
+					ship.SendMessage("PickupL",false);
+				else if(type==5)
+					ship.SendMessage("PickupEB",1/multiplier);
+			}
 		}
 		
 		Destroy(gameObject);

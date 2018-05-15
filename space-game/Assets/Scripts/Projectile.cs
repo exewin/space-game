@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
 		{
 			//add dmg rocket vs meteor
 			if (gameObject.tag=="Rocket"&&coll.gameObject.tag=="Meteor")
-				bulletInfo[0] *= 3;
+				bulletInfo[0] *= 6;
 			
 			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up);
 			if(hit.collider != null)

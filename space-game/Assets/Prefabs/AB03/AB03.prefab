@@ -361,6 +361,7 @@ MonoBehaviour:
   isPlayer: 0
   speedBonus: 1
   damageBonus: 1
+  fireRateBonus: 1
   weaponaryBonus: 0
   autoFire: 0
   Wpns:
@@ -400,9 +401,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a63cd4ce190c834b83474f9708690a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 25
+  maxHp: 20
   hp: 0
   isPlayer: 0
+  part: 0
   destroyEffect: {fileID: 1762303578077224, guid: 43fe11fccbc3ad5458e5328de33251fc,
     type: 2}
   hitEffect: {fileID: 1705349776823396, guid: d0913175c0770df4f9a58b9f27f31d7e, type: 2}

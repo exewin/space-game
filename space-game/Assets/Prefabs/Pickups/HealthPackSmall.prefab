@@ -81,7 +81,7 @@ MonoBehaviour:
   speed: 6
   type: 0
   bonusTime: 0
-  multiplier: 8
+  multiplier: 10
   sound: {fileID: 8300000, guid: 7402c29a231500341bf0dc39829cd36d, type: 3}
 --- !u!212 &212401286245700900
 SpriteRenderer:
