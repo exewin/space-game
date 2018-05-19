@@ -53,6 +53,9 @@ https://github.com/exewin/space-game
 * DST | http://www.nosoapradio.us (Music)
 
 
+Project is licensed under CC-BY-3 http://creativecommons.org/licenses/by/3.0/
+
+
 ## Useful links
 
 * http://game-icons.net/
