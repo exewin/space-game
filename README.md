@@ -49,8 +49,13 @@ Use default unity configuration window to select resolution (you can also change
 
 ## License
 
-  Okay, important things here.
-You can use my assets for everything you want. I require only small attribution like link to my github account: https://github.com/exewin
+Project is licensed under GNU General Public License v3.0 http://creativecommons.org/licenses/by/3.0/
+
+If you want to use my assets, please read the license first.
+
+How to credit me:
+Put somewhere in your project link to my profile:
+https://github.com/exewin
 or this project:
 https://github.com/exewin/space-game
 
@@ -64,9 +69,6 @@ https://github.com/exewin/space-game
 * https://opensource.org/licenses/OFL-1.1 (Open Font License)
 * Frozen Jam by tgfcoder <https://twitter.com/tgfcoder> licensed under CC-BY-3 <http://creativecommons.org/licenses/by/3.0/> (Music)
 * DST | http://www.nosoapradio.us (Music)
-
-
-Project is licensed under CC-BY-3 http://creativecommons.org/licenses/by/3.0/
 
 
 ## Useful links
