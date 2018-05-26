@@ -2,6 +2,19 @@
 
 Old-school space shooter. Tribute to Alien Outbreak.
 
+
+## Important announcement
+
+Although the game is finished, I'm currently working on some improvements to make game longer and more challenging.
+What can you expect?
+* More enemy ships and waves - which also means more weapons
+* Slightly upgraded GUI
+* Completely reworked gaining exp and level-uping
+* Slight changes on pickups
+* Difficulty levels
+* I'm considering some kind of leaderboard (but I can't promise it)
+* And much more...
+
 ## Description
 
   I focused mainly on programming and graphics therefore story in game is simplified. You play as a Admiral of the spaceship and your mission is to destroy all enemy ships. You gain experience and new technologies through the gameplay. While you have to destroy hostiles, you must also watch out for their fire and deadly meteors. Yep, sounds very dull, but maybe some pictures can convince you to try it out (there is also gameplay in youtube, link is in the 'useful links' category):
