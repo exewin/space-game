@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4045391114404244}
   - component: {fileID: 198278010927622812}
   - component: {fileID: 199676831266869112}
-  - component: {fileID: 114169968955157762}
   m_Layer: 0
   m_Name: trash02
   m_TagString: Untagged
@@ -39,7 +38,6 @@ GameObject:
   - component: {fileID: 4889252911549788}
   - component: {fileID: 198351079211317510}
   - component: {fileID: 199715962316379058}
-  - component: {fileID: 114538092231928424}
   m_Layer: 0
   m_Name: trash01
   m_TagString: Untagged
@@ -155,18 +153,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114169968955157762
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1195411326299700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f781200a9d55f04bbe27828daed3e16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 5
 --- !u!114 &114269148220842478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -185,18 +171,6 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1737573863684448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f781200a9d55f04bbe27828daed3e16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 5
---- !u!114 &114538092231928424
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1372026255770224}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f781200a9d55f04bbe27828daed3e16, type: 3}

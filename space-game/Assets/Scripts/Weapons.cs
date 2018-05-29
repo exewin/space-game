@@ -26,7 +26,7 @@ public class Weapons : MonoBehaviour
 		[HideInInspector]
 		public float nextFire = 0.0f;
 		[HideInInspector]
-		public Weapons playerScript;
+		public Weapons Wscript;
 		
 		
 		public GameObject projectile;
@@ -37,15 +37,20 @@ public class Weapons : MonoBehaviour
 		{
 			if(Time.time > nextFire)
 			{
+				
+				if(!isPlayer)
+					Wscript.SendMessage("ShootConfirmed",1);
+				
 				for(int i=0;i<spawnPoint.Length;i++)
 				{
 					if(this.spawnPoint[i]!=null)
 					{
+						
 						GameObject spawn = Instantiate(this.projectile,this.spawnPoint[i].position,this.spawnPoint[i].rotation);
 						if(isPlayer)
 						{
-							spawn.GetComponent<Projectile>().speed*=playerScript.speedBonus;
-							spawn.GetComponent<Projectile>().damage*=playerScript.damageBonus;
+							spawn.GetComponent<Projectile>().speed*=Wscript.speedBonus;
+							spawn.GetComponent<Projectile>().damage*=Wscript.damageBonus;
 						}
 						spawn.SendMessage("GiveOwner",nameTag);
 						
@@ -55,10 +60,10 @@ public class Weapons : MonoBehaviour
 						}
 						else
 						{
-							if(playerScript.weaponaryBonus)
-								nextFire = (Time.time + this.fireRate/playerScript.fireRateBonus) ;
+							if(Wscript.weaponaryBonus)
+								nextFire = (Time.time + this.fireRate/Wscript.fireRateBonus) ;
 							else
-								playerScript.FillNextFires();
+								Wscript.FillNextFires();
 						}
 						
 					}
@@ -79,8 +84,7 @@ public class Weapons : MonoBehaviour
 			isPlayer=true;
 		for(int i = 0;i<Wpns.Length;i++)
 		{
-			if(isPlayer)
-				Wpns[i].playerScript=this;
+			Wpns[i].Wscript=this;
 			Wpns[i].nameTag=gameObject.tag;
 			Wpns[i].isPlayer=isPlayer;
 		}

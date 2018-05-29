@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 4321996195214530}
   - component: {fileID: 198706493896033144}
   - component: {fileID: 199339300995405132}
-  - component: {fileID: 114359939004734324}
   m_Layer: 0
   m_Name: trash01
   m_TagString: Untagged
@@ -57,7 +56,6 @@ GameObject:
   - component: {fileID: 4582773631932626}
   - component: {fileID: 198897805091668226}
   - component: {fileID: 199546096472076934}
-  - component: {fileID: 114733977200145270}
   m_Layer: 0
   m_Name: MiniExplo
   m_TagString: Untagged
@@ -106,30 +104,6 @@ Transform:
   m_Father: {fileID: 4049115919346236}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114359939004734324
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1602580636575196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f781200a9d55f04bbe27828daed3e16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 5
---- !u!114 &114733977200145270
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1612143616245370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f781200a9d55f04bbe27828daed3e16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 0.2
 --- !u!114 &114835458734417124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6825,7 +6799,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1612143616245370}
   serializedVersion: 5
-  lengthInSec: 0.2
+  lengthInSec: 3
   simulationSpeed: 1
   stopAction: 0
   looping: 1
@@ -6878,14 +6852,14 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1046369653
+  randomSeed: -1328313804
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -7030,7 +7004,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7557,10 +7531,10 @@ ParticleSystem:
           outSlope: -1
           tangentMode: 0
         - serializedVersion: 2
-          time: 0.13133135
-          value: 0.32432246
-          inSlope: -1
-          outSlope: -1
+          time: 0.8283497
+          value: 0.08108121
+          inSlope: -3.0258183
+          outSlope: -3.0258183
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2

@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour
 	public bool patternChanger;
 	float changerTime;
 	
+	public int recoilPush;
+	
 	private int currentScheme=0;
 	Transform target;
 	
@@ -103,6 +105,34 @@ public class Enemy : MonoBehaviour
 			else
 				movementPattern=1;
 		}
+		// <<>>
+		else if(movementPattern==3)
+		{
+			if(mod(currentScheme,4)==0)
+			{
+				gameObject.SendMessage("GetInput", 4);
+				if(Random.Range(1,3)==1)
+					gameObject.SendMessage("GetInput", 2);
+			}
+			else if(mod(currentScheme,4)==3)
+			{
+				gameObject.SendMessage("GetInput", 4);
+				if(Random.Range(1,3)==1)
+					gameObject.SendMessage("GetInput", 1);
+			}			
+			else if(mod(currentScheme,4)==2)
+			{
+				gameObject.SendMessage("GetInput", 3);
+				if(Random.Range(1,3)==1)
+					gameObject.SendMessage("GetInput", 1);
+			}
+			else
+			{
+				gameObject.SendMessage("GetInput", 3);
+				if(Random.Range(1,3)==1)
+					gameObject.SendMessage("GetInput", 2);
+			}
+		}
 		
 		
 		if(patternChanger)
@@ -131,6 +161,14 @@ public class Enemy : MonoBehaviour
 		hostilenessR+=Time.deltaTime;
 		if(patternChanger)
 			changerTime+=Time.deltaTime;
+	}
+	
+	public void ShootConfirmed()
+	{
+		if(recoilPush!=0)
+		{
+			gameObject.SendMessage("Push", recoilPush);
+		}
 	}
 	
 }

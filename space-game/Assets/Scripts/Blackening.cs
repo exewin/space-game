@@ -5,6 +5,13 @@ using UnityEngine.UI;
 
 public class Blackening : MonoBehaviour 
 {
+	void Start()
+	{
+
+		transform.position = new Vector3(0,0,0);
+	
+	}
+	
 	float clr = 1;
 	void Update () 
 	{

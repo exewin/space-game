@@ -47,6 +47,14 @@ public class Movement : MonoBehaviour
 		
 	}
 	
+	void Push(int force)
+	{
+		if(!rb)
+			return;
+
+		rb.AddForce(-transform.up *  force);
+	}
+	
 	void OnCollisionEnter2D(Collision2D coll) 
 	{
 		int[] bulletInfo;
