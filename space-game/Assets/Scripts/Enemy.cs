@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour
 
 	public int movementPattern;
 	
-	public int wpnsCount;
+	int wpnsCount;
 	public float mobility;
 	public float hostileness;
 	private float mobilityR = 0.0f;
