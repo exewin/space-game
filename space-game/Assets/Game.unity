@@ -296,7 +296,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f02688a0e30f4034bb5151bf01c959ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7f09159ede0278641887356afb97f6e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14455,7 +14455,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Zotron
+  m_Text: Gen. Alice
 --- !u!222 &623940029
 CanvasRenderer:
   m_ObjectHideFlags: 0
