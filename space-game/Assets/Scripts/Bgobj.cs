@@ -8,19 +8,29 @@ public class Bgobj : MonoBehaviour
 	public bool randomColor;
 	public bool randomScale;
 	public bool randomRot;
+	public int highOrder;
 	
 	float scale = 1;
 
 	void Start() 
 	{
 		if(randomColor)
-			GetComponent<SpriteRenderer>().color = new Color(Random.Range(0,.7f),Random.Range(0,.7f),Random.Range(0,.7f),1);
+			GetComponent<SpriteRenderer>().color = new Color(Random.Range(0,0.5f),Random.Range(0,0.5f),Random.Range(0,0.5f),1);
 		
 		if(randomScale)
 		{
 			scale = Random.Range(0.5f,3f);
 			transform.localScale = new Vector3(scale,scale,scale);
-			GetComponent<SpriteRenderer>().sortingOrder = (int)(-200+(scale*16));
+			GetComponent<SpriteRenderer>().sortingOrder = (int)(-200+(scale*16))+highOrder;
+			if(highOrder!=0)
+			{
+				GameObject[] childs;
+				childs=GetAllChildren.getChildren(gameObject);
+				for(int i=0;i<childs.Length;i++)
+				{
+					childs[i].GetComponent<SpriteRenderer>().sortingOrder = (int)(-200+(scale*16))-i;
+				}
+			}
 		}
 		
 		if(randomRot)
@@ -32,6 +42,7 @@ public class Bgobj : MonoBehaviour
 	
 	void Update()
 	{
-		transform.Translate(0,-scale*Time.deltaTime,0,Space.World);
+		if(randomScale)
+			transform.Translate(0,-scale*Time.deltaTime,0,Space.World);
 	}
 }

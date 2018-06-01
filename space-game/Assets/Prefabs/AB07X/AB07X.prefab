@@ -628,6 +628,7 @@ MonoBehaviour:
   hitSound: {fileID: 0}
   shieldSound: {fileID: 0}
   UI: {fileID: 0}
+  UIGameOver: {fileID: 0}
 --- !u!114 &114297927591660548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -653,6 +654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 35
   angle: 45
+  flwPlyr: 0
 --- !u!114 &114525214377214078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -665,10 +667,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementPattern: 2
-  wpnsCount: 0
   mobility: 0.5
   hostileness: 1.5
   patternChanger: 0
+  recoilPush: 0
 --- !u!114 &114742022891149368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -708,7 +710,7 @@ MonoBehaviour:
   - isPlayer: 0
     nameTag: 
     nextFire: 0
-    playerScript: {fileID: 0}
+    Wscript: {fileID: 0}
     projectile: {fileID: 1668246145119764, guid: 832d648f8f86a60468a9705fadcfc4b9,
       type: 2}
     fireRate: 1.5
@@ -717,7 +719,7 @@ MonoBehaviour:
   - isPlayer: 0
     nameTag: 
     nextFire: 0
-    playerScript: {fileID: 0}
+    Wscript: {fileID: 0}
     projectile: {fileID: 1768728476357894, guid: 3f1629b58d20e9040947e5cc93e4f347,
       type: 2}
     fireRate: 0.8
@@ -10913,7 +10915,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 13
   m_Sprite: {fileID: 21300000, guid: d5479cce09eb3314c9ab4f467e416552, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11045,7 +11047,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 14
   m_Sprite: {fileID: 21300000, guid: 2d7f915234e51c14e87c2605b1abe453, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -16969,18 +16969,20 @@ MonoBehaviour:
   bgobjs:
   - {fileID: 1138959440810304, guid: 893b3a92f265f71498ed990542358b09, type: 2}
   - {fileID: 1061830335134434, guid: 476a7b3bfb3e40a488dd52b60ba51847, type: 2}
+  - {fileID: 1196195694933318, guid: 5954a3c9c4e03844eb9edbe9a7b75ffc, type: 2}
+  - {fileID: 1487129149857024, guid: 234f59951c2bb7f438ed31d4af7fe9b8, type: 2}
 --- !u!4 &944256655
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 944256653}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 106.2, y: 47.6, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1529573491}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &949579164
 Prefab:
@@ -17475,7 +17477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &996405226
 Transform:
   m_ObjectHideFlags: 0
@@ -18646,7 +18648,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1176034326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -87.8, y: -33.6, z: 0}
+  m_LocalPosition: {x: -98.2, y: -66.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177279318}
@@ -31826,6 +31828,7 @@ Transform:
   - {fileID: 512907780}
   - {fileID: 2133652101}
   - {fileID: 2141047027}
+  - {fileID: 944256655}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

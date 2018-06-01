@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4396575046942994}
   - component: {fileID: 212685526159692608}
   - component: {fileID: 114408285435198304}
+  - component: {fileID: 114425650087697340}
   m_Layer: 0
   m_Name: bgobj2
   m_TagString: Untagged
@@ -55,6 +56,19 @@ MonoBehaviour:
   randomColor: 1
   randomScale: 1
   randomRot: 1
+  highOrder: 0
+--- !u!114 &114425650087697340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1061830335134434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f781200a9d55f04bbe27828daed3e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 60
 --- !u!212 &212685526159692608
 SpriteRenderer:
   m_ObjectHideFlags: 1
