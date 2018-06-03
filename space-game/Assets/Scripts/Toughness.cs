@@ -81,7 +81,9 @@ public class Toughness : MonoBehaviour
 				AudioSource.PlayClipAtPoint(hitSound, new Vector3(3,0,0));
 			}
 			if(hitEffect)
+			{
 				Instantiate(hitEffect,hitPoint,transform.rotation);
+			}
 		}
 		
 		if(isPlayer)
@@ -127,6 +129,10 @@ public class Toughness : MonoBehaviour
 			destroyOrigin=gameObject.transform;
 		
 		GameObject eff = Instantiate(destroyEffect,destroyOrigin.position,Quaternion.Euler(transform.rotation.x,transform.rotation.y,Random.Range(0,360)));
+		if(gameObject.tag=="Meteor")
+		{
+			eff.transform.localScale = transform.lossyScale;
+		}
 		if(killAfter)
 			Destroy(eff.GetComponent<PlayAtPoint>());
 		

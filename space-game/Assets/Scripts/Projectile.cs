@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
 	
 	public float speed=3;
 	public float damage=5;
+	public float maxDamage=6;
 	public byte penetrableRate=1;
 	int[] bulletInfo;
 	[HideInInspector]
@@ -22,7 +23,7 @@ public class Projectile : MonoBehaviour
 		if(sound)
 			AudioSource.PlayClipAtPoint(sound, new Vector3(5,0,0));
 		bulletInfo = new int[4];
-		bulletInfo[0] = (int)damage;
+		bulletInfo[0] = (int)Random.Range(damage,maxDamage);
 	}
 	
 	void Update () 

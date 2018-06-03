@@ -55,6 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 460
   angle: 0
+  flwPlyr: 0
 --- !u!114 &114888549187531112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -67,9 +68,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hostileness: 2
-  meteor: {fileID: 1140784741114742, guid: 53e7f9a846a10b54091abf5c8bfdabd3, type: 2}
-  biggity: 45
-  direction: 3
+  meteor:
+  - {fileID: 1401448900797504, guid: 1c1ba4e1e763271459959d108a9e80c9, type: 2}
+  - {fileID: 1671894554149824, guid: 5af0adda463b9b342a9d1e26a5a3aca6, type: 2}
+  - {fileID: 1989705199484902, guid: 0acbb02cf7b201e4dbf74c6f2a4ea8e8, type: 2}
+  - {fileID: 1003119324344840, guid: f83523b9ea0433a4e91e671262366efa, type: 2}
+  biggity: 100
 --- !u!212 &212513779208544588
 SpriteRenderer:
   m_ObjectHideFlags: 1

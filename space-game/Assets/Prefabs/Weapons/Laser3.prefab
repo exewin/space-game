@@ -80,7 +80,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 35
-  damage: 5
+  damage: 15
+  maxDamage: 15
   penetrableRate: 3
   ownerTag: 
   sound: {fileID: 8300000, guid: 796c313b38dce8d458061c022b9abddd, type: 3}

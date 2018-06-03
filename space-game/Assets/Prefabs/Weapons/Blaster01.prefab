@@ -110,8 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf525e31ffcd194c8cb65499b2e4ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 18
-  damage: 8
+  speed: 24
+  damage: 32
+  maxDamage: 38
   penetrableRate: 1
   ownerTag: 
   sound: {fileID: 8300000, guid: fe96c61df3d839247847fb6341ff62fc, type: 3}

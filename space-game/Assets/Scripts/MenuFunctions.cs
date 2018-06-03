@@ -67,4 +67,6 @@ public class MenuFunctions : MonoBehaviour
 	{
 		Application.OpenURL(link);
 	}
+	
 }
+

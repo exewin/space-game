@@ -28,7 +28,7 @@ public class Bgobj : MonoBehaviour
 				childs=GetAllChildren.getChildren(gameObject);
 				for(int i=0;i<childs.Length;i++)
 				{
-					childs[i].GetComponent<SpriteRenderer>().sortingOrder = (int)(-200+(scale*16))-i;
+					childs[i].GetComponent<SpriteRenderer>().sortingOrder = (int)(-200+(scale*16))+highOrder-1-i;
 				}
 			}
 		}

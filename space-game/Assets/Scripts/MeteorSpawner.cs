@@ -7,7 +7,7 @@ public class MeteorSpawner : MonoBehaviour
 	
 	public float hostileness;
 	private float hostilenessR = 0.0f;
-	public GameObject meteor;
+	public GameObject[] meteor;
 	[Range(25,100)]
 	public int biggity=25;
 
@@ -27,7 +27,7 @@ public class MeteorSpawner : MonoBehaviour
 	
 	void SpawnMeteor()
 	{
-		GameObject spawn = Instantiate(meteor,transform.position,transform.rotation);
+		GameObject spawn = Instantiate(meteor[Random.Range(0,meteor.Length-1)],transform.position,transform.rotation);
 		int randomness=Random.Range(25,biggity);
 		spawn.transform.localScale = new Vector3((float)randomness/50f,(float)randomness/50f, 1);
 		spawn.GetComponent<Toughness>().maxHp=randomness*3;
