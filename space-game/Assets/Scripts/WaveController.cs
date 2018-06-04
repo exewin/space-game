@@ -36,6 +36,7 @@ public class WaveController : MonoBehaviour
 				curWave++;
 				wave[curWave].SetActive(true);
 				numOfObjs=GetAllChildren.getChildren(wave[curWave],false,"Enemy").Length;
+				gameObject.SendMessage("CallMe",0);
 				venue.CastEvent(miniEvents[curEvent]);
 			}
 			//text
@@ -58,6 +59,7 @@ public class WaveController : MonoBehaviour
 				dangerZone.SetActive(true);
 			}
 			Destroy(wave[curWave]);
+			gameObject.SendMessage("HideMe",0);
 			StartCoroutine(Waiter(5));
 		}
 	}	

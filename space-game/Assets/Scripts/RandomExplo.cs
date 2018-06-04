@@ -11,7 +11,6 @@ public class RandomExplo : MonoBehaviour
 	void Start () 
 	{
 		explo = Instantiate(explosions[Random.Range(0,explosions.Length)], transform.position,transform.rotation);
-		explo.transform.localScale = transform.lossyScale*10;
 		Destroy(explo,1.3f);
 		
 	}
