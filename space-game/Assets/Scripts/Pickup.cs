@@ -28,50 +28,51 @@ public class Pickup : MonoBehaviour
 	{
 		if(player.tag == "Player")
 		{
-			StartCoroutine(Boost(player));
-		}
-	}
-	
-	IEnumerator Boost (Collider2D player)
-	{
-		AudioSource.PlayClipAtPoint(sound, new Vector3(0,0,0));
-		GameObject ship = player.gameObject;
-		if(ship)
-		{
-			if(type==0)
-				ship.SendMessage("PickupR",(int)multiplier);
-			else if(type==1)
-				ship.SendMessage("PickupSP",1.5f);
-			else if(type==2)
-				ship.SendMessage("PickupRF",2);
-			else if(type==3)
-				ship.SendMessage("PickupW",true);
-			else if(type==4)
-				ship.SendMessage("PickupL",true);
-			else if(type==5)
-				ship.SendMessage("PickupEB",multiplier);
-			
-			if(bonusTime!=0)
+			AudioSource.PlayClipAtPoint(sound, new Vector3(0,0,0));
+			GameObject ship = player.gameObject;
+			if(ship)
 			{
-				GetComponent<SpriteRenderer>().enabled = false;
-				GetComponent<Collider2D>().enabled = false;
-				yield return new WaitForSeconds(bonusTime);
-				
-				if(type==1)
-					ship.SendMessage("PickupSP",1);
-				else if(type==2)
-					ship.SendMessage("PickupRF",1);
-				else if(type==3)
-					ship.SendMessage("PickupW",false);
-				else if(type==4)
-					ship.SendMessage("PickupL",false);
-				else if(type==5)
-					ship.SendMessage("PickupEB",1/multiplier);
+				//normal Packs
+				if(type==0) // Health Pack
+				{
+					ship.SendMessage("PickupHealthPack",(int)multiplier);
+				}
+				else if(type==1) // Shield Pack
+				{
+					ship.SendMessage("PickupShieldPack",(int)multiplier);
+				}
+				else if(type==2) // Expierience Pak
+				{
+					ship.SendMessage("PickupExpieriencePack",(int)multiplier);
+				}
+
+				//special Packs
+				else if(type==3) // Weaponary
+				{
+					ship.SendMessage("PickupBonus",1);
+				}
+				else if(type==4) // Laser
+				{
+					ship.SendMessage("PickupBonus",2);
+				}
+				else if(type==5) // EngineBoost
+				{
+					ship.SendMessage("PickupBonus",3);
+				}
+				else if(type==6) // SuperProjectiles
+				{
+					ship.SendMessage("PickupBonus",4);
+				}
+				else if(type==7) //RapidFire
+				{
+					ship.SendMessage("PickupBonus",5);
+				}
 			}
+			
+			Destroy(gameObject);
 		}
-		
-		Destroy(gameObject);
 	}
 	
+
 	
 }

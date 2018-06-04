@@ -24,7 +24,7 @@ public class PickupSpawner : MonoBehaviour
 		{
 			EvSys.spawnExp=true;
 			if(Random.Range(1,100)<25)
-				Instantiate (prefabs[Random.Range(1,6)],transform.position,transform.rotation);
+				Instantiate (prefabs[Random.Range(1,prefabs.Length)],transform.position,transform.rotation);
 		}
 	}
 	

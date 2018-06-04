@@ -102,24 +102,16 @@ public class Toughness : MonoBehaviour
 		
 	}
 	
-	void PickupR(int heal)
+	void PickupHealthPack(int heal)
 	{
 		if(heal<=maxHp-hp)
 			hp+=heal;
 		else
-		{
-			SendMessage("AddXP",heal-(maxHp-hp));
 			hp=maxHp;
-		}
 		
 		AdjustUI();
 	}
 	
-	void SuperHeal(int xp)
-	{
-		maxHp+=xp;
-		hp+=xp;
-	}
 	
 	
 	public void Annihilation()
@@ -131,7 +123,7 @@ public class Toughness : MonoBehaviour
 		GameObject eff = Instantiate(destroyEffect,destroyOrigin.position,Quaternion.Euler(transform.rotation.x,transform.rotation.y,Random.Range(0,360)));
 		if(gameObject.tag=="Meteor")
 		{
-			eff.transform.localScale = transform.lossyScale;
+			eff.transform.localScale = transform.lossyScale*15;
 		}
 		if(killAfter)
 			Destroy(eff.GetComponent<PlayAtPoint>());

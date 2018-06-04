@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114332773990250432}
   - component: {fileID: 61599507720372456}
   m_Layer: 0
-  m_Name: EngineBoostSmall
+  m_Name: EngineBoost
   m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

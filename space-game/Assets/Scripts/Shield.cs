@@ -73,9 +73,6 @@ public class Shield : MonoBehaviour
 		{
 			energy=99999;
 			gameObject.SendMessage("ShieldMe",1);
-			gameObject.SendMessage("PickupRF",25);
-			gameObject.SendMessage("PickupSP",3);
-			gameObject.SendMessage("PickupW",true);
 			gameObject.GetComponent<Movement>().speed=2000f;
 		}
 	}
@@ -84,6 +81,14 @@ public class Shield : MonoBehaviour
 	void AdjustUI()
 	{
 		UI.GetComponent<Text>().text=""+Mathf.FloorToInt(energy);
+	}
+	
+	
+	void PickupShieldPack(int multiplier)
+	{
+		energy+=multiplier;
+		if(energy>100)
+			energy=100;
 	}
 	
 

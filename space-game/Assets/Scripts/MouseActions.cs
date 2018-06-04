@@ -70,9 +70,4 @@ public class MouseActions : MonoBehaviour
 		return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
 	}
 	
-	void PickupL(bool mode)
-	{
-		allowLaser=mode;
-	}
-	
 }

@@ -77,11 +77,6 @@ public class Movement : MonoBehaviour
 			}
 	}
 	
-	void PickupEB(float multi)
-	{
-		speed*=multi;
-	}
-	
 }
 
 
