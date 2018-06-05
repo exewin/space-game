@@ -80,8 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   type: 5
-  bonusTime: 15
-  multiplier: 2
+  multiplier: 0
   sound: {fileID: 8300000, guid: 8e8fc8ca9d7cf1245af77a62c8a26acb, type: 3}
 --- !u!212 &212656681202944246
 SpriteRenderer:

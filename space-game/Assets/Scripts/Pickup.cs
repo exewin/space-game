@@ -6,12 +6,7 @@ public class Pickup : MonoBehaviour
 		
 	public float speed; 
 	public byte type;
-
-	//0 for instant
-	public float bonusTime;
-	
 	public float multiplier; 
-	
 	public AudioClip sound;
 	
 	void OnDisable()
