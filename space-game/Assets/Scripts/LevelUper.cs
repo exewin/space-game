@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class LevelUper : MonoBehaviour 
 {
 	int exp=0;
-	int reqExp=30;
+	int reqExp=10;
 	int level=0;
 	public GameObject UI;
 	public GameObject UI2;
-	
+	public PickupsManager pickupMan;
 	public Weapons[] WeaponsPresets;
 	
 	void Start()
@@ -25,21 +25,19 @@ public class LevelUper : MonoBehaviour
 		Weapons wpns = gameObject.AddComponent<Weapons>() as Weapons;
 		wpns.Wpns = WeaponsPresets[level].Wpns;
 		wpns.Configure();
+		pickupMan.weapons = wpns;
 	}
 	
-	void AddXP(int xp)
+	void PickupExperiencePack(int xp)
 	{
 		exp+=xp;
-		if(exp>=reqExp&&level<5)
+		if(exp>=reqExp)
 		{
 			level++;
+			reqExp=reqExp+(level+1)*10;
 			LevelUp(level);
-			exp-=reqExp;
-			reqExp=reqExp+20;
 			if(level==WeaponsPresets.Length-1)
-			{
-				reqExp=0;
-			}
+				reqExp=99999;
 		}
 		AdjustUI();
 	}
@@ -47,9 +45,6 @@ public class LevelUper : MonoBehaviour
 	void AdjustUI()
 	{
 		UI.GetComponent<Text>().text=""+reqExp;
-		if(level==5)
-			UI.GetComponent<Text>().text="99999";
-		
 		UI2.GetComponent<Text>().text=""+exp;
 	}
 }

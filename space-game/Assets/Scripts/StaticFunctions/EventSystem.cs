@@ -20,7 +20,7 @@ public class EventSystem : MonoBehaviour
 	public GameObject UIPortrait;
 	public GameObject ShieldUI;
 	
-	public bool spawnExp;
+	public bool spawnShield;
 	
 	public MouseActions msa;
 	public KeyboardActions kba;
@@ -60,6 +60,7 @@ public class EventSystem : MonoBehaviour
 			msa.allowRocketLauncher=true;
 		if(id==3)
 		{
+			spawnShield=true;
 			kba.allowShield=true;
 			ShieldUI.SetActive(true);
 		}

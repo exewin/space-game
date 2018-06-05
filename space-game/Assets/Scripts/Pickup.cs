@@ -6,7 +6,7 @@ public class Pickup : MonoBehaviour
 		
 	public float speed; 
 	public byte type;
-	public float multiplier; 
+	public int multiplier; 
 	public AudioClip sound;
 	
 	void OnDisable()
@@ -38,7 +38,7 @@ public class Pickup : MonoBehaviour
 				}
 				else if(type==2) // Expierience Pak
 				{
-					ship.SendMessage("PickupExpieriencePack",(int)multiplier);
+					ship.SendMessage("PickupExperiencePack",(int)multiplier);
 				}
 
 				//special Packs

@@ -35,6 +35,7 @@ public class PickupsManager : MonoBehaviour
 			if(types[h]==type)
 			{
 				ConfirmBonus(h, type);
+				timers[h]=5;
 				return;
 			}
 		}
@@ -46,6 +47,7 @@ public class PickupsManager : MonoBehaviour
 			{
 				Activator(i, true);
 				ConfirmBonus(i, type);
+				timers[i]=5;
 				return;
 			}
 		}
@@ -61,8 +63,9 @@ public class PickupsManager : MonoBehaviour
 				lowest=timers[j];
 			}
 		}
-		
+		Deconfirm(index);
 		ConfirmBonus(index, type);
+		timers[index]=20;
 			
 
 		
@@ -85,7 +88,6 @@ public class PickupsManager : MonoBehaviour
 				}
 				else
 				{
-					types[i]=0;
 					SortBonuses(i);
 				}
 			}
@@ -99,18 +101,18 @@ public class PickupsManager : MonoBehaviour
 	{
 		UI[index].SetActive(mode);
 		UI_timers[index].SetActive(mode);
-
 	}
 	
 	void ConfirmBonus(int index, int type)
 	{
 		UI[index].GetComponent<Image>().sprite=bonusIcons[type-1];
 		types[index]=type;
-		timers[index]=5;
+		RealBonus(type,true);
 	}
 	
 	void Deconfirm(int index)
 	{
+		RealBonus(types[index], false);
 		types[index]=0;
 		timers[index]=0;
 		UI[index].GetComponent<Image>().sprite=null;
@@ -118,13 +120,17 @@ public class PickupsManager : MonoBehaviour
 
 	void SortBonuses(int index)
 	{
+		Deconfirm(index);
 		if(index==0)
 		{
 			UI[0].GetComponent<Image>().sprite=UI[1].GetComponent<Image>().sprite;
 			types[0]=types[1];
 			timers[0]=timers[1];
 			
-			Deconfirm(1);
+			types[1]=0;
+			timers[1]=0;
+			UI[1].GetComponent<Image>().sprite=null;
+
 		}
 		if(index==0||index==1)
 		{
@@ -132,16 +138,51 @@ public class PickupsManager : MonoBehaviour
 			types[1]=types[2];	
 			timers[1]=timers[2];
 			
-			Deconfirm(2);
+			types[2]=0;
+			timers[2]=0;
+			UI[2].GetComponent<Image>().sprite=null;
 		}
+
+		
 		
 		for(int i = 0; i < 3; i++)
 		{
 			if(types[i]==0)
+			{
+				Deconfirm(i);
 				Activator(i, false);
+				
+			}
 		}
 	}
 	
+	
+	void RealBonus(int type, bool mode)
+	{
+		if(type==1)
+		{
+			weapons.weaponaryBonus=mode;
+		}
+		else if(type==2)
+		{
+			mouseActions.allowLaser=mode;
+		}		
+		else if(type==3)
+		{
+			if(mode)
+				movement.speed+=600;
+			else
+				movement.speed=600;
+		}		
+		else if(type==4)
+		{
+			weapons.damageBonus=mode;
+		}		
+		else if(type==5)
+		{
+			weapons.fireRateBonus=mode;
+		}
+	}
 }
 
 

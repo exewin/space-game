@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114744414536025332}
   - component: {fileID: 61636854704097398}
   m_Layer: 0
-  m_Name: SuperProjectilesSmall
+  m_Name: SuperProjectiles
   m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

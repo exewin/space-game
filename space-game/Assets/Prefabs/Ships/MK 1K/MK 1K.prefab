@@ -303,11 +303,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 1965146696457360, guid: 59a180a295092e44e93e48cde0b2e09d, type: 2}
-  - {fileID: 1660509175289882, guid: e31fbff3f4af9004bb9c5933b8314938, type: 2}
-  - {fileID: 1825596770829974, guid: ccfa298ef94326240b92b566f7dbbab4, type: 2}
+  - {fileID: 1378853087561814, guid: 52ad56725dac858469ac2f65dd10b103, type: 2}
+  - {fileID: 1484854694130570, guid: f47bd9d86c852764dab58f3af7057209, type: 2}
   - {fileID: 1617110476650696, guid: 8bcd2a8a6557a8d4e9d0d9f2066ea2bb, type: 2}
-  - {fileID: 1206137918047760, guid: a40509aa0de54a947a98b52bb7ed511b, type: 2}
   - {fileID: 1186657992257980, guid: 7ec53d2169d3e4244918e450034d3360, type: 2}
+  - {fileID: 1206137918047760, guid: a40509aa0de54a947a98b52bb7ed511b, type: 2}
+  - {fileID: 1825596770829974, guid: ccfa298ef94326240b92b566f7dbbab4, type: 2}
+  - {fileID: 1660509175289882, guid: e31fbff3f4af9004bb9c5933b8314938, type: 2}
+  exp: 5
 --- !u!114 &114185274471095354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -320,7 +323,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  speedBonus: 1
   damageBonus: 1
   fireRateBonus: 1
   weaponaryBonus: 0
