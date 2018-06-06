@@ -8,9 +8,11 @@ public class PickupSpawner : MonoBehaviour
 	public GameObject[] prefabs;
 	EventSystem EvSys;
 	public int exp;
+	private bool prot;
 	
 	void Start()
 	{
+		prot=true;
 		EvSys = GameObject.Find("EventSystem").GetComponent<EventSystem>();
 	}
 	
@@ -28,8 +30,12 @@ public class PickupSpawner : MonoBehaviour
 		}
 
 		//spawn ExpPak
-		GameObject expPack = Instantiate (prefabs[2],transform.position+new Vector3(Random.Range(-2,2),Random.Range(-2,2),0),transform.rotation);
-		expPack.GetComponent<Pickup>().multiplier=exp;
+		if(prot)
+		{
+			prot=false;
+			GameObject expPack = Instantiate (prefabs[2],transform.position+new Vector3(Random.Range(-2,2),Random.Range(-2,2),0),transform.rotation);
+			expPack.GetComponent<Pickup>().multiplier=exp;
+		}
 
 			
 		//spawn rnd bonus

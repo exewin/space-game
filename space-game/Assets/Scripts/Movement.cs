@@ -12,6 +12,16 @@ public class Movement : MonoBehaviour
 	void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		
+		if(gameObject.tag=="Enemy")
+		{
+			if(StaticVars.level==1)
+				speed-=speed/3;
+			
+			if(StaticVars.level==3)
+				speed+=speed/2;
+		}
+		
 	}
 	//1-up
 	//2-down

@@ -31,7 +31,9 @@ public class Toughness : MonoBehaviour
 	void Start()
 	{
 		if(gameObject.tag=="Enemy")
+		{
 			waveController = GameObject.Find("WaveController").GetComponent<WaveController>();
+		}
 		
 		hp=maxHp;
 		

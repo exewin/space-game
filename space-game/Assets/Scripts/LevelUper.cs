@@ -26,6 +26,7 @@ public class LevelUper : MonoBehaviour
 		wpns.Wpns = WeaponsPresets[level].Wpns;
 		wpns.Configure();
 		pickupMan.weapons = wpns;
+		SendMessage("ReApplyBonus", 1);
 	}
 	
 	void PickupExperiencePack(int xp)
@@ -46,5 +47,15 @@ public class LevelUper : MonoBehaviour
 	{
 		UI.GetComponent<Text>().text=""+reqExp;
 		UI2.GetComponent<Text>().text=""+exp;
+	}
+	
+	
+	void Update()
+	{
+		//hax
+		if(Input.GetKey(KeyCode.RightShift)&&Input.GetKeyDown(KeyCode.LeftShift))
+		{
+			SendMessage("PickupExperiencePack",10);
+		}
 	}
 }

@@ -15460,7 +15460,7 @@ MonoBehaviour:
   UIText: {fileID: 2012247522}
   UIPortrait: {fileID: 27257072}
   ShieldUI: {fileID: 1305383215}
-  spawnExp: 0
+  spawnShield: 0
   msa: {fileID: 1176034336}
   kba: {fileID: 1176034335}
   tn: {fileID: 1176034331}

@@ -27,9 +27,14 @@ public class Enemy : MonoBehaviour
 	
 	void Start()
 	{
+		//adjust difficulty level
+		hostileness*=StaticVars.level;
+		mobility*=StaticVars.level;
+		
+		
 		
 		wpnsCount = gameObject.GetComponent<Weapons>().Wpns.Length;
-		mobilityR=0;
+		mobilityR=Random.Range(-0.5f,0);
 		hostilenessR=Random.Range(-0.5f,0);
 		if(movementPattern==2||patternChanger) //SPY
 		{

@@ -27,8 +27,9 @@ public class MenuFunctions : MonoBehaviour
 		Application.Quit();
 	}
 	
-	public void StartGame()
+	public void StartGame(int difficulty)
 	{
+		StaticVars.level=difficulty;
 		UILoading.SetActive(true);
 		SceneManager.LoadScene("Game");
 	}

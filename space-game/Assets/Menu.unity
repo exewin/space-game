@@ -1505,8 +1505,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 368910078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 800, y: 450, z: 0}
-  m_LocalScale: {x: 1.875, y: 1.875, z: 1.875}
+  m_LocalPosition: {x: 683, y: 384, z: 0}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
   m_Children:
   - {fileID: 650017173}
   - {fileID: 1764913862}
@@ -1853,7 +1853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &426053076
 Transform:
   m_ObjectHideFlags: 0
@@ -3017,11 +3017,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1979316754}
         m_MethodName: StartGame
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3177,7 +3177,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 650017172}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -426.66666, y: 239.99994, z: 0}
+  m_LocalPosition: {x: -426.875, y: 239.99994, z: 0}
   m_LocalScale: {x: 0.62469333, y: 0.62469333, z: 0.62469333}
   m_Children: []
   m_Father: {fileID: 368910082}
@@ -4515,7 +4515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &961453218
 Transform:
   m_ObjectHideFlags: 0
@@ -5966,11 +5966,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1979316754}
         m_MethodName: StartGame
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7165,7 +7165,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1764913861}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -417.2963, y: 104.831635, z: 0.6246949}
+  m_LocalPosition: {x: -417.08795, y: 104.831635, z: 0.6246949}
   m_LocalScale: {x: 0.15249068, y: 0.15249068, z: 0.15249068}
   m_Children: []
   m_Father: {fileID: 368910082}
@@ -11526,11 +11526,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1979316754}
         m_MethodName: StartGame
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12062,7 +12062,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2123931472}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -417.29636, y: 36.052765, z: 0.6246949}
+  m_LocalPosition: {x: -417.088, y: 36.052765, z: 0.6246949}
   m_LocalScale: {x: 0.22211733, y: 0.22211733, z: 0.22211733}
   m_Children: []
   m_Father: {fileID: 368910082}

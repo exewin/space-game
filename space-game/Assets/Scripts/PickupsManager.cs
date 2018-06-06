@@ -35,7 +35,7 @@ public class PickupsManager : MonoBehaviour
 			if(types[h]==type)
 			{
 				ConfirmBonus(h, type);
-				timers[h]=5;
+				timers[h]=20;
 				return;
 			}
 		}
@@ -47,7 +47,7 @@ public class PickupsManager : MonoBehaviour
 			{
 				Activator(i, true);
 				ConfirmBonus(i, type);
-				timers[i]=5;
+				timers[i]=20;
 				return;
 			}
 		}
@@ -181,6 +181,20 @@ public class PickupsManager : MonoBehaviour
 		else if(type==5)
 		{
 			weapons.fireRateBonus=mode;
+		}
+	}
+	
+	
+	void ReApplyBonus()
+	{
+		for(int i = 0; i < 3; i++)
+		{
+			if(types[i]==1)
+				weapons.weaponaryBonus=true;
+			else if(types[i]==4) 
+				weapons.damageBonus=true;
+			else if(types[i]==5)
+				weapons.fireRateBonus=true;
 		}
 	}
 }

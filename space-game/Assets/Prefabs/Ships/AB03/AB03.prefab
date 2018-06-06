@@ -272,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementPattern: 0
   mobility: 0.5
-  hostileness: 1
+  hostileness: 0.5
   patternChanger: 0
   recoilPush: 0
 --- !u!114 &114523903158722602

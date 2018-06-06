@@ -20,6 +20,23 @@ public class Projectile : MonoBehaviour
 	
 	void Start()
 	{
+		
+		//adjust difficulty level
+		if(ownerTag=="Enemy")
+		{
+			if(StaticVars.level==1)
+			{
+				speed-=speed/3;
+				damage-=damage/3;
+			}
+			
+			if(StaticVars.level==3)
+			{
+				speed+=speed/2;
+				damage+=damage/2;
+			}
+		}
+		
 		if(sound)
 			AudioSource.PlayClipAtPoint(sound, new Vector3(5,0,0));
 		bulletInfo = new int[4];
@@ -32,7 +49,7 @@ public class Projectile : MonoBehaviour
 	}
 	
 	
-	void OnTriggerEnter2D(Collider2D coll) 
+	void OnTriggerStay2D(Collider2D coll) 
 	{
 		if (coll.gameObject.tag != "Untagged" && coll.gameObject.tag != ownerTag)
 		{
