@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 114129239250771626}
   - component: {fileID: 50779413145666234}
   - component: {fileID: 60377101173985728}
+  - component: {fileID: 114713324770150780}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Player
@@ -546,7 +547,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1133890725368474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -98.2, y: -66.3, z: 0}
+  m_LocalPosition: {x: -96, y: -66.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4785345684742796}
@@ -791,6 +792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
   UI2: {fileID: 0}
+  pickupMan: {fileID: 114713324770150780}
   WeaponsPresets:
   - {fileID: 0}
   - {fileID: 0}
@@ -900,6 +902,40 @@ MonoBehaviour:
   energy: 100
   gpx: {fileID: 1217165078212934}
   UI: {fileID: 0}
+--- !u!114 &114713324770150780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1133890725368474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffd87cea0b9814449e57a7da4e1daf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  types: 000000000000000000000000
+  mouseActions: {fileID: 114465904758790902}
+  weapons: {fileID: 0}
+  movement: {fileID: 114432819260827348}
+  UI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  bonusIcons:
+  - {fileID: 21300000, guid: 038a4908145c59041a1914934c1a5860, type: 3}
+  - {fileID: 21300000, guid: 3c215cd602574034d87633361f9dafaa, type: 3}
+  - {fileID: 21300000, guid: 488f6d503a4de924ba4be19a300c8d26, type: 3}
+  - {fileID: 21300000, guid: e4ef719ea27c08f4a82ee9e40c77f867, type: 3}
+  - {fileID: 21300000, guid: 5f732b68acebb494d9e9b0bc6563c5a4, type: 3}
+  timers:
+  - 0
+  - 0
+  - 0
+  UI_timers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  allowTimers: 1
 --- !u!198 &198134653493040594
 ParticleSystem:
   m_ObjectHideFlags: 1

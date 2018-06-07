@@ -87,6 +87,11 @@ public class Movement : MonoBehaviour
 			}
 	}
 	
+	void OnCollisionOver2D(Collision2D coll) 
+	{
+		OnCollisionEnter2D(coll);
+	}
+	
 }
 
 

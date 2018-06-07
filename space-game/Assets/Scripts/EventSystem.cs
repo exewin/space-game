@@ -7,18 +7,14 @@ public class EventSystem : MonoBehaviour
 {
 
 	public AudioClip msgSound;
-	public AudioClip msgMeteorSound;
 	AudioSource audioSource;
 	
 	[TextArea(1,4)]
 	public string[] msgs;
 	public int[] specialEvents;
 	
-	public GameObject dangerZone;
-	
-	public GameObject UIText;
-	public GameObject UIPortrait;
-	public GameObject ShieldUI;
+	public GameObject[] UIPortrait;
+
 	
 	public bool spawnShield;
 	
@@ -29,6 +25,9 @@ public class EventSystem : MonoBehaviour
 	public GameObject MusicSwitcher;
 	public GameObject Canvas;
 	public GameObject VictoryScreen;
+	public GameObject dangerZone;
+	public GameObject UIText;
+	public GameObject ShieldUI;
 	
 	void Start()
 	{
@@ -37,7 +36,7 @@ public class EventSystem : MonoBehaviour
 	
 	public void CastEvent(int id)
 	{
-		UIPortrait.SetActive(true);
+		UIPortrait[1].SetActive(true);
 		UIText.GetComponent<Text>().text=msgs[id];
 		if(specialEvents[id]!=0)
 		{
@@ -48,7 +47,7 @@ public class EventSystem : MonoBehaviour
 			audioSource.PlayOneShot(msgSound);	
 		}
 		else
-			UIPortrait.SetActive(false);
+			UIPortrait[1].SetActive(false);
 	}
 	
 	public void CustomEvent(int id)
