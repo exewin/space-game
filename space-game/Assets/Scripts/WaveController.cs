@@ -16,7 +16,6 @@ public class WaveController : MonoBehaviour
 	{
 		dangerZone.SetActive(false);
 		wave=GetAllChildren.getChildren(gameObject);
-		StartCoroutine(Waiter(3));
 	}
 	
 	
@@ -37,13 +36,12 @@ public class WaveController : MonoBehaviour
 				wave[curWave].SetActive(true);
 				numOfObjs=GetAllChildren.getChildren(wave[curWave],false,"Enemy").Length;
 				gameObject.SendMessage("CallMe",0);
-				venue.CastEvent(miniEvents[curEvent]);
+				//venue.CastEvent(miniEvents[curEvent]);
 			}
 			//text
 			else
 			{
-				venue.CastEvent(miniEvents[curEvent]);
-				StartCoroutine(Waiter(5));
+			//	venue.CastEvent(miniEvents[curEvent]);
 			}
 		}
 	}
@@ -60,20 +58,10 @@ public class WaveController : MonoBehaviour
 			}
 			Destroy(wave[curWave]);
 			gameObject.SendMessage("HideMe",0);
-			StartCoroutine(Waiter(5));
 		}
 	}	
 	
-	IEnumerator Waiter (int secs)
-	{
-		yield return new WaitForSeconds(secs);
-		NextEvent();
-	}
-	
-	void EndGame()
-	{
-		Debug.Log("victory");
-	}
+
 	
 	void DestroyMeteors()
 	{

@@ -19,7 +19,7 @@ public class ScrollText : MonoBehaviour {
 	void Update () 
 	{
 		if(text1!=text2)
-		counter+=Time.deltaTime*28;
+			counter+=Time.deltaTime*28;
 		text2=text1.Substring(0,(int)counter);
 		gameObject.GetComponent<Text>().text=text2;
 	}

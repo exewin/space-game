@@ -7,7 +7,7 @@ public class EventSystem : MonoBehaviour
 {
 
 	public AudioClip msgSound;
-	AudioSource audioSource;
+	public AudioSource audioSource;
 	
 	[TextArea(1,4)]
 	public string[] msgs;
@@ -34,21 +34,40 @@ public class EventSystem : MonoBehaviour
 		audioSource = GetComponent<AudioSource>();
 	}
 	
-	public void CastEvent(int id)
+	public void CastEvent(int portraitID, string msg, int specEvent)
 	{
-		UIPortrait[1].SetActive(true);
-		UIText.GetComponent<Text>().text=msgs[id];
-		if(specialEvents[id]!=0)
+		PortraitDisplay(portraitID);
+		counter=0;
+		text1=msg;
+		if(specEvent!=0)
 		{
-			CustomEvent(specialEvents[id]); //bring the silence
+			CustomEvent(specialEvents[specEvent]);
 		}
-		if(msgs[id]!="")
+		audioSource.Play();
+	}
+	
+	
+	float counter=0;
+	string text1;
+	string text2;
+	
+
+	void Update () 
+	{
+		if(text1!=text2)
 		{
-			audioSource.PlayOneShot(msgSound);	
+			counter+=Time.deltaTime*40;
+			text2=text1.Substring(0,(int)counter);
+			UIText.GetComponent<Text>().text=text2;
+			
 		}
 		else
-			UIPortrait[1].SetActive(false);
+		{
+			audioSource.Stop();
+			counter=0;
+		}
 	}
+
 	
 	public void CustomEvent(int id)
 	{
@@ -82,9 +101,20 @@ public class EventSystem : MonoBehaviour
 		}
 	}
 	
+	
+	public void PortraitDisplay(int index)
+	{
+		for(int i = 0; i < UIPortrait.Length; i++)
+		{
+			UIPortrait[i].SetActive(false);
+		}
+		UIPortrait[index].SetActive(true);
+	}
+	
 	public void EndGame()
 	{
 		Canvas.GetComponent<Pause>().endGame=true;
 		VictoryScreen.SetActive(true);
 	}
+	
 }
