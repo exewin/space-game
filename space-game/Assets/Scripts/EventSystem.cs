@@ -29,12 +29,24 @@ public class EventSystem : MonoBehaviour
 	public GameObject UIText;
 	public GameObject ShieldUI;
 	
+	
+	public float timer;
+	public SingleWave wave;
+	public GameObject[] waves;
+	public int curWave;
+	
+	float counter=0;
+	string text1;
+	string text2;
+	
 	void Start()
 	{
 		audioSource = GetComponent<AudioSource>();
+		waves = GetAllChildren.getChildren(gameObject,false,"Wave");
+		waves[curWave].SetActive(true);
 	}
 	
-	public void CastEvent(int portraitID, string msg, int specEvent)
+	public void CastEvent(int portraitID, string msg, int specEvent, SingleWave thisWave)
 	{
 		PortraitDisplay(portraitID);
 		counter=0;
@@ -44,27 +56,43 @@ public class EventSystem : MonoBehaviour
 			CustomEvent(specialEvents[specEvent]);
 		}
 		audioSource.Play();
+		timer=2;
+		wave=thisWave;
 	}
 	
+	public void NextWave()
+	{
+		curWave++;
+		waves[curWave].SetActive(true);
+	}
 	
-	float counter=0;
-	string text1;
-	string text2;
+	public void RemoveEvent()
+	{
+		PortraitDisplay(999);
+		UIText.GetComponent<Text>().text="";
+	}
 	
-
 	void Update () 
 	{
-		if(text1!=text2)
+		if(timer>0)
 		{
-			counter+=Time.deltaTime*40;
-			text2=text1.Substring(0,(int)counter);
-			UIText.GetComponent<Text>().text=text2;
-			
+			if(text1!=text2)
+			{
+				counter+=Time.deltaTime*40;
+				text2=text1.Substring(0,(int)counter);
+				UIText.GetComponent<Text>().text=text2;
+				
+			}
+			else
+			{
+				timer-=Time.deltaTime*1;
+				audioSource.Stop();
+				counter=0;
+			}
 		}
 		else
 		{
-			audioSource.Stop();
-			counter=0;
+			wave.ContinuePlot();
 		}
 	}
 
@@ -108,6 +136,9 @@ public class EventSystem : MonoBehaviour
 		{
 			UIPortrait[i].SetActive(false);
 		}
+		if(index==999)
+			return;
+		
 		UIPortrait[index].SetActive(true);
 	}
 	

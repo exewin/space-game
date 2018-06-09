@@ -19,7 +19,7 @@ public class Toughness : MonoBehaviour
 	[HideInInspector]
 	public bool killAfter;
 	
-	WaveController waveController;
+	SingleWave myWave;
 	
 	[Header("PlayerOnly")]
 	public AudioClip hitSound; //only for player
@@ -32,7 +32,7 @@ public class Toughness : MonoBehaviour
 	{
 		if(gameObject.tag=="Enemy")
 		{
-			waveController = GameObject.Find("WaveController").GetComponent<WaveController>();
+			myWave = GameObject.FindWithTag("Wave").GetComponent<SingleWave>();
 		}
 		
 		hp=maxHp;
@@ -133,7 +133,8 @@ public class Toughness : MonoBehaviour
 		if(gameObject.tag=="Enemy"&&part==false)
 		{
 			SendMessage("SpawnPickup",null);
-			waveController.Reduce();
+			if(myWave)
+				myWave.Reduce();
 		}
 		
 		if(isPlayer)

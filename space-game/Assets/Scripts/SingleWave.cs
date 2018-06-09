@@ -9,7 +9,6 @@ public class SingleWave : MonoBehaviour
 	public int numOfObjs;
 	public GameObject wave;
 	public GameObject dangerZone;
-	public WaveController controller;
 	public EventSystem venue;
 	int curDial;
 	
@@ -33,18 +32,44 @@ public class SingleWave : MonoBehaviour
 		ContinuePlot();
 	}
 	
-	void ContinuePlot()
+	public void ContinuePlot()
 	{
-		if(curDial<=boxes.Length)
+		if(curDial<=boxes.Length-1)
 		{
-			venue.CastEvent((int)boxes[curDial].who,boxes[curDial].text,boxes[curDial].specEvent);
+			venue.CastEvent((int)boxes[curDial].who,boxes[curDial].text,boxes[curDial].specEvent,this);
 			curDial++;
 		}
 		else
 		{
+			venue.RemoveEvent();
 			dangerZone.SetActive(false);
 			wave.SetActive(true);
 			numOfObjs=GetAllChildren.getChildren(wave,false,"Enemy").Length;
+			
+		}
+	}
+	
+	
+	public void Reduce()
+	{
+		numOfObjs=GetAllChildren.getChildren(wave,false,"Enemy").Length-1;
+		if(numOfObjs<=0)
+		{
+			DestroyMeteors();
+			venue.gameObject.SendMessage("HideMe",0);
+			venue.NextWave();
+			Destroy(gameObject);
+			
+		}
+	}	
+	
+	
+	void DestroyMeteors()
+	{
+		GameObject[] meteors = GameObject.FindGameObjectsWithTag("Meteor");
+		foreach (GameObject meteor in meteors)
+        {
+			meteor.GetComponent<Toughness>().Annihilation();
 		}
 	}
 	

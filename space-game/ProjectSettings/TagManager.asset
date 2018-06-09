@@ -12,6 +12,7 @@ TagManager:
   - Pickup
   - EventSys
   - MeteorSpawner
+  - Wave
   layers:
   - Default
   - TransparentFX
