@@ -63,6 +63,11 @@ public class EventSystem : MonoBehaviour
 	public void NextWave()
 	{
 		curWave++;
+		if(curWave>=waves.Length)
+		{
+			EndGame();
+			return;
+		}
 		waves[curWave].SetActive(true);
 	}
 	
@@ -92,7 +97,8 @@ public class EventSystem : MonoBehaviour
 		}
 		else
 		{
-			wave.ContinuePlot();
+			if(wave)
+				wave.ContinuePlot();
 		}
 	}
 

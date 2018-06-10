@@ -10,6 +10,8 @@ public class CanonRotation : MonoBehaviour {
 	public bool flwPlyr;
 	Transform target;
 	
+	float z;
+	
 	bool mode;
 
 	void Start () 
@@ -17,6 +19,12 @@ public class CanonRotation : MonoBehaviour {
 		if(flwPlyr)
 			if(GameObject.FindGameObjectWithTag("Player"))
 				target=GameObject.FindGameObjectWithTag("Player").transform;
+		if(gameObject.tag=="MeteorSpawner")
+		{
+			z=transform.rotation.z;
+		}
+		else
+			z=0;
 	}
 	
 	void Update () 
@@ -39,9 +47,9 @@ public class CanonRotation : MonoBehaviour {
 			}
 			else
 			{
-				if(transform.eulerAngles.z<180-angle)
+				if(transform.eulerAngles.z+z<180-angle)
 					mode=true;
-				if(transform.eulerAngles.z>180+angle)
+				if(transform.eulerAngles.z+z>180+angle)
 					mode=false;
 				
 				if(mode)

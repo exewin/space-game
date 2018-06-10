@@ -26,6 +26,7 @@ public class SingleWave : MonoBehaviour
 	
 	void Start()
 	{
+		wave.SetActive(false);
 		curDial=0;
 		dangerZone.SetActive(true);
 		numOfObjs=GetAllChildren.getChildren(wave,false,"Enemy").Length;

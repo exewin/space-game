@@ -70,7 +70,7 @@ public class Projectile : MonoBehaviour
 			if(boomEffect)
 				Instantiate(boomEffect,transform.position,transform.rotation);
 			if(destroySound)
-				AudioSource.PlayClipAtPoint(destroySound, transform.position);
+				AudioSource.PlayClipAtPoint(destroySound, new Vector3(5,0,0));
 			
 			Penetration();
 		}

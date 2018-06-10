@@ -147,7 +147,7 @@ public class Enemy : MonoBehaviour
 			{
 				changerTime=0;
 				movementPattern++;
-				if(movementPattern>2)
+				if(movementPattern>3)
 				{
 					movementPattern=0;
 				}	

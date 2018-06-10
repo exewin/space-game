@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1578427521450528}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: -103.33, y: -39.73, z: 0}
+  m_LocalPosition: {x: -110.6, y: -37.3, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 4578175553392346}
@@ -151,7 +151,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 13
+  m_Mass: 30
   m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
   - {fileID: 1206137918047760, guid: a40509aa0de54a947a98b52bb7ed511b, type: 2}
   - {fileID: 1825596770829974, guid: ccfa298ef94326240b92b566f7dbbab4, type: 2}
   - {fileID: 1660509175289882, guid: e31fbff3f4af9004bb9c5933b8314938, type: 2}
-  exp: 5
+  exp: 12
 --- !u!114 &114185274471095354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -332,7 +332,7 @@ MonoBehaviour:
     nameTag: 
     nextFire: 0
     Wscript: {fileID: 0}
-    projectile: {fileID: 1497901484510078, guid: 42c70ae910f73b04f96d9318b5d81ff1,
+    projectile: {fileID: 1086125678410974, guid: 67285d55333cef0459c1a1f763c9f566,
       type: 2}
     fireRate: 1
     spawnPoint:
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92a5cbd81af99d47aeee9a531d9d710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 380
+  speed: 1200
 --- !u!114 &114556248132583490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,10 +360,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63c6d46353da934b97048178a54c0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementPattern: 1
-  mobility: 0.8
-  hostileness: 1.2
-  patternChanger: 0
+  movementPattern: 0
+  mobility: 1
+  hostileness: 2
+  patternChanger: 1
   recoilPush: 0
 --- !u!114 &114691592285505362
 MonoBehaviour:
