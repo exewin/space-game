@@ -2,6 +2,8 @@
 
 Old-school space shooter. Tribute to Alien Outbreak.
 
+![alt text](https://github.com/exewin/space-game/blob/master/preview3.jpg)
+
 
 ## Important announcement
 
@@ -63,6 +65,7 @@ https://github.com/exewin/space-game
 
   Keep in mind that not everything in this project was created by me. You can find all the necessary info about other creators in in-game credits and here:
 
+* **baranpirincal | https://github.com/baranpirincal (Logo)**
 * Lorc | game-icons.net (Icons of pickups)
 * Delapouite | game-icons.net (Icons of pickups)
 * Bonsaiheldin | https://opengameart.org/content/shield-effect (Shield effect)
