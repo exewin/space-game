@@ -67,7 +67,7 @@ public class PickupsManager : MonoBehaviour
 		ConfirmBonus(index, type);
 		timers[index]=20;
 			
-
+		UI_timers[index].GetComponent<Text>().text=""+timers[index].ToString("F2");
 		
 	}
 	

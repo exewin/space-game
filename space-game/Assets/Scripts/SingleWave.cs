@@ -45,6 +45,7 @@ public class SingleWave : MonoBehaviour
 			venue.RemoveEvent();
 			dangerZone.SetActive(false);
 			wave.SetActive(true);
+			venue.gameObject.SendMessage("CallMe",0);
 			numOfObjs=GetAllChildren.getChildren(wave,false,"Enemy").Length;
 			
 		}
@@ -56,6 +57,7 @@ public class SingleWave : MonoBehaviour
 		numOfObjs=GetAllChildren.getChildren(wave,false,"Enemy").Length-1;
 		if(numOfObjs<=0)
 		{
+			dangerZone.SetActive(true);
 			DestroyMeteors();
 			venue.gameObject.SendMessage("HideMe",0);
 			venue.NextWave();

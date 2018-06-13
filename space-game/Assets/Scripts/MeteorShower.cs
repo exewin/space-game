@@ -13,7 +13,7 @@ public class MeteorShower : MonoBehaviour
 	void CallMe ()	
 	{
 		MeteorSpawner = GameObject.FindGameObjectsWithTag("MeteorSpawner");
-		if(MeteorSpawner[0]!=null)
+		if(MeteorSpawner.Length>0)
 		{
 			for(int i = 0; i < MeteorSpawner.Length; i++)
 			{

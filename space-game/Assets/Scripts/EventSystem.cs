@@ -11,7 +11,6 @@ public class EventSystem : MonoBehaviour
 	
 	[TextArea(1,4)]
 	public string[] msgs;
-	public int[] specialEvents;
 	
 	public GameObject[] UIPortrait;
 
@@ -29,11 +28,16 @@ public class EventSystem : MonoBehaviour
 	public GameObject UIText;
 	public GameObject ShieldUI;
 	
+	public PickupsManager pickupsManager;
+	
 	
 	public float timer;
 	public SingleWave wave;
 	public GameObject[] waves;
 	public int curWave;
+	
+	float betweenWavesTimer;
+	bool doNextWave=false;
 	
 	float counter=0;
 	string text1;
@@ -53,7 +57,7 @@ public class EventSystem : MonoBehaviour
 		text1=msg;
 		if(specEvent!=0)
 		{
-			CustomEvent(specialEvents[specEvent]);
+			CustomEvent(specEvent);
 		}
 		audioSource.Play();
 		timer=2;
@@ -62,17 +66,14 @@ public class EventSystem : MonoBehaviour
 	
 	public void NextWave()
 	{
-		curWave++;
-		if(curWave>=waves.Length)
-		{
-			EndGame();
-			return;
-		}
-		waves[curWave].SetActive(true);
+		betweenWavesTimer=3;
+		pickupsManager.allowTimers=false;
+		doNextWave=true;
 	}
 	
 	public void RemoveEvent()
 	{
+		pickupsManager.allowTimers=true;
 		PortraitDisplay(999);
 		UIText.GetComponent<Text>().text="";
 	}
@@ -100,12 +101,28 @@ public class EventSystem : MonoBehaviour
 			if(wave)
 				wave.ContinuePlot();
 		}
+		
+		if(betweenWavesTimer>0)
+		{
+			betweenWavesTimer-=Time.deltaTime*1;
+		}
+		else if(doNextWave)
+		{
+			curWave++;
+			if(curWave>=waves.Length)
+			{
+				EndGame();
+				return;
+			}
+			waves[curWave].SetActive(true);
+			doNextWave=false;
+		}
 	}
 
 	
 	public void CustomEvent(int id)
 	{
-		//active dangerZone
+		//active dangerZone - deleted
 		if(id==1)
 			dangerZone.SetActive(true);
 		if(id==2)
