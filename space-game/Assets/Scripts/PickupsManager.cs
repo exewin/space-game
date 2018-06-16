@@ -36,6 +36,7 @@ public class PickupsManager : MonoBehaviour
 			{
 				ConfirmBonus(h, type);
 				timers[h]=20;
+				UI_timers[h].GetComponent<Text>().text=""+timers[h].ToString("F2");
 				return;
 			}
 		}
@@ -48,6 +49,7 @@ public class PickupsManager : MonoBehaviour
 				Activator(i, true);
 				ConfirmBonus(i, type);
 				timers[i]=20;
+				UI_timers[i].GetComponent<Text>().text=""+timers[i].ToString("F2");
 				return;
 			}
 		}
@@ -170,9 +172,9 @@ public class PickupsManager : MonoBehaviour
 		else if(type==3)
 		{
 			if(mode)
-				movement.speed+=600;
+				movement.speed+=900;
 			else
-				movement.speed=600;
+				movement.speed=900;
 		}		
 		else if(type==4)
 		{

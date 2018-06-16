@@ -53,9 +53,9 @@ public class LevelUper : MonoBehaviour
 	void Update()
 	{
 		//hax
-		if(Input.GetKey(KeyCode.RightShift)&&Input.GetKeyDown(KeyCode.LeftShift))
+		if(Input.GetKey(KeyCode.RightShift))
 		{
-			SendMessage("PickupExperiencePack",10);
+			SendMessage("PickupExperiencePack",4);
 		}
 	}
 }
