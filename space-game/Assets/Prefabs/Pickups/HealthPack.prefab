@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   type: 0
-  multiplier: 7
+  multiplier: 25
   sound: {fileID: 8300000, guid: 7402c29a231500341bf0dc39829cd36d, type: 3}
 --- !u!212 &212401286245700900
 SpriteRenderer:
@@ -95,6 +95,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
