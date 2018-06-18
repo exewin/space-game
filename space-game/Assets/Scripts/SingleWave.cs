@@ -12,6 +12,8 @@ public class SingleWave : MonoBehaviour
 	public EventSystem venue;
 	int curDial;
 	
+	public bool lastWave;
+	
 	[System.Serializable]
 	public class dial
 	{
@@ -42,8 +44,8 @@ public class SingleWave : MonoBehaviour
 		}
 		else
 		{
-			venue.RemoveEvent();
 			dangerZone.SetActive(false);
+			venue.RemoveEvent();
 			wave.SetActive(true);
 			venue.gameObject.SendMessage("CallMe",0);
 			numOfObjs=GetAllChildren.getChildren(wave,false,"Enemy").Length;
@@ -57,7 +59,9 @@ public class SingleWave : MonoBehaviour
 		numOfObjs=GetAllChildren.getChildren(wave,false,"Enemy").Length-1;
 		if(numOfObjs<=0)
 		{
-			dangerZone.SetActive(true);
+			if(!lastWave)
+				dangerZone.SetActive(true);
+			
 			DestroyMeteors();
 			venue.gameObject.SendMessage("HideMe",0);
 			venue.NextWave();
@@ -72,6 +76,7 @@ public class SingleWave : MonoBehaviour
 		GameObject[] meteors = GameObject.FindGameObjectsWithTag("Meteor");
 		foreach (GameObject meteor in meteors)
         {
+			meteor.GetComponent<Toughness>().killAfter=true;
 			meteor.GetComponent<Toughness>().Annihilation();
 		}
 	}

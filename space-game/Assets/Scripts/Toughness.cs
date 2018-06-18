@@ -27,6 +27,9 @@ public class Toughness : MonoBehaviour
 	public GameObject UI; //only for player
 	public GameObject UIGameOver; //only for player
 	
+	
+	[Header("MeteorOnly")]
+	public GameObject alternativeDestroyEffect;
 
 	void Start()
 	{
@@ -118,17 +121,20 @@ public class Toughness : MonoBehaviour
 	
 	public void Annihilation()
 	{
-		//effect
 		if(destroyOrigin==null)
 			destroyOrigin=gameObject.transform;
 		
-		GameObject eff = Instantiate(destroyEffect,destroyOrigin.position,Quaternion.Euler(transform.rotation.x,transform.rotation.y,Random.Range(0,360)));
+		GameObject eff;
+		
+		if(!killAfter)
+			eff = Instantiate(destroyEffect,destroyOrigin.position,Quaternion.Euler(transform.rotation.x,transform.rotation.y,Random.Range(0,360)));
+		else
+			eff = Instantiate(alternativeDestroyEffect,destroyOrigin.position,Quaternion.Euler(transform.rotation.x,transform.rotation.y,Random.Range(0,360)));
+		
 		if(gameObject.tag=="Meteor")
 		{
 			eff.transform.localScale = transform.lossyScale*15;
 		}
-		if(killAfter)
-			Destroy(eff.GetComponent<PlayAtPoint>());
 		
 		if(gameObject.tag=="Enemy"&&part==false)
 		{
@@ -136,7 +142,7 @@ public class Toughness : MonoBehaviour
 			if(myWave)
 				myWave.Reduce();
 		}
-		
+	
 		if(isPlayer)
 		{
 			Time.timeScale=0f;

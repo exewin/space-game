@@ -36,8 +36,8 @@ public class Weapons : MonoBehaviour
 			if(Time.time > nextFire)
 			{
 				
-				if(!isPlayer)
-					Wscript.SendMessage("ShootConfirmed",1);
+				if(!isPlayer && !Wscript.autoFire)
+					Wscript.gameObject.SendMessage("ShootConfirmed",SendMessageOptions.RequireReceiver);
 				
 				for(int i=0;i<spawnPoint.Length;i++)
 				{
@@ -85,6 +85,7 @@ public class Weapons : MonoBehaviour
 	{
 		if(gameObject.tag=="Player")
 			isPlayer=true;
+		
 		for(int i = 0;i<Wpns.Length;i++)
 		{
 			Wpns[i].Wscript=this;

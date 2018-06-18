@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MeteorShower : MonoBehaviour 
 {
 
-	public GameObject[] MeteorSpawner;
+	GameObject[] MeteorSpawner;
 	public GameObject[] Mindicator;
 	
 	
@@ -27,6 +27,8 @@ public class MeteorShower : MonoBehaviour
 				//x> -54
 				//y^ -19
 				//yV -77
+				
+				//dumb crap here:
 				
 				if(x > 325 & x < 1556)
 					typeX=0;

@@ -248,6 +248,8 @@ MonoBehaviour:
   shieldSound: {fileID: 0}
   UI: {fileID: 0}
   UIGameOver: {fileID: 0}
+  alternativeDestroyEffect: {fileID: 1519377103190442, guid: a67f42e2635f25d41b7f37683c26bea6,
+    type: 2}
 --- !u!212 &212919653075030300
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -261,6 +263,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

@@ -31,10 +31,10 @@ public class EventSystem : MonoBehaviour
 	public PickupsManager pickupsManager;
 	
 	
-	public float timer;
-	public SingleWave wave;
-	public GameObject[] waves;
-	public int curWave;
+	float timer;
+	SingleWave wave;
+	GameObject[] waves;
+	int curWave;
 	
 	float betweenWavesTimer;
 	bool doNextWave=false;
@@ -82,7 +82,12 @@ public class EventSystem : MonoBehaviour
 	{
 		if(timer>0)
 		{
-			if(text1!=text2)
+			//anti error
+			if(text2.Length>=text1.Length)
+			{
+				UIText.GetComponent<Text>().text=text1;
+			}
+			else if(text1!=text2)
 			{
 				counter+=Time.deltaTime*40;
 				text2=text1.Substring(0,(int)counter);

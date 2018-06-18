@@ -9,7 +9,6 @@ public class MouseActions : MonoBehaviour
 	public Transform rocketLauncher;
 	float prop;
 	
-	public float speed = 1.0F;
     private float startTime;
     private float journeyLength;
 	
