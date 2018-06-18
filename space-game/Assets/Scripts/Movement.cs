@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour 
 {
 
-	
+
 	public float speed;
 	Rigidbody2D rb;
 	Vector3 screenPosition;
@@ -73,7 +73,7 @@ public class Movement : MonoBehaviour
 			{
 				bulletInfo = new int[4];
 				bulletInfo[0] = ((int)rb.velocity.magnitude+(int)coll.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude)*4/5;
-				bulletInfo[1] = 0;
+					bulletInfo[1] = 0;
 				
 				foreach (ContactPoint2D missileHit in coll.contacts)
 				{
