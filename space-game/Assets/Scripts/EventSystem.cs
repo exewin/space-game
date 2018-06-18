@@ -26,6 +26,7 @@ public class EventSystem : MonoBehaviour
 	public GameObject VictoryScreen;
 	public GameObject dangerZone;
 	public GameObject UIText;
+	public GameObject WaveInt;
 	public GameObject ShieldUI;
 	
 	public PickupsManager pickupsManager;
@@ -45,9 +46,11 @@ public class EventSystem : MonoBehaviour
 	
 	void Start()
 	{
+		WaveInt.GetComponent<Text>().text=""+(curWave+1);
 		audioSource = GetComponent<AudioSource>();
 		waves = GetAllChildren.getChildren(gameObject,false,"Wave");
 		waves[curWave].SetActive(true);
+		timer = 5;
 	}
 	
 	public void CastEvent(int portraitID, string msg, int specEvent, SingleWave thisWave)
@@ -82,17 +85,11 @@ public class EventSystem : MonoBehaviour
 	{
 		if(timer>0)
 		{
-			//anti error
-			if(text2.Length>=text1.Length)
-			{
-				UIText.GetComponent<Text>().text=text1;
-			}
-			else if(text1!=text2)
+			if(text1!=text2)
 			{
 				counter+=Time.deltaTime*40;
 				text2=text1.Substring(0,(int)counter);
 				UIText.GetComponent<Text>().text=text2;
-				
 			}
 			else
 			{
@@ -121,6 +118,7 @@ public class EventSystem : MonoBehaviour
 			}
 			waves[curWave].SetActive(true);
 			doNextWave=false;
+			WaveInt.GetComponent<Text>().text=""+(curWave+1);
 		}
 	}
 
