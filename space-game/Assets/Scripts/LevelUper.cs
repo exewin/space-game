@@ -49,13 +49,4 @@ public class LevelUper : MonoBehaviour
 		UI2.GetComponent<Text>().text=""+exp;
 	}
 	
-	
-	void Update()
-	{
-		//hax
-		if(Input.GetKey(KeyCode.RightShift))
-		{
-			SendMessage("PickupExperiencePack",4);
-		}
-	}
 }

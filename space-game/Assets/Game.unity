@@ -704,7 +704,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -500
   m_Sprite: {fileID: 21300000, guid: f62d6d07788e33a4abbf06b0ac8b03bc, type: 3}
-  m_Color: {r: 0.2647059, g: 0.2647059, b: 0.2647059, a: 1}
+  m_Color: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 0.627451}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
@@ -22208,7 +22208,7 @@ MonoBehaviour:
     text: We maxed out out beast. Get used to even more speed.
     specEvent: 1
   - who: 1
-    text: That's all I can do here, pardner. Now it's your turn.
+    text: I'm pretty sure we can do something with that shield. Be patient, friend.
     specEvent: 0
 --- !u!1 &665764646
 GameObject:
@@ -41026,6 +41026,12 @@ MonoBehaviour:
   - who: 1
     text: We are very close to main forces. Careful now, mate.
     specEvent: 0
+  - who: 1
+    text: We have somehow upgraded shield. It's stronger and regenerate faster now.
+    specEvent: 5
+  - who: 1
+    text: That's all I can do here, pardner. Now it's your turn.
+    specEvent: 0
 --- !u!1 &1193198927
 GameObject:
   m_ObjectHideFlags: 0
@@ -51621,7 +51627,7 @@ MonoBehaviour:
   lastWave: 0
   boxes:
   - who: 2
-    text: 
+    text: Weak patrol detected. Great chance to pick some bonuses.
     specEvent: 0
 --- !u!1001 &1509655874
 Prefab:
@@ -54625,7 +54631,8 @@ MonoBehaviour:
   msa: {fileID: 1176034336}
   kba: {fileID: 1176034335}
   tn: {fileID: 1176034331}
-  mv: {fileID: 0}
+  mv: {fileID: 42745500}
+  sp: {fileID: 42745501}
   MusicSwitcher: {fileID: 1946301992}
   Canvas: {fileID: 2141047023}
   VictoryScreen: {fileID: 6304188}
@@ -59916,6 +59923,9 @@ MonoBehaviour:
   boxes:
   - who: 1
     text: 'We are currently working on shield systems. '
+    specEvent: 0
+  - who: 1
+    text: Shield will allow you to get hit without loosing HP.
     specEvent: 0
 --- !u!1001 &1760058452
 Prefab:

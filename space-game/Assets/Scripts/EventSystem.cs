@@ -18,6 +18,7 @@ public class EventSystem : MonoBehaviour
 	public KeyboardActions kba;
 	public Toughness tn;
 	public Movement mv;
+	public Shield sp;
 	
 	public GameObject MusicSwitcher;
 	public GameObject Canvas;
@@ -156,6 +157,13 @@ public class EventSystem : MonoBehaviour
 			MusicSwitcher.GetComponent<MusicScript>().curMusic++;
 			MusicSwitcher.GetComponent<AudioSource>().clip = MusicSwitcher.GetComponent<MusicScript>().music[MusicSwitcher.GetComponent<MusicScript>().curMusic];
 			MusicSwitcher.GetComponent<AudioSource>().Play();
+		}
+		
+		else if(id==5)
+		{
+			sp.maxShield+=150;
+			sp.shieldRegen+=3;
+			sp.energy=sp.maxShield;
 		}
 	}
 	
