@@ -61,14 +61,16 @@ public class MenuFunctions : MonoBehaviour
 			Screen.SetResolution(1920,1080,Screen.fullScreen);
 	}
 	
-	public void SetFullScreen(GameObject x)
-	{
-		Screen.fullScreen=!Screen.fullScreen;
-		if(Screen.fullScreen)
-			x.GetComponent<Text>().text="X";
-		else
-			x.GetComponent<Text>().text="";
-	}
+	public void SetFullScreen(bool fullScreenValue)
+    {
+        Screen.fullScreen = fullScreenValue;
+        if (!fullScreenValue)
+        {
+            Resolution resolution = Screen.currentResolution;
+            Screen.SetResolution(resolution.width, resolution.height, fullScreenValue);
+        }
+       
+    }
 	
 	public void OpenLink(string link)
 	{
