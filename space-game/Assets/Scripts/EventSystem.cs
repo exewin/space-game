@@ -9,9 +9,6 @@ public class EventSystem : MonoBehaviour
 	public AudioClip msgSound;
 	public AudioSource audioSource;
 	
-	[TextArea(1,4)]
-	public string[] msgs;
-	
 	public GameObject[] UIPortrait;
 
 	
@@ -20,6 +17,7 @@ public class EventSystem : MonoBehaviour
 	public MouseActions msa;
 	public KeyboardActions kba;
 	public Toughness tn;
+	public Movement mv;
 	
 	public GameObject MusicSwitcher;
 	public GameObject Canvas;
@@ -46,12 +44,18 @@ public class EventSystem : MonoBehaviour
 	
 	void Start()
 	{
+		StartCoroutine(Waiter());
+	}
+	
+	IEnumerator Waiter()
+    {
+        yield return new WaitForSeconds(3);
 		WaveInt.GetComponent<Text>().text=""+(curWave+1);
 		audioSource = GetComponent<AudioSource>();
 		waves = GetAllChildren.getChildren(gameObject,false,"Wave");
 		waves[curWave].SetActive(true);
 		timer = 5;
-	}
+    }
 	
 	public void CastEvent(int portraitID, string msg, int specEvent, SingleWave thisWave)
 	{
@@ -125,29 +129,29 @@ public class EventSystem : MonoBehaviour
 	
 	public void CustomEvent(int id)
 	{
-		//active dangerZone - deleted
-		if(id==1)
-			dangerZone.SetActive(true);
-		if(id==2)
+		
+		if(id==1) //BoostShip
+		{
+			tn.maxHp+=125;
+			mv.maxSpeed+=200;
+			if(mv.speed<=mv.maxSpeed)
+				mv.speed=mv.maxSpeed;
+			tn.AdjustUI();
+		}
+		
+		else if(id==2) //Install RcktLaunch
+		{
 			msa.allowRocketLauncher=true;
-		if(id==3)
+		}
+		
+		else if(id==3) //Install Shield
 		{
 			spawnShield=true;
 			kba.allowShield=true;
 			ShieldUI.SetActive(true);
 		}
-		if(id==4)
-		{
-			tn.maxHp+=25;
-			tn.hp=tn.maxHp;
-			tn.AdjustUI();
-		}
-		if(id==5)
-		{
-			EndGame();
-			
-		}
-		if(id==6)//switch music
+		
+		else if(id==4)//switch music
 		{
 			MusicSwitcher.GetComponent<MusicScript>().curMusic++;
 			MusicSwitcher.GetComponent<AudioSource>().clip = MusicSwitcher.GetComponent<MusicScript>().music[MusicSwitcher.GetComponent<MusicScript>().curMusic];

@@ -94,7 +94,7 @@ MonoBehaviour:
   speed: 55
   damage: 20
   maxDamage: 25
-  penetrableRate: 1
+  penetrableRate: 3
   ownerTag: 
   sound: {fileID: 8300000, guid: a901a3718019efa4a88b26bfe709fbdc, type: 3}
   boomEffect: {fileID: 1018322656187614, guid: 87ab9ec379cabfa47a31525e6be6e2b1, type: 2}
@@ -112,6 +112,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

@@ -197,7 +197,7 @@ RectTransform:
   - {fileID: 309983907}
   - {fileID: 1445245732}
   m_Father: {fileID: 2141047027}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -351,17 +351,24 @@ MonoBehaviour:
   lastWave: 0
   boxes:
   - who: 0
-    text: Good morning Admiral, I am Captain Willis and I will advise you on your
-      mission.
+    text: Base to pilot... Do you hear me?
+    specEvent: 0
+  - who: 4
+    text: Yes, sir.
+    specEvent: 0
+  - who: 0
+    text: Cpt. Willis here. We will provide you with all necessary information for
+      your mission.
     specEvent: 0
   - who: 0
     text: Use WASD Keys to move and LMB or RMB for shooting.
     specEvent: 0
   - who: 0
-    text: Danger Zone is a place where enemy ships spawn therefore please avoid it.
+    text: Danger Zone is a place where enemy ships spawn therefore avoid it and destroy
+      all enemies.
     specEvent: 0
-  - who: 0
-    text: Destroy all hostiles.
+  - who: 4
+    text: Roger that.
     specEvent: 0
 --- !u!1001 &23235925
 Prefab:
@@ -400,7 +407,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4383089888626090, guid: 824b9865edabb8b4fa0b8d87f24e3a72, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1167306389069578, guid: 824b9865edabb8b4fa0b8d87f24e3a72, type: 2}
       propertyPath: m_IsActive
@@ -1067,6 +1074,76 @@ Transform:
   m_Father: {fileID: 356401568}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &38166875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 38166876}
+  - component: {fileID: 38166878}
+  - component: {fileID: 38166877}
+  m_Layer: 5
+  m_Name: Matt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &38166876
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 38166875}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.0000002}
+  m_LocalScale: {x: 0.9999973, y: 0.9999973, z: 0.9999973}
+  m_Children:
+  - {fileID: 2116325630}
+  - {fileID: 885199499}
+  m_Father: {fileID: 2141047027}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 45.00004, y: -238.89996}
+  m_SizeDelta: {x: 90, y: 90}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &38166877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 38166875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 8290ca95e72ca044bb9859ea6bf55b52, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &38166878
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 38166875}
 --- !u!1 &42745494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,6 +1353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 900
+  maxSpeed: 900
 --- !u!114 &42745501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1289,7 +1367,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   used: 0
-  energy: 100
+  energy: 150
+  maxShield: 150
+  shieldRegen: 3
   gpx: {fileID: 104400115}
   UI: {fileID: 598613708}
 --- !u!1001 &45363550
@@ -1385,7 +1465,13 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 2
+    text: 'I can see on the radar very fast objects. '
+    specEvent: 0
+  - who: 4
+    text: That's probably new type of enemy...
+    specEvent: 0
 --- !u!1001 &50704325
 Prefab:
   m_ObjectHideFlags: 0
@@ -6595,8 +6681,8 @@ MonoBehaviour:
     text: Rocket launcher standing by. Shoot with MMB.
     specEvent: 2
   - who: 0
-    text: I believe it's wise to use it especially against meteors, sir.
-    specEvent: 2
+    text: Rockets can immediately destroy meteors.
+    specEvent: 0
 --- !u!1 &94496722
 GameObject:
   m_ObjectHideFlags: 0
@@ -7534,7 +7620,7 @@ RectTransform:
   - {fileID: 1298941474}
   - {fileID: 1193198928}
   m_Father: {fileID: 2141047027}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7845,7 +7931,7 @@ RectTransform:
   - {fileID: 314890000}
   - {fileID: 1273233017}
   m_Father: {fileID: 2141047027}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -8115,7 +8201,13 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 0
+    text: Base to pilot... our scouts have seen FXes near your position.
+    specEvent: 0
+  - who: 0
+    text: These are much harder than any other enemies you've fought.
+    specEvent: 0
 --- !u!1001 &183004805
 Prefab:
   m_ObjectHideFlags: 0
@@ -8567,7 +8659,7 @@ RectTransform:
   - {fileID: 793460247}
   - {fileID: 672033261}
   m_Father: {fileID: 2141047027}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8911,8 +9003,17 @@ MonoBehaviour:
   wave: {fileID: 1872305426}
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
-  lastWave: 0
-  boxes: []
+  lastWave: 1
+  boxes:
+  - who: 3
+    text: Looks like I will have to kill you personally.
+    specEvent: 0
+  - who: 4
+    text: Try me!
+    specEvent: 0
+  - who: 3
+    text: Prepare to die bug pilot!
+    specEvent: 0
 --- !u!1001 &209508298
 Prefab:
   m_ObjectHideFlags: 0
@@ -10733,7 +10834,38 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 2
+    text: Still no answer from the base... WAIT! I got something!
+    specEvent: 0
+  - who: 0
+    text: Pilot do you hear me?!
+    specEvent: 0
+  - who: 4
+    text: 'Yes sir, what is going on? '
+    specEvent: 0
+  - who: 0
+    text: Listen carefully, cause I got no time to repeat.
+    specEvent: 0
+  - who: 0
+    text: There was an ambush and soon we will get destroyed by Zotron forces.
+    specEvent: 0
+  - who: 0
+    text: We have bought time for civilians to escape, but they won't survive long
+      if we perish.
+    specEvent: 0
+  - who: 0
+    text: You must assassinate Zotron, only you can do this.
+    specEvent: 0
+  - who: 0
+    text: That's all... good luck. Over and out.
+    specEvent: 0
+  - who: 2
+    text: Fight that madman alone? That's insane!
+    specEvent: 0
+  - who: 4
+    text: We have to save these people. We can't retreat and let them die.
+    specEvent: 0
 --- !u!1 &300769518
 GameObject:
   m_ObjectHideFlags: 0
@@ -10832,7 +10964,7 @@ RectTransform:
   - {fileID: 1373438194}
   - {fileID: 1121074295}
   m_Father: {fileID: 2141047027}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16683,7 +16815,23 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 1
+    text: Pardner, we fixed our signal, but...
+    specEvent: 0
+  - who: 4
+    text: But?
+    specEvent: 0
+  - who: 1
+    text: Well, looks like we cannot connect with base. Something had to happen there.
+    specEvent: 0
+  - who: 4
+    text: Damnit, we can't go back now... Alice, stick close to radio, maybe they
+      will answer.
+    specEvent: 0
+  - who: 2
+    text: Ok.
+    specEvent: 0
 --- !u!1 &356765627
 GameObject:
   m_ObjectHideFlags: 0
@@ -16732,10 +16880,10 @@ MonoBehaviour:
   lastWave: 0
   boxes:
   - who: 0
-    text: Admiral! Very strong enemy incoming - the C7.
+    text: Pilot! Very strong enemy incoming - the C7.
     specEvent: 0
   - who: 0
-    text: Technician thinks it's wisely to destroy its "fragile" launchers firstly.
+    text: We think it's wisely to destroy its "fragile" launchers firstly.
     specEvent: 0
 --- !u!1001 &360787610
 Prefab:
@@ -18426,7 +18574,13 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 4
+    text: Not this time, Zotron. It is me, who will crush you!
+    specEvent: 0
+  - who: 3
+    text: We will see...
+    specEvent: 0
 --- !u!1 &490590932
 GameObject:
   m_ObjectHideFlags: 0
@@ -19890,14 +20044,11 @@ MonoBehaviour:
   venue: {fileID: 1726108870}
   lastWave: 0
   boxes:
-  - who: 0
-    text: Sir, Grand Technician want to talk with you.
+  - who: 1
+    text: Howdy! We collected some floating parts of 07X rocket launcher.
     specEvent: 0
   - who: 1
-    text: Howdy Admiral! We collected some parts of 07X rocket launcher.
-    specEvent: 0
-  - who: 1
-    text: It turned out that we can fix our one, aw yeah.
+    text: It turned out that we can fix our one.
     specEvent: 0
   - who: 1
     text: Give us some time and we will make this beauty workin'.
@@ -20172,7 +20323,7 @@ RectTransform:
   - {fileID: 94496723}
   - {fileID: 725982284}
   m_Father: {fileID: 2141047027}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20272,7 +20423,13 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 4
+    text: Any sign of meteors, Alice?
+    specEvent: 0
+  - who: 2
+    text: Radar is clear. I will eventually inform you, but now focus on hostiles.
+    specEvent: 0
 --- !u!1001 &597072183
 Prefab:
   m_ObjectHideFlags: 0
@@ -20486,7 +20643,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4500894763699632, guid: dc5d61d12aabdc6448743e0107303510, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1774453062624416, guid: dc5d61d12aabdc6448743e0107303510, type: 2}
       propertyPath: m_IsActive
@@ -21522,7 +21679,13 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 1
+    text: We maxed out out beast. Get used to even more speed.
+    specEvent: 1
+  - who: 1
+    text: That's all I can do here, pardner. Now it's your turn.
+    specEvent: 0
 --- !u!1 &665764646
 GameObject:
   m_ObjectHideFlags: 0
@@ -21826,7 +21989,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4383089888626090, guid: 824b9865edabb8b4fa0b8d87f24e3a72, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1167306389069578, guid: 824b9865edabb8b4fa0b8d87f24e3a72, type: 2}
       propertyPath: m_IsActive
@@ -26948,11 +27111,11 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1877400055}
+    m_TransformParent: {fileID: 1488960400}
     m_Modifications:
     - target: {fileID: 4987566823466248, guid: 7ef335d51e4318f46b69ea1e34b3697f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 9.7
+      value: 9.699997
       objectReference: {fileID: 0}
     - target: {fileID: 4987566823466248, guid: 7ef335d51e4318f46b69ea1e34b3697f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -26980,7 +27143,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4987566823466248, guid: 7ef335d51e4318f46b69ea1e34b3697f, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1723634593920282, guid: 7ef335d51e4318f46b69ea1e34b3697f, type: 2}
       propertyPath: m_IsActive
@@ -28747,7 +28910,7 @@ RectTransform:
   - {fileID: 1187420808}
   - {fileID: 135324540}
   m_Father: {fileID: 2141047027}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -29598,7 +29761,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4227791832462672, guid: bc983fb8de57ade49998a448c9cf7a87, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1479779400650506, guid: bc983fb8de57ade49998a448c9cf7a87, type: 2}
       propertyPath: m_IsActive
@@ -30246,6 +30409,92 @@ Transform:
   m_PrefabParentObject: {fileID: 4251307149706198, guid: dba63bb6426f22a4ca1aee4be676f76c,
     type: 2}
   m_PrefabInternal: {fileID: 883444665}
+--- !u!1 &885199498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 885199499}
+  - component: {fileID: 885199501}
+  - component: {fileID: 885199500}
+  - component: {fileID: 885199502}
+  m_Layer: 5
+  m_Name: Name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &885199499
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885199498}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 38166876}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 45.39994, y: -73.599976}
+  m_SizeDelta: {x: 100, y: 48}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &885199500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885199498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.8758622, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c111967db5b7e9b459cc990fefd19410, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Pilot
+--- !u!222 &885199501
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885199498}
+--- !u!114 &885199502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885199498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ca35660a8d51a46a3cc642819baa8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &886439469
 Prefab:
   m_ObjectHideFlags: 0
@@ -30758,6 +31007,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114499735988505762, guid: dba63bb6426f22a4ca1aee4be676f76c,
+        type: 2}
+      propertyPath: speed
+      value: 750
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dba63bb6426f22a4ca1aee4be676f76c, type: 2}
   m_IsPrefabParent: 0
@@ -31118,13 +31372,13 @@ MonoBehaviour:
   lastWave: 0
   boxes:
   - who: 0
-    text: Sir, I got important news. This area is known of lethal meteors.
+    text: Base to pilot... I got important news. This area is known of lethal meteors.
     specEvent: 0
-  - who: 1
-    text: No worries cap, our beast is using modern meteor radar.
+  - who: 2
+    text: "I can confirm that. Few meteors are in front of us\r."
     specEvent: 0
-  - who: 1
-    text: We may see where to expect some fancy stones.
+  - who: 0
+    text: You can use them for your advantage. Enemies are not aware of them.
     specEvent: 0
 --- !u!1001 &922356463
 Prefab:
@@ -31637,7 +31891,7 @@ RectTransform:
   - {fileID: 511446610}
   - {fileID: 781042671}
   m_Father: {fileID: 2141047027}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -31820,8 +32074,8 @@ Transform:
   - {fileID: 2008788250}
   - {fileID: 1154597845}
   - {fileID: 436033234}
-  - {fileID: 2088340460}
   - {fileID: 1944752908}
+  - {fileID: 2088340460}
   - {fileID: 606269305}
   - {fileID: 2014405370}
   - {fileID: 563060686}
@@ -32978,7 +33232,10 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 2
+    text: Watch out! Huge number of meteors on our right!
+    specEvent: 0
 --- !u!1001 &1043236118
 Prefab:
   m_ObjectHideFlags: 0
@@ -38793,7 +39050,13 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 4
+    text: 'Pilot to base... C7 destroyed. '
+    specEvent: 0
+  - who: 0
+    text: Fine job, pilot. Continue your mission.
+    specEvent: 0
 --- !u!1 &1126860471
 GameObject:
   m_ObjectHideFlags: 0
@@ -38878,7 +39141,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4383089888626090, guid: 824b9865edabb8b4fa0b8d87f24e3a72, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1167306389069578, guid: 824b9865edabb8b4fa0b8d87f24e3a72, type: 2}
       propertyPath: m_IsActive
@@ -39137,7 +39400,10 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 2
+    text: Watch out, more meteors on left.
+    specEvent: 0
 --- !u!1001 &1154249059
 Prefab:
   m_ObjectHideFlags: 0
@@ -40101,7 +40367,10 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 1
+    text: We are very close to main forces. Careful now, mate.
+    specEvent: 0
 --- !u!1 &1193198927
 GameObject:
   m_ObjectHideFlags: 0
@@ -46127,7 +46396,7 @@ RectTransform:
   m_Children:
   - {fileID: 2012247523}
   m_Father: {fileID: 2141047027}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -46316,7 +46585,7 @@ Transform:
   m_Children:
   - {fileID: 1481109753}
   m_Father: {fileID: 2141047027}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1306567652
 Prefab:
@@ -47432,12 +47701,10 @@ MonoBehaviour:
   lastWave: 0
   boxes:
   - who: 0
-    text: As you probably saw, enemies drop various bonuses. I strongly recommend
-      to pick them.
+    text: As you see, enemies drop various bonuses. You must pick them.
     specEvent: 0
   - who: 0
-    text: Yellow indicator shows how much resources we have and Purple how much we
-      need for upgrade.
+    text: Collecting required XP allows your crew to upgrade ship.
     specEvent: 0
 --- !u!1001 &1379576564
 Prefab:
@@ -47700,7 +47967,19 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 4
+    text: Tech team, any progress on fixing signal?
+    specEvent: 0
+  - who: 1
+    text: Nope.
+    specEvent: 0
+  - who: 1
+    text: But we finished work on shield system! Use it with Space.
+    specEvent: 3
+  - who: 1
+    text: Power decreases when it's actived so use it wisely.
+    specEvent: 0
 --- !u!1001 &1387020513
 Prefab:
   m_ObjectHideFlags: 0
@@ -49421,7 +49700,7 @@ RectTransform:
   - {fileID: 645498790}
   - {fileID: 2141986503}
   m_Father: {fileID: 2141047027}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -50263,6 +50542,7 @@ Transform:
   - {fileID: 530715841}
   - {fileID: 912150467}
   - {fileID: 1755481384}
+  - {fileID: 702940225}
   - {fileID: 609102748}
   - {fileID: 827523266}
   - {fileID: 680445333}
@@ -50486,7 +50766,10 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 2
+    text: 
+    specEvent: 0
 --- !u!1001 &1509655874
 Prefab:
   m_ObjectHideFlags: 0
@@ -50851,7 +51134,19 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 3
+    text: YOU!
+    specEvent: 4
+  - who: 3
+    text: You are causing me so many problems.
+    specEvent: 0
+  - who: 1
+    text: It's that scoundrel Zotron!
+    specEvent: 0
+  - who: 3
+    text: I will crush you like a bug. Soldiers, attack!
+    specEvent: 0
 --- !u!1001 &1550872175
 Prefab:
   m_ObjectHideFlags: 0
@@ -51240,7 +51535,16 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 1
+    text: Well hi there, great news here.
+    specEvent: 0
+  - who: 1
+    text: We have installed new hardware and reprogrammed old system.
+    specEvent: 1
+  - who: 1
+    text: Ship is now tougher and faster.
+    specEvent: 0
 --- !u!1001 &1576990330
 Prefab:
   m_ObjectHideFlags: 0
@@ -51345,7 +51649,26 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 4
+    text: Too many damn stones!
+    specEvent: 4
+  - who: 2
+    text: This time radar shows large group of ships. That can be a problem.
+    specEvent: 0
+  - who: 4
+    text: Pilot to base... We need backup immediately.
+    specEvent: 0
+  - who: 4
+    text: 'BASE?! '
+    specEvent: 0
+  - who: 1
+    text: Bloody hell, our signal is reduced. Probably antena got hit by piece of
+      destroyed meteor.
+    specEvent: 0
+  - who: 1
+    text: But do not worry, I will settle this!
+    specEvent: 0
 --- !u!1001 &1581526493
 Prefab:
   m_ObjectHideFlags: 0
@@ -53372,49 +53695,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   msgSound: {fileID: 8300000, guid: dc2a9c0a4b45ac34f8f1a78e4fb543e1, type: 3}
   audioSource: {fileID: 1726108872}
-  msgs:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - That's a fine job sir...
-  - '...but our mission has not ended yet.'
-  - We are going to face <color=red>FXes</color> - the best ships in the whole galaxy.
-  - Engineer has at least fully repaired and upgraded <color=green>defensive systems</color>.
-  - Here they come!
-  - Heavy <color=red>FX</color> wave incoming.
-  - Engineer has maximally upgraded ship's <color=green>defensive systems</color>
-    before next waves.
-  - Sir. it's looks like that's the last ships in the area.
-  - Let's destroy them and head back home.
-  - 'Alright! Good job everyone. '
-  - Sir, Congratu...
-  - Bloody hell! What's this?
-  - Some kind of <color=red>MONSTER</color> is approaching us! Everyone get back to
-    stations!
-  - Well, that must be it, Admiral.
-  - '"Mission One" completed. That was an honour to serve with you.'
-  - 
   UIPortrait:
   - {fileID: 191693994}
   - {fileID: 187580319}
   - {fileID: 237752037}
   - {fileID: 1028848948}
+  - {fileID: 38166875}
   spawnShield: 0
   msa: {fileID: 1176034336}
   kba: {fileID: 1176034335}
   tn: {fileID: 1176034331}
+  mv: {fileID: 0}
   MusicSwitcher: {fileID: 1946301992}
   Canvas: {fileID: 2141047023}
   VictoryScreen: {fileID: 6304188}
@@ -58702,7 +58993,10 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 1
+    text: 'We are currently working on shield systems. '
+    specEvent: 0
 --- !u!1001 &1760058452
 Prefab:
   m_ObjectHideFlags: 0
@@ -59662,7 +59956,13 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 2
+    text: Radar shows enormous number of hostiles.
+    specEvent: 0
+  - who: 2
+    text: I see six lines of ships, problably Zotron is at the end.
+    specEvent: 0
 --- !u!1 &1845634868
 GameObject:
   m_ObjectHideFlags: 0
@@ -60257,8 +60557,8 @@ MonoBehaviour:
   venue: {fileID: 1726108870}
   lastWave: 0
   boxes:
-  - who: 0
-    text: Caution sir, radar detected presence of AB07X - ship armed with rocket launcher.
+  - who: 2
+    text: Caution, radar detected presence of AB07X - ship armed with rocket launcher.
     specEvent: 0
 --- !u!1 &1872305426
 GameObject:
@@ -60519,7 +60819,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1488960400}
-  - {fileID: 702940225}
   m_Father: {fileID: 1726108871}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -60539,7 +60838,10 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 3
+    text: FOOLS! CAN'T YOU DESTROY A SINGLE SHIP?
+    specEvent: 0
 --- !u!1 &1883216823
 GameObject:
   m_ObjectHideFlags: 0
@@ -61042,7 +61344,7 @@ RectTransform:
   m_LocalScale: {x: 1.6007812, y: 1.6007812, z: 1.6007812}
   m_Children: []
   m_Father: {fileID: 2141047027}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -61634,7 +61936,10 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 3
+    text: How's that possible?! You should be dead by now.
+    specEvent: 0
 --- !u!1 &1936023758
 GameObject:
   m_ObjectHideFlags: 0
@@ -62049,7 +62354,7 @@ MonoBehaviour:
   lastWave: 0
   boxes:
   - who: 0
-    text: In our mission, we may encounter many different and much tougher enemies.
+    text: In this mission, you may encounter many different and much tougher enemies.
       Be prepared.
     specEvent: 0
 --- !u!1001 &1955603193
@@ -62867,7 +63172,16 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 2
+    text: Radar shows meteors from every side.
+    specEvent: 0
+  - who: 4
+    text: Oh, hell no.
+    specEvent: 0
+  - who: 2
+    text: Everything is up to you, pilot. You can do this.
+    specEvent: 0
 --- !u!1 &1991676128
 GameObject:
   m_ObjectHideFlags: 0
@@ -68573,7 +68887,7 @@ MonoBehaviour:
     Wscript: {fileID: 0}
     projectile: {fileID: 1388087786156858, guid: 0b419fc2d6af6f84ea0a6c2d3ea4719d,
       type: 2}
-    fireRate: 0.16
+    fireRate: 0.17
     spawnPoint:
     - {fileID: 1150047715}
     - {fileID: 924663753}
@@ -70005,6 +70319,74 @@ Transform:
   m_Father: {fileID: 827464773}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2116325629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2116325630}
+  - component: {fileID: 2116325632}
+  - component: {fileID: 2116325631}
+  m_Layer: 5
+  m_Name: BGCharacter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2116325630
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2116325629}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 38166876}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -120.1001, y: 120.42502}
+  m_SizeDelta: {x: 156, y: 156}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &2116325631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2116325629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 12e31f921f463b84fa3f3695d3efc776, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2116325632
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2116325629}
 --- !u!1 &2121966964
 GameObject:
   m_ObjectHideFlags: 0
@@ -70460,7 +70842,19 @@ MonoBehaviour:
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
-  boxes: []
+  boxes:
+  - who: 3
+    text: Bug pilot!
+    specEvent: 0
+  - who: 3
+    text: I have destroyed your planet. You can't win this battle alone.
+    specEvent: 0
+  - who: 3
+    text: Surrender now and I will give you a quick death.
+    specEvent: 0
+  - who: 4
+    text: Never!
+    specEvent: 0
 --- !u!1 &2141047023
 GameObject:
   m_ObjectHideFlags: 0
@@ -70555,6 +70949,7 @@ RectTransform:
   - {fileID: 187580320}
   - {fileID: 237752038}
   - {fileID: 1028848949}
+  - {fileID: 38166876}
   - {fileID: 1282904912}
   - {fileID: 956512922}
   - {fileID: 784376843}

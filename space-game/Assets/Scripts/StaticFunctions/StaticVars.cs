@@ -6,6 +6,6 @@ public class StaticVars : MonoBehaviour
 {
 
 	public static int level = 1;
-
+	public static string playName = "Player";
 	
 }

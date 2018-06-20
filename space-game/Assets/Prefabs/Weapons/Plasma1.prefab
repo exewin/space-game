@@ -79,10 +79,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf525e31ffcd194c8cb65499b2e4ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
-  damage: 22
-  maxDamage: 22
-  penetrableRate: 4
+  speed: 42
+  damage: 9
+  maxDamage: 11
+  penetrableRate: 3
   ownerTag: 
   sound: {fileID: 8300000, guid: 9ceb2bef7b9789d4087ac9b5ef092059, type: 3}
   boomEffect: {fileID: 0}
@@ -112,6 +112,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

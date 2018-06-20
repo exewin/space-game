@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 19
-  damage: 6
+  damage: 7
   maxDamage: 9
   penetrableRate: 1
   ownerTag: 

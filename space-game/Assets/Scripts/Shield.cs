@@ -8,6 +8,8 @@ public class Shield : MonoBehaviour
 	
 	public bool used;
 	public float energy;
+	public float maxShield;
+	public float shieldRegen;
 	public GameObject gpx;
 	public GameObject UI;
 	
@@ -39,7 +41,7 @@ public class Shield : MonoBehaviour
 	
 	void Active()
 	{
-		energy-=6;
+		energy-=8;
 		used=true;
 		gpx.SetActive(true);
 	}
@@ -61,9 +63,9 @@ public class Shield : MonoBehaviour
 				Unactive();
 			}
 		}
-		else if(energy<100)
+		else if(energy<maxShield)
 		{
-			energy+=Time.deltaTime*2;
+			energy+=Time.deltaTime*shieldRegen;
 		}
 		AdjustUI();
 		
@@ -87,8 +89,8 @@ public class Shield : MonoBehaviour
 	void PickupShieldPack(int multiplier)
 	{
 		energy+=multiplier;
-		if(energy>100)
-			energy=100;
+		if(energy>maxShield)
+			energy=maxShield;
 	}
 	
 

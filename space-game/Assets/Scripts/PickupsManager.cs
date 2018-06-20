@@ -172,9 +172,9 @@ public class PickupsManager : MonoBehaviour
 		else if(type==3)
 		{
 			if(mode)
-				movement.speed+=900;
+				movement.speed=movement.maxSpeed*2;
 			else
-				movement.speed=900;
+				movement.speed=movement.maxSpeed;
 		}		
 		else if(type==4)
 		{

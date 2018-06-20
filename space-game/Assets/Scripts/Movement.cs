@@ -9,6 +9,10 @@ public class Movement : MonoBehaviour
 	public float speed;
 	Rigidbody2D rb;
 	Vector3 screenPosition;
+	
+	[Header("PlayerOnly")]
+	public float maxSpeed;
+	
 	void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
@@ -23,6 +27,8 @@ public class Movement : MonoBehaviour
 		}
 		
 	}
+	
+	
 	//1-up
 	//2-down
 	//3-left

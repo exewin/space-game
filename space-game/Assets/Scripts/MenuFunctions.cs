@@ -8,6 +8,7 @@ public class MenuFunctions : MonoBehaviour
 	
 	public GameObject[] menus;
 	public GameObject UILoading;
+	public GameObject nameField;
 	public AudioClip sound;
 	AudioSource audioSource;
 	
@@ -41,6 +42,11 @@ public class MenuFunctions : MonoBehaviour
 			menus[i].SetActive(false);
 		}
 		menus[id].SetActive(true);
+	}
+	
+	public void NameEdit()
+	{
+		StaticVars.playName=nameField.GetComponent<Text>().text;
 	}
 	
 	public void SetResolution(int resId)

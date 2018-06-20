@@ -14,10 +14,12 @@ public class SingleWave : MonoBehaviour
 	
 	public bool lastWave;
 	
+	bool allowAnti;
+	
 	[System.Serializable]
 	public class dial
 	{
-		public enum character : int { Willis=0, Technician=1, Alice=2, Zotron=3};
+		public enum character : int { Willis=0, Technician=1, Alice=2, Zotron=3, Matt=4};
 		public character who;
 		[TextArea(2,4)]
 		public string text;
@@ -49,6 +51,7 @@ public class SingleWave : MonoBehaviour
 			wave.SetActive(true);
 			venue.gameObject.SendMessage("CallMe",0);
 			numOfObjs=GetAllChildren.getChildren(wave,false,"Enemy").Length;
+			allowAnti=true;
 			
 		}
 	}
@@ -57,17 +60,7 @@ public class SingleWave : MonoBehaviour
 	public void Reduce()
 	{
 		numOfObjs=GetAllChildren.getChildren(wave,false,"Enemy").Length-1;
-		if(numOfObjs<=0)
-		{
-			if(!lastWave)
-				dangerZone.SetActive(true);
-			
-			DestroyMeteors();
-			venue.gameObject.SendMessage("HideMe",0);
-			venue.NextWave();
-			Destroy(gameObject);
-			
-		}
+		Check();
 	}	
 	
 	
@@ -81,6 +74,36 @@ public class SingleWave : MonoBehaviour
 		}
 	}
 	
+	public void Check()
+	{
+		if(numOfObjs<=0)
+		{
+			if(!lastWave)
+				dangerZone.SetActive(true);
+			
+			DestroyMeteors();
+			venue.gameObject.SendMessage("HideMe",0);
+			venue.NextWave();
+			Destroy(gameObject);
+			
+		}
+	}
+	
+	//anti error
+	float timer;
+	void Update()
+	{
+		if(allowAnti)
+		{
+			numOfObjs=GetAllChildren.getChildren(wave,false,"Enemy").Length;
+			timer-=Time.deltaTime*1;
+			if(timer<0)
+			{
+				Check();
+				timer=5;
+			}
+		}
+	}
 	
 	
 }

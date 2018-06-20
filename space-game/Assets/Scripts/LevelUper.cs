@@ -35,7 +35,7 @@ public class LevelUper : MonoBehaviour
 		if(exp>=reqExp)
 		{
 			level++;
-			reqExp=reqExp+(level+1)*10;
+			reqExp=reqExp+(level+1)*10+15;
 			LevelUp(level);
 			if(level==WeaponsPresets.Length-1)
 				reqExp=99999;
