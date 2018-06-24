@@ -13,6 +13,9 @@ Get it here: https://github.com/exewin/space-game/releases
 New ideas for next version:
 https://github.com/exewin/space-game/projects/4
 
+You can also play it in your browser here:
+https://www.kongregate.com/games/windowsmemphis/mission-one
+
 
 ## Description
 
