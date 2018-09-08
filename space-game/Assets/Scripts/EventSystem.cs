@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class EventSystem : MonoBehaviour 
 {
-
-	public AudioClip msgSound;
 	public AudioSource audioSource;
 	
 	public GameObject[] UIPortrait;
@@ -34,17 +32,16 @@ public class EventSystem : MonoBehaviour
 	float timer;
 	SingleWave wave;
 	GameObject[] waves;
-	int curWave;
+	public int curWave;
 	
 	float betweenWavesTimer;
 	bool doNextWave=false;
 	
-	float counter=0;
-	string text1;
-	string text2;
 	
 	void Start()
 	{
+		curWave=StaticVars.level;
+		WaveInt.GetComponent<Text>().text=""+(curWave+1);
 		StartCoroutine(Waiter());
 	}
 	
@@ -61,14 +58,13 @@ public class EventSystem : MonoBehaviour
 	public void CastEvent(int portraitID, string msg, int specEvent, SingleWave thisWave)
 	{
 		PortraitDisplay(portraitID);
-		counter=0;
-		text1=msg;
+		UIText.GetComponent<Text>().text=msg;
 		if(specEvent!=0)
 		{
 			CustomEvent(specEvent);
 		}
 		audioSource.Play();
-		timer=2;
+		timer=3;
 		wave=thisWave;
 	}
 	
@@ -90,18 +86,7 @@ public class EventSystem : MonoBehaviour
 	{
 		if(timer>0)
 		{
-			if(text1!=text2)
-			{
-				counter+=Time.deltaTime*40;
-				text2=text1.Substring(0,(int)counter);
-				UIText.GetComponent<Text>().text=text2;
-			}
-			else
-			{
-				timer-=Time.deltaTime*1;
-				audioSource.Stop();
-				counter=0;
-			}
+			timer-=Time.deltaTime*1;
 		}
 		else
 		{
@@ -116,6 +101,7 @@ public class EventSystem : MonoBehaviour
 		else if(doNextWave)
 		{
 			curWave++;
+			SaveLevels();
 			if(curWave>=waves.Length)
 			{
 				EndGame();
@@ -125,6 +111,12 @@ public class EventSystem : MonoBehaviour
 			doNextWave=false;
 			WaveInt.GetComponent<Text>().text=""+(curWave+1);
 		}
+	}
+	
+	
+	void SaveLevels()
+	{
+		PlayerPrefs.SetInt("checkpoint",curWave);
 	}
 
 	

@@ -11,14 +11,6 @@ public class MeteorSpawner : MonoBehaviour
 	[Range(25,100)]
 	public int biggity=25;
 	
-	
-	void Start()
-	{
-		//adjust difficulty level
-		if(StaticVars.level==3)
-			hostileness/=2;
-	}
-
 	void Update () 
 	{
 		if(hostilenessR>hostileness)

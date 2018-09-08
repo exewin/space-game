@@ -12,6 +12,7 @@ public class Shield : MonoBehaviour
 	public float shieldRegen;
 	public GameObject gpx;
 	public GameObject UI;
+	public SpriteRenderer shipGpx;
 	
 	void Start()
 	{
@@ -44,19 +45,21 @@ public class Shield : MonoBehaviour
 		energy-=8;
 		used=true;
 		gpx.SetActive(true);
+		shipGpx.color= new Color(0.45f,0.97f,0.58f);
 	}
 	
 	void Unactive()
 	{
 		used=false;
 		gpx.SetActive(false);
+		shipGpx.color= new Color(1f,1f,1f);
 	}
 	
 	void Update()
 	{
 		if(used)
 		{
-			gpx.transform.localScale = new Vector3(Random.Range(1.1f,1.2f), Random.Range(1.1f,1.2f), 1);
+			gpx.transform.localScale = new Vector3(1.1f + Mathf.PingPong(Time.time*.4f, .1f), 1.1f + Mathf.PingPong(Time.time*.6f, .1f), 1);
 			energy-=Time.deltaTime*5;
 			if(energy<0.1)
 			{

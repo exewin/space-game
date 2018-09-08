@@ -28,9 +28,9 @@ public class MenuFunctions : MonoBehaviour
 		Application.Quit();
 	}
 	
-	public void StartGame(int difficulty)
+	public void StartGame(int level)
 	{
-		StaticVars.level=difficulty;
+		StaticVars.level=level;
 		UILoading.SetActive(true);
 		SceneManager.LoadScene("Game");
 	}
@@ -44,10 +44,6 @@ public class MenuFunctions : MonoBehaviour
 		menus[id].SetActive(true);
 	}
 	
-	public void NameEdit()
-	{
-		StaticVars.playName=nameField.GetComponent<Text>().text;
-	}
 	
 	public void SetResolution(int resId)
 	{
