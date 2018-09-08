@@ -2,22 +2,20 @@
 
 Old-school space shooter. Tribute to Alien Outbreak.
 
-![alt text](https://github.com/exewin/space-game/blob/master/preview3.jpg)
-
-
 ## Important announcements
+
+[September 8, 2018] I've started working on version 1.02. New version will be only available in Kongregate.com (which means no more realeases, only WebGL build).
+
+Version 1.02 log:
+https://github.com/exewin/space-game/projects/4
+
 
 [June 20, 2018] Version 1.01 Released.
 Get it here: https://github.com/exewin/space-game/releases
 
-New ideas for next version:
-https://github.com/exewin/space-game/projects/4
-
-You can also play it in your browser here:
-https://www.kongregate.com/games/windowsmemphis/mission-one
-
-
 ## Description
+
+![alt text](https://github.com/exewin/space-game/blob/master/preview3.jpg)
 
   I focused mainly on programming and graphics therefore story in game is simplified. You play as a pilot of the spaceship and your mission is to destroy all enemy ships. You gain experience and new technologies through the gameplay. While you have to destroy hostiles, you must also watch out for their fire and deadly meteors. Yep, sounds very dull, but maybe some pictures can convince you to try it out (there is also gameplay in youtube, link is in the 'useful links' category):
 
@@ -31,6 +29,8 @@ Project was created in Unity.
 
 ### Instrucions
 
+
+Update: instruction below refer only to versions older than 1.02. 
   Download the newest version form 'releases' and unpack it with winrar or something. Put files where you want. 
 **Remember! UnityPlayer.dll is required to run the game.**
 Use default unity configuration window to select resolution (you can also change it in in-game options).
