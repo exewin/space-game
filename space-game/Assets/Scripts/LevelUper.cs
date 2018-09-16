@@ -13,11 +13,6 @@ public class LevelUper : MonoBehaviour
 	public PickupsManager pickupMan;
 	public Weapons[] WeaponsPresets;
 	
-	void Start()
-	{
-		LevelUp(0);
-		AdjustUI();
-	}
 	
 	void LevelUp (int level)
 	{
@@ -29,16 +24,18 @@ public class LevelUper : MonoBehaviour
 		SendMessage("ReApplyBonus", 1);
 	}
 	
-	void PickupExperiencePack(int xp)
+	public void PickupExperiencePack(int xp)
 	{
 		exp+=xp;
-		if(exp>=reqExp)
+		
+		while(exp>=reqExp)
 		{
 			level++;
 			reqExp=reqExp+(level+1)*10+15;
-			LevelUp(level);
 			if(level==WeaponsPresets.Length-1)
 				reqExp=99999;
+			
+			LevelUp(level);
 		}
 		AdjustUI();
 	}

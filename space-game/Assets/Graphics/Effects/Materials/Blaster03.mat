@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Blaster03
   m_Shader: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
@@ -75,4 +75,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _TintColor: {r: 0.32352942, g: 0.100405686, b: 0, a: 0.525}
+    - _TintColor: {r: 0.28705058, g: 0, b: 0.32156864, a: 0.525}

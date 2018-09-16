@@ -24,6 +24,8 @@ public class KongregateAPIBehaviour : MonoBehaviour
   public void OnKongregateAPILoaded(string userInfoString) {
     OnKongregateUserInfo(userInfoString);
   }  
+  
+  
 
   public void OnKongregateUserInfo(string userInfoString) {
     var info = userInfoString.Split('|');
@@ -32,13 +34,10 @@ public class KongregateAPIBehaviour : MonoBehaviour
     var gameAuthToken = info[2];
     Debug.Log("Kongregate User Info: " + username + ", userId: " + userId);
   }
+
+	
   
-  public void SendScore(int score)
-  {
-	  Application.ExternalCall("kongregate.stats.submit", "Score", score);
-  }
-  
-  public void SendScore(int levelPassed)
+  public void SendLevel(int levelPassed)
   {
 	  Application.ExternalCall("kongregate.stats.submit", "Levels passed", levelPassed);
   }

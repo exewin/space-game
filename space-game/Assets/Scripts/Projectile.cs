@@ -14,6 +14,8 @@ public class Projectile : MonoBehaviour
 	public string ownerTag;
 	public AudioClip sound;
 	
+	public bool slimeSpecial; //moroder special
+	
 	[Header("Optional")]
 	public GameObject boomEffect;
 	public AudioClip destroySound;
@@ -21,20 +23,11 @@ public class Projectile : MonoBehaviour
 	void Start()
 	{
 		
-		//adjust difficulty level
+		//nerf
 		if(ownerTag=="Enemy")
 		{
-			if(StaticVars.level==1)
-			{
 				speed-=speed/3;
 				damage-=damage/3;
-			}
-			
-			if(StaticVars.level==3)
-			{
-				speed+=speed/2;
-				damage+=damage/2;
-			}
 		}
 		
 		if(sound)
@@ -64,7 +57,11 @@ public class Projectile : MonoBehaviour
 				bulletInfo[3]=(int)hit.point.y;
 			}
 			
-			
+			if(slimeSpecial&&coll.gameObject.tag=="Player")
+			{
+				coll.gameObject.GetComponent<Shield>().energy-=Random.Range(25,50);
+			}
+				
 			coll.gameObject.SendMessage("Damage", bulletInfo);
 			
 			if(boomEffect)

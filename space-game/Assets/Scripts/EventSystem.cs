@@ -17,6 +17,7 @@ public class EventSystem : MonoBehaviour
 	public Toughness tn;
 	public Movement mv;
 	public Shield sp;
+	public LevelUper lu;
 	
 	public GameObject MusicSwitcher;
 	public GameObject Canvas;
@@ -37,11 +38,45 @@ public class EventSystem : MonoBehaviour
 	float betweenWavesTimer;
 	bool doNextWave=false;
 	
-	
+
+	public bool debugBool;
+
 	void Start()
 	{
+		//checkpoint starting
+		if(!debugBool)
 		curWave=StaticVars.level;
 		WaveInt.GetComponent<Text>().text=""+(curWave+1);
+		
+		//add bonuses when starting from checkpoint
+		//to avoid bug - use few small exp packs rather than one large
+		if(curWave>=10)
+		{
+			CustomEvent(2);
+			lu.PickupExperiencePack(30);
+			lu.PickupExperiencePack(30);
+			lu.PickupExperiencePack(30); //90 / 90
+		}
+		if(curWave>=20)
+		{
+			CustomEvent(1);
+			lu.PickupExperiencePack(50);
+			lu.PickupExperiencePack(50);
+			lu.PickupExperiencePack(50);//150 / 240
+		}			
+		if(curWave>=30)
+		{
+			CustomEvent(3);
+			lu.PickupExperiencePack(60);
+			lu.PickupExperiencePack(60);
+			lu.PickupExperiencePack(60);//180 / 420
+		}
+		if(curWave>=40)
+		{
+			CustomEvent(1);
+			// more xp
+		}
+		
 		StartCoroutine(Waiter());
 	}
 	
@@ -126,6 +161,7 @@ public class EventSystem : MonoBehaviour
 		if(id==1) //BoostShip
 		{
 			tn.maxHp+=125;
+			tn.hp=tn.maxHp;
 			mv.maxSpeed+=200;
 			if(mv.speed<=mv.maxSpeed)
 				mv.speed=mv.maxSpeed;

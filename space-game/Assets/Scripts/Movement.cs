@@ -10,8 +10,12 @@ public class Movement : MonoBehaviour
 	Rigidbody2D rb;
 	Vector3 screenPosition;
 	
+	public bool meteorImmune; //KBUM special
+	
 	[Header("PlayerOnly")]
 	public float maxSpeed;
+	
+	
 	
 	void Start()
 	{
@@ -63,6 +67,7 @@ public class Movement : MonoBehaviour
 		
 	}
 	
+	//Mini1's downside
 	void Push(int force)
 	{
 		if(!rb)
@@ -77,9 +82,15 @@ public class Movement : MonoBehaviour
 		if(coll.gameObject.tag!="Border")
 			if (coll.gameObject.tag != gameObject.tag || coll.gameObject.tag=="Meteor" && gameObject.tag=="Meteor")
 			{
+				if(coll.gameObject.tag=="Enemy"&&gameObject.tag=="Meteor")
+				{
+					if(coll.gameObject.GetComponent<Movement>().meteorImmune==true)
+						return;
+				}
+				
 				bulletInfo = new int[4];
 				bulletInfo[0] = ((int)rb.velocity.magnitude+(int)coll.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude)*4/5;
-					bulletInfo[1] = 0;
+					bulletInfo[1] = 0; //this is unused - it was created for armor
 				
 				foreach (ContactPoint2D missileHit in coll.contacts)
 				{

@@ -33,6 +33,9 @@ public class MenuFunctions : MonoBehaviour
 		StaticVars.level=level;
 		UILoading.SetActive(true);
 		SceneManager.LoadScene("Game");
+		
+		
+		
 	}
 	
 	public void ActiveSubmenu(int id)

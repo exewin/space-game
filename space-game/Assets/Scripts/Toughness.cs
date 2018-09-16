@@ -18,14 +18,15 @@ public class Toughness : MonoBehaviour
 	public Transform destroyOrigin;
 	[HideInInspector]
 	public bool killAfter;
+
 	
 	SingleWave myWave;
 	
 	[Header("PlayerOnly")]
-	public AudioClip hitSound; //only for player
-	public AudioClip shieldSound; //only for player
-	public GameObject UI; //only for player
-	public GameObject UIGameOver; //only for player
+	public AudioClip hitSound;
+	public AudioClip shieldSound; 
+	public GameObject UI; 
+	public GameObject UIGameOver; 
 	
 	
 	[Header("MeteorOnly")]

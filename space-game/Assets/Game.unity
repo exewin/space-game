@@ -362,7 +362,8 @@ MonoBehaviour:
       your mission.
     specEvent: 0
   - who: 0
-    text: Use WASD Keys to move and LMB or RMB for shooting.
+    text: Use <color='yellow'>WASD Keys</color> to move and <color='yellow'>LMB</color>
+      or <color='yellow'>RMB</color> for shooting.
     specEvent: 0
   - who: 0
     text: Danger Zone is a place where enemy ships spawn therefore avoid it and destroy
@@ -1033,7 +1034,7 @@ MonoBehaviour:
       type: 2}
     fireRate: 1.3
     spawnPoint:
-    - {fileID: 0}
+    - {fileID: 1150047715}
   - isPlayer: 0
     nameTag: 
     nextFire: 0
@@ -1356,6 +1357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1800
+  meteorImmune: 0
   maxSpeed: 1800
 --- !u!114 &42745501
 MonoBehaviour:
@@ -1413,7 +1415,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4142699804091372, guid: 04a8a55f491bcc844ad1e376940aaa08, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04a8a55f491bcc844ad1e376940aaa08, type: 2}
@@ -1471,10 +1473,14 @@ MonoBehaviour:
   lastWave: 0
   boxes:
   - who: 2
-    text: 'I can see on the radar very fast objects. '
+    text: 'I can see very fast objects on the radar. '
     specEvent: 0
-  - who: 4
-    text: That's probably new type of enemy...
+  - who: 0
+    text: That must be <color='red'>Mini</color> type ships.
+    specEvent: 0
+  - who: 0
+    text: Don't underestimate them! They may look weak, but are really powerful and
+      fast.
     specEvent: 0
 --- !u!1001 &50704325
 Prefab:
@@ -6544,7 +6550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &84724246
 Transform:
   m_ObjectHideFlags: 0
@@ -6672,10 +6678,10 @@ MonoBehaviour:
     text: THAT'S IT!
     specEvent: 0
   - who: 1
-    text: Rocket launcher standing by. Shoot with MMB.
+    text: <color='green'>Rocket launcher</color> standing by. Shoot with <color='yellow'>MMB</color>.
     specEvent: 2
   - who: 0
-    text: Rockets can immediately destroy meteors.
+    text: Rockets can immediately destroy <color='red'>meteors</color>.
     specEvent: 0
 --- !u!1 &94496722
 GameObject:
@@ -7831,7 +7837,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4626720423410634, guid: 3f0ff2d67cbb30f4ba59c541564aff2f, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f0ff2d67cbb30f4ba59c541564aff2f, type: 2}
@@ -9945,7 +9951,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4737108575572770, guid: a87c148655cd7544883afc65215454ae, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4737108575572770, guid: a87c148655cd7544883afc65215454ae, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -17104,7 +17110,7 @@ GameObject:
   - component: {fileID: 356765628}
   - component: {fileID: 356765629}
   m_Layer: 0
-  m_Name: Wave012
+  m_Name: Wave010
   m_TagString: Wave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17122,7 +17128,7 @@ Transform:
   m_Children:
   - {fileID: 1849551351}
   m_Father: {fileID: 1726108871}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &356765629
 MonoBehaviour:
@@ -17142,7 +17148,7 @@ MonoBehaviour:
   lastWave: 0
   boxes:
   - who: 0
-    text: Pilot! Very strong enemy incoming - the C7.
+    text: Pilot! Very strong enemy incoming - the <color='red'>C7</color>.
     specEvent: 0
   - who: 0
     text: We think it's wisely to destroy its "fragile" launchers firstly.
@@ -20322,9 +20328,9 @@ Transform:
   - {fileID: 796357567}
   - {fileID: 2084756170}
   - {fileID: 597072184}
+  - {fileID: 150850607}
   - {fileID: 45363551}
   - {fileID: 1653523756}
-  - {fileID: 150850607}
   - {fileID: 1047937913}
   - {fileID: 756925849}
   - {fileID: 2059412591}
@@ -21743,7 +21749,7 @@ MonoBehaviour:
       type: 2}
     fireRate: 2.2
     spawnPoint:
-    - {fileID: 0}
+    - {fileID: 1150047715}
   - isPlayer: 0
     nameTag: 
     nextFire: 0
@@ -22140,7 +22146,7 @@ MonoBehaviour:
   lastWave: 0
   boxes:
   - who: 1
-    text: We maxed out out beast. Get used to even more speed.
+    text: We maxed out out beast. Get used to even more <color='green'>speed and HP</color>.
     specEvent: 1
   - who: 1
     text: I'm pretty sure we can do something with that shield. Be patient, friend.
@@ -22508,7 +22514,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4737108575572770, guid: a87c148655cd7544883afc65215454ae, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4737108575572770, guid: a87c148655cd7544883afc65215454ae, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -22876,7 +22882,7 @@ MonoBehaviour:
       type: 2}
     fireRate: 3
     spawnPoint:
-    - {fileID: 0}
+    - {fileID: 1150047715}
   - isPlayer: 0
     nameTag: 
     nextFire: 0
@@ -27860,7 +27866,7 @@ MonoBehaviour:
       type: 2}
     fireRate: 1.8
     spawnPoint:
-    - {fileID: 0}
+    - {fileID: 1150047715}
   - isPlayer: 0
     nameTag: 
     nextFire: 0
@@ -28636,18 +28642,6 @@ Prefab:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1771714847499908, guid: e88e66ecc617f1546a8434d95d9138be, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4553821709482580, guid: e88e66ecc617f1546a8434d95d9138be, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.79999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 4553821709482580, guid: e88e66ecc617f1546a8434d95d9138be, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.79999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771714847499908, guid: e88e66ecc617f1546a8434d95d9138be, type: 2}
       propertyPath: m_Name
       value: FXT7 (5)
       objectReference: {fileID: 0}
@@ -29058,7 +29052,7 @@ MonoBehaviour:
       type: 2}
     fireRate: 1.5
     spawnPoint:
-    - {fileID: 0}
+    - {fileID: 1150047715}
   - isPlayer: 0
     nameTag: 
     nextFire: 0
@@ -29555,10 +29549,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4383089888626090, guid: 824b9865edabb8b4fa0b8d87f24e3a72, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1167306389069578, guid: 824b9865edabb8b4fa0b8d87f24e3a72, type: 2}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -31481,11 +31471,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114499735988505762, guid: dba63bb6426f22a4ca1aee4be676f76c,
-        type: 2}
-      propertyPath: speed
-      value: 750
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dba63bb6426f22a4ca1aee4be676f76c, type: 2}
   m_IsPrefabAsset: 0
@@ -31846,13 +31831,10 @@ MonoBehaviour:
   venue: {fileID: 1726108870}
   lastWave: 0
   boxes:
-  - who: 0
-    text: Base to pilot... I got important news. This area is known of lethal meteors.
+  - who: 2
+    text: "Caution, <color='red'>meteor party</color> ahead\r."
     specEvent: 0
   - who: 2
-    text: "I can confirm that. Few meteors are in front of us\r."
-    specEvent: 0
-  - who: 0
     text: You can use them for your advantage. Enemies are not aware of them.
     specEvent: 0
 --- !u!1001 &922356463
@@ -31895,20 +31877,8 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1578427521450528, guid: 4ea5865b0ee1960448c2a0469102c855, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1578427521450528, guid: 4ea5865b0ee1960448c2a0469102c855, type: 2}
       propertyPath: m_Name
       value: MK 1K (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4998598171848780, guid: 4ea5865b0ee1960448c2a0469102c855, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.79999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 4998598171848780, guid: 4ea5865b0ee1960448c2a0469102c855, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.79999995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ea5865b0ee1960448c2a0469102c855, type: 2}
@@ -33813,10 +33783,6 @@ Prefab:
     - target: {fileID: 4987566823466248, guid: 7ef335d51e4318f46b69ea1e34b3697f, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1723634593920282, guid: 7ef335d51e4318f46b69ea1e34b3697f, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ef335d51e4318f46b69ea1e34b3697f, type: 2}
@@ -39634,11 +39600,12 @@ MonoBehaviour:
   venue: {fileID: 1726108870}
   lastWave: 0
   boxes:
-  - who: 4
-    text: 'Pilot to base... C7 destroyed. '
+  - who: 2
+    text: New type of enemy incoming. Heavy red ships.
     specEvent: 0
   - who: 0
-    text: Fine job, pilot. Continue your mission.
+    text: These are <color='red'>KBUMs</color>. They are immune to meteors, but they
+      move slowly.
     specEvent: 0
 --- !u!1 &1126860471
 GameObject:
@@ -39947,7 +39914,7 @@ GameObject:
   - component: {fileID: 1150719665}
   - component: {fileID: 1150719666}
   m_Layer: 0
-  m_Name: Wave010
+  m_Name: Wave011
   m_TagString: Wave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39965,7 +39932,7 @@ Transform:
   m_Children:
   - {fileID: 1166323924}
   m_Father: {fileID: 1726108871}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1150719666
 MonoBehaviour:
@@ -39979,13 +39946,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numOfObjs: 0
-  wave: {fileID: 1166323923}
+  wave: {fileID: 1905658739}
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
   boxes:
-  - who: 2
-    text: Watch out, more meteors on left.
+  - who: 4
+    text: 'Pilot to base... <color=''red''>C7</color> destroyed. '
+    specEvent: 0
+  - who: 0
+    text: Fine job, pilot. Continue your mission.
     specEvent: 0
 --- !u!1001 &1154249059
 Prefab:
@@ -40552,7 +40522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8664b1a256ae900469a8b8482e928a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowLaser: 0
+  allowLaser: 1
   allowRocketLauncher: 0
   rocketLauncher: {fileID: 1150047715}
 --- !u!1001 &1176591581
@@ -41021,7 +40991,8 @@ MonoBehaviour:
     text: We are very close to main forces. Careful now, mate.
     specEvent: 0
   - who: 1
-    text: We have somehow upgraded shield. It's stronger and regenerate faster now.
+    text: We have somehow <color='green'>upgraded shield</color>. It's stronger and
+      regenerate faster now.
     specEvent: 5
   - who: 1
     text: That's all I can do here, pardner. Now it's your turn.
@@ -46601,7 +46572,7 @@ MonoBehaviour:
       type: 2}
     fireRate: 1.4
     spawnPoint:
-    - {fileID: 0}
+    - {fileID: 1150047715}
   - isPlayer: 0
     nameTag: 
     nextFire: 0
@@ -47018,7 +46989,7 @@ MonoBehaviour:
       type: 2}
     fireRate: 1.5
     spawnPoint:
-    - {fileID: 0}
+    - {fileID: 1150047715}
   - isPlayer: 0
     nameTag: 
     nextFire: 0
@@ -48407,7 +48378,8 @@ MonoBehaviour:
     text: As you see, enemies drop various bonuses. You must pick them.
     specEvent: 0
   - who: 0
-    text: Collecting required XP allows your crew to upgrade ship.
+    text: Collecting required <color='magenta'>XP</color> allows your crew to upgrade
+      ship.
     specEvent: 0
 --- !u!1001 &1379576564
 Prefab:
@@ -48543,7 +48515,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4737108575572770, guid: a87c148655cd7544883afc65215454ae, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4737108575572770, guid: a87c148655cd7544883afc65215454ae, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -48678,7 +48650,8 @@ MonoBehaviour:
     text: Nope.
     specEvent: 0
   - who: 1
-    text: But we finished work on shield system! Use it with Space.
+    text: But we finished work on <color='cyan'>shield system</color>! Use it with
+      <color='yellow'>Space</color>.
     specEvent: 3
   - who: 1
     text: Power decreases when it's actived so use it wisely.
@@ -51829,7 +51802,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4737108575572770, guid: a87c148655cd7544883afc65215454ae, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4737108575572770, guid: a87c148655cd7544883afc65215454ae, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -52306,7 +52279,7 @@ MonoBehaviour:
     text: We have installed new hardware and reprogrammed old system.
     specEvent: 1
   - who: 1
-    text: Ship is now tougher and faster.
+    text: Ship is now <color='green'>tougher and faster</color>.
     specEvent: 0
 --- !u!1001 &1576990330
 Prefab:
@@ -53370,11 +53343,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4500894763699632, guid: dc5d61d12aabdc6448743e0107303510, type: 2}
       propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1774453062624416, guid: dc5d61d12aabdc6448743e0107303510, type: 2}
-      propertyPath: m_IsActive
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc5d61d12aabdc6448743e0107303510, type: 2}
@@ -54427,6 +54396,7 @@ MonoBehaviour:
   tn: {fileID: 1176034331}
   mv: {fileID: 42745500}
   sp: {fileID: 42745501}
+  lu: {fileID: 42745498}
   MusicSwitcher: {fileID: 1946301992}
   Canvas: {fileID: 2141047023}
   VictoryScreen: {fileID: 6304188}
@@ -54436,6 +54406,7 @@ MonoBehaviour:
   ShieldUI: {fileID: 1092612535}
   pickupsManager: {fileID: 968254346}
   curWave: 0
+  debugBool: 0
 --- !u!4 &1726108871
 Transform:
   m_ObjectHideFlags: 0
@@ -54455,9 +54426,9 @@ Transform:
   - {fileID: 68475331}
   - {fileID: 921647310}
   - {fileID: 91413739}
+  - {fileID: 356765628}
   - {fileID: 1150719665}
   - {fileID: 2070941349}
-  - {fileID: 356765628}
   - {fileID: 1126228672}
   - {fileID: 1890608586}
   - {fileID: 49674987}
@@ -60754,7 +60725,7 @@ MonoBehaviour:
   lastWave: 0
   boxes:
   - who: 2
-    text: Radar shows enormous number of hostiles.
+    text: Radar shows <color='red'>enormous number of hostiles</color>.
     specEvent: 0
   - who: 2
     text: I see six lines of ships, problably Zotron is at the end.
@@ -61244,7 +61215,7 @@ MonoBehaviour:
       type: 2}
     fireRate: 1.1
     spawnPoint:
-    - {fileID: 0}
+    - {fileID: 1150047715}
   - isPlayer: 0
     nameTag: 
     nextFire: 0
@@ -61302,7 +61273,8 @@ MonoBehaviour:
   lastWave: 0
   boxes:
   - who: 2
-    text: Caution, radar detected presence of AB07X - ship armed with rocket launcher.
+    text: Caution, radar detected presence of <color='red'>AB07X</color> - ship armed
+      with rocket launcher.
     specEvent: 0
 --- !u!1 &1872305426
 GameObject:
@@ -62471,7 +62443,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4987566823466248, guid: 7ef335d51e4318f46b69ea1e34b3697f, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1723634593920282, guid: 7ef335d51e4318f46b69ea1e34b3697f, type: 2}
       propertyPath: m_IsActive
@@ -63927,7 +63899,7 @@ MonoBehaviour:
   lastWave: 0
   boxes:
   - who: 2
-    text: Radar shows meteors from every side.
+    text: Radar shows <color='red'>meteors</color> from every side.
     specEvent: 0
   - who: 4
     text: Oh, hell no.
@@ -64283,7 +64255,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4987566823466248, guid: 7ef335d51e4318f46b69ea1e34b3697f, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1723634593920282, guid: 7ef335d51e4318f46b69ea1e34b3697f, type: 2}
       propertyPath: m_IsActive
@@ -69665,7 +69637,7 @@ MonoBehaviour:
       type: 2}
     fireRate: 1
     spawnPoint:
-    - {fileID: 0}
+    - {fileID: 1150047715}
   - isPlayer: 0
     nameTag: 
     nextFire: 0
@@ -69782,7 +69754,7 @@ MonoBehaviour:
       type: 2}
     fireRate: 1.3
     spawnPoint:
-    - {fileID: 0}
+    - {fileID: 1150047715}
   - isPlayer: 0
     nameTag: 
     nextFire: 0
@@ -69945,10 +69917,6 @@ Prefab:
     - target: {fileID: 4075090981943358, guid: 6da989f0588290a4f9e6ccd805a5c5e9, type: 2}
       propertyPath: m_RootOrder
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1041389759866178, guid: 6da989f0588290a4f9e6ccd805a5c5e9, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6da989f0588290a4f9e6ccd805a5c5e9, type: 2}
@@ -70118,7 +70086,7 @@ GameObject:
   - component: {fileID: 2070941349}
   - component: {fileID: 2070941350}
   m_Layer: 0
-  m_Name: Wave011
+  m_Name: Wave012
   m_TagString: Wave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70136,7 +70104,7 @@ Transform:
   m_Children:
   - {fileID: 229963443}
   m_Father: {fileID: 1726108871}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2070941350
 MonoBehaviour:
@@ -70411,14 +70379,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4737108575572770, guid: a87c148655cd7544883afc65215454ae, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1743193802440136, guid: a87c148655cd7544883afc65215454ae, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1743193802440136, guid: a87c148655cd7544883afc65215454ae, type: 2}
       propertyPath: m_Name
       value: AB03 (1)
@@ -70678,7 +70638,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4737108575572770, guid: a87c148655cd7544883afc65215454ae, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4737108575572770, guid: a87c148655cd7544883afc65215454ae, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
