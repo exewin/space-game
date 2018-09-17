@@ -7,14 +7,14 @@ public class LevelUper : MonoBehaviour
 {
 	int exp=0;
 	int reqExp=10;
-	int level=0;
+	public int level=0;
 	public GameObject UI;
 	public GameObject UI2;
 	public PickupsManager pickupMan;
 	public Weapons[] WeaponsPresets;
 	
 	
-	void LevelUp (int level)
+	public void LevelUp (int level)
 	{
 		Destroy(GetComponent<Weapons>());
 		Weapons wpns = gameObject.AddComponent<Weapons>() as Weapons;
@@ -35,8 +35,8 @@ public class LevelUper : MonoBehaviour
 			if(level==WeaponsPresets.Length-1)
 				reqExp=99999;
 			
-			LevelUp(level);
 		}
+		LevelUp(level);
 		AdjustUI();
 	}
 	

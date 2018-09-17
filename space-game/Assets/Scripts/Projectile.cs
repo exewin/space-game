@@ -57,9 +57,13 @@ public class Projectile : MonoBehaviour
 				bulletInfo[3]=(int)hit.point.y;
 			}
 			
+			//special
 			if(slimeSpecial&&coll.gameObject.tag=="Player")
 			{
-				coll.gameObject.GetComponent<Shield>().energy-=Random.Range(25,50);
+				Shield s = coll.gameObject.GetComponent<Shield>();
+				s.energy-=Random.Range(25,50);
+				if(s.energy<0)
+					s.energy=0;
 			}
 				
 			coll.gameObject.SendMessage("Damage", bulletInfo);
