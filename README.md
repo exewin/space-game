@@ -1,14 +1,13 @@
 # Mission One
 
-Old-school space shooter. Tribute to Alien Outbreak.
+Old-school space shooter. Tribute to Alien Outbreak, Laser Age and Demon Star.
 
 ## Important announcements
 
-[September 8, 2018] I've started working on version 1.02. New version will be only available in Kongregate.com (which means no more realeases, only WebGL build).
+Project is finished and no longer supported.
 
-Version 1.02 log:
-https://github.com/exewin/space-game/projects/4
-
+[September 20,2018] Version 1.02 Released. 
+Play here: https://www.kongregate.com/games/windowsmemphis/mission-one
 
 [June 20, 2018] Version 1.01 Released.
 Get it here: https://github.com/exewin/space-game/releases
@@ -29,13 +28,15 @@ Project was created in Unity.
 
 ### Instrucions
 
-
 Update: instruction below refer only to versions older than 1.02. 
+
   Download the newest version form 'releases' and unpack it with winrar or something. Put files where you want. 
 **Remember! UnityPlayer.dll is required to run the game.**
 Use default unity configuration window to select resolution (you can also change it in in-game options).
 **Only 16:9 aspect ratio is supported.**
 
+
+### Controls
 
   Game has own tutorial on how to play, although you can check it also here:
 * W,A,S,D - Keys for movement
