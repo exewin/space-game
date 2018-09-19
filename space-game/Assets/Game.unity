@@ -727,7 +727,7 @@ Transform:
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 1529573491}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &28294113 stripped
 Transform:
@@ -16829,8 +16829,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32, y: 2015}
-  m_SizeDelta: {x: 64, y: 64}
+  m_AnchoredPosition: {x: 999, y: 0}
+  m_SizeDelta: {x: 48, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &342576108
 MonoBehaviour:
@@ -17249,8 +17249,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32, y: 2015}
-  m_SizeDelta: {x: 64, y: 64}
+  m_AnchoredPosition: {x: 999, y: 0}
+  m_SizeDelta: {x: 48, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &361023860
 MonoBehaviour:
@@ -19290,7 +19290,7 @@ Transform:
   - {fileID: 1859507283}
   - {fileID: 2044524158}
   m_Father: {fileID: 1529573491}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &514770642
 Prefab:
@@ -21228,7 +21228,7 @@ Transform:
   m_Children:
   - {fileID: 1908983209}
   m_Father: {fileID: 1529573491}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &610685413
 SpriteRenderer:
@@ -21792,8 +21792,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32, y: 2015}
-  m_SizeDelta: {x: 64, y: 64}
+  m_AnchoredPosition: {x: 999, y: 0}
+  m_SizeDelta: {x: 48, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &652357065
 MonoBehaviour:
@@ -32120,7 +32120,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1529573491}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &954858209
 Prefab:
@@ -32375,7 +32375,7 @@ RectTransform:
   m_Children:
   - {fileID: 636017906}
   m_Father: {fileID: 1529573491}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -32409,10 +32409,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 960, y: 540}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -40523,7 +40523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8664b1a256ae900469a8b8482e928a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowLaser: 1
+  allowLaser: 0
   allowRocketLauncher: 0
   rocketLauncher: {fileID: 1150047715}
 --- !u!1001 &1176591581
@@ -40990,7 +40990,7 @@ MonoBehaviour:
   boxes:
   - who: 1
     text: We are very close to main forces. Careful now, mate.
-    specEvent: 0
+    specEvent: 4
   - who: 1
     text: We have somehow <color='green'>upgraded shield</color>. It's stronger and
       regenerate faster now.
@@ -46043,7 +46043,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1529573491}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: -90}
 --- !u!1001 &1227352953
 Prefab:
@@ -47111,6 +47111,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4737108575572770, guid: a87c148655cd7544883afc65215454ae,
     type: 2}
   m_PrefabInternal: {fileID: 557465430}
+--- !u!1 &1321556937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1321556939}
+  - component: {fileID: 1321556938}
+  m_Layer: 0
+  m_Name: KONG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1321556938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1321556937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d954e5b9d52d3fc479ec3e315ef0fea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1321556939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1321556937}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 398.30933, y: 181.76373, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1327075583
 GameObject:
   m_ObjectHideFlags: 0
@@ -48898,7 +48938,7 @@ Transform:
   m_Children:
   - {fileID: 490590933}
   m_Father: {fileID: 1529573491}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1401154766
 MonoBehaviour:
@@ -50445,7 +50485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numOfObjs: 0
-  wave: {fileID: 1606741977}
+  wave: {fileID: 290737193}
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
@@ -51628,7 +51668,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2105404897}
-  - {fileID: 1978182665}
   - {fileID: 1223844479}
   - {fileID: 27985735}
   - {fileID: 1946301993}
@@ -51751,7 +51790,7 @@ MonoBehaviour:
   boxes:
   - who: 3
     text: YOU!
-    specEvent: 4
+    specEvent: 0
   - who: 3
     text: You are causing me so many problems.
     specEvent: 0
@@ -52266,7 +52305,7 @@ MonoBehaviour:
   boxes:
   - who: 4
     text: Too many damn stones!
-    specEvent: 4
+    specEvent: 0
   - who: 2
     text: This time radar shows large group of ships. That can be a problem.
     specEvent: 0
@@ -54286,6 +54325,7 @@ MonoBehaviour:
   waves: []
   curWave: 0
   debugBool: 0
+  kongComp: {fileID: 1321556938}
 --- !u!4 &1726108871
 Transform:
   m_ObjectHideFlags: 0
@@ -59961,8 +60001,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32, y: 2015}
-  m_SizeDelta: {x: 64, y: 64}
+  m_AnchoredPosition: {x: 999, y: 0}
+  m_SizeDelta: {x: 48, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1796402788
 MonoBehaviour:
@@ -62638,7 +62678,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1529573491}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1941161990
 MeshRenderer:
@@ -62765,7 +62805,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1529573491}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1946301994
 AudioSource:
@@ -62876,7 +62916,6 @@ MonoBehaviour:
   curMusic: 0
   music:
   - {fileID: 8300000, guid: 89ed4e4ffb3cd4048b107b9bc1174ca9, type: 3}
-  - {fileID: 8300000, guid: 055410d5ad6c17249931304bc8fb13ae, type: 3}
   - {fileID: 8300000, guid: 4e699612d89cc5144b867e316ada1825, type: 3}
 --- !u!1 &1949659254
 GameObject:
@@ -63438,11 +63477,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1978182664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 106.2, y: 47.6, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1529573491}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &1978182666
 AudioListener:
@@ -71503,7 +71542,7 @@ Transform:
   - {fileID: 413299729}
   - {fileID: 958643250}
   m_Father: {fileID: 1529573491}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2140637250
 GameObject:
@@ -71672,7 +71711,7 @@ RectTransform:
   - {fileID: 6304189}
   - {fileID: 1908778889}
   m_Father: {fileID: 1529573491}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

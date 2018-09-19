@@ -31,7 +31,7 @@ public class Projectile : MonoBehaviour
 		}
 		
 		if(sound)
-			AudioSource.PlayClipAtPoint(sound, new Vector3(5,0,0));
+			AudioSource.PlayClipAtPoint(sound, new Vector3(0,6,0));
 		bulletInfo = new int[4];
 		bulletInfo[0] = (int)Random.Range(damage,maxDamage);
 	}

@@ -71,15 +71,6 @@ public class Shield : MonoBehaviour
 			energy+=Time.deltaTime*shieldRegen;
 		}
 		AdjustUI();
-		
-		
-		//pst, you want some cheats?
-		if(Input.GetKey(KeyCode.RightShift)&&Input.GetKeyDown(KeyCode.LeftShift))
-		{
-			energy=99999;
-			gameObject.SendMessage("ShieldMe",1);
-			gameObject.GetComponent<Movement>().speed=2000f;
-		}
 	}
 	
 

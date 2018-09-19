@@ -40,9 +40,13 @@ public class EventSystem : MonoBehaviour
 	
 
 	public bool debugBool;
+	
+	public KongregateAPIBehaviour kongComp;
+	
 
 	void Start()
 	{
+		
 		//checkpoint starting
 		if(!debugBool)
 			curWave=StaticVars.level;
@@ -148,7 +152,10 @@ public class EventSystem : MonoBehaviour
 	void SaveLevels()
 	{
 		if(PlayerPrefs.GetInt("checkpoint")<curWave)
+		{
 			PlayerPrefs.SetInt("checkpoint",curWave);
+			kongComp.SendLevel(curWave);
+		}
 	}
 
 	

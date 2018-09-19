@@ -30,18 +30,18 @@ public class MeteorShower : MonoBehaviour
 				
 				//dumb crap here:
 				
-				if(x > 325 & x < 1556)
+				if(x > 220 & x < 960)
 					typeX=0;
-				else if(x >= 1556)
+				else if(x >= 960)
 					typeX=1;
-				else if(x <= 325)
+				else if(x <= 220)
 					typeX=2;
 				
-				if(y > 34 & y < 847)
+				if(y > 0 & y < 540)
 					typeY=0;
-				else if(y >= 847)
+				else if(y >=540)
 					typeY=1;
-				else if(y <= 34)
+				else if(y <= 0)
 					typeY=2;
 				
 				if(typeX==0)
