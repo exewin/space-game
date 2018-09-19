@@ -30883,7 +30883,6 @@ GameObject:
   - component: {fileID: 885199499}
   - component: {fileID: 885199501}
   - component: {fileID: 885199500}
-  - component: {fileID: 885199502}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -30949,17 +30948,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 885199498}
   m_CullTransparentMesh: 0
---- !u!114 &885199502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 885199498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06ca35660a8d51a46a3cc642819baa8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &886439469
 Prefab:
   m_ObjectHideFlags: 0
@@ -50485,7 +50473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numOfObjs: 0
-  wave: {fileID: 290737193}
+  wave: {fileID: 1606741977}
   dangerZone: {fileID: 610685411}
   venue: {fileID: 1726108870}
   lastWave: 0
